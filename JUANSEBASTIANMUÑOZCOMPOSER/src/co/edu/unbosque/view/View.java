@@ -8,15 +8,15 @@ public class View {
 		JOptionPane.showMessageDialog(null, dato);
 	}
 	
-	public String pedirDato() {
+	public String pedirDato(String mensaje) {
 		String dato = "";
-		dato = JOptionPane.showInputDialog(null, "Entre Dato:");
+		dato = JOptionPane.showInputDialog(null,mensaje);
 		return dato;
 	}
 	
-	public int pedirDatoEntero() {
+	public int pedirDatoEntero(String mensaje) {
 		int numero = 0;
-		numero = Integer.parseInt(JOptionPane.showInputDialog(null,"Entre Nùmero:"));
+		numero = Integer.parseInt(JOptionPane.showInputDialog(null,mensaje));
 		return numero;
 	}
 }

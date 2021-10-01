@@ -1,17 +1,10 @@
 package co.edu.unbosque.model;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.swing.JFileChooser;
-
-import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
 
 import co.edu.unbosque.model.persistence.EjemploFile;
 import co.edu.unbosque.model.persistence.Propiedades;
+
 
 public class Crear_cancion {
 
@@ -46,61 +39,8 @@ public class Crear_cancion {
 		this.numeroRenglones = numeroRenglones;
 	}
 
+	
 
-
-	public String generarCancion() {
-		
-		
-		EjemploFile archivo=new EjemploFile();
-		
-		
-		String cancion = null;
-	
-	
-		
-		
-		String estrofa1=generarEstrofa();
-		
-
-		String estrofa2=generarEstrofa();
-		
-		String estrofa3=generarEstrofa();
-		
-		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"\nLa estrofa 2 es \n"+estrofa2+"\nLa estrofa 3 es \n"+estrofa3);
-		
-	if(numeroEstrofas==1) {
-		
-			estrofa1=generarEstrofa();
-			
-			archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1);
-			
-			cancion="La estrofa 1 es \n"+estrofa1;
-			
-		
-			
-		}
-	
-	if(numeroEstrofas==2) {
-		
-		estrofa1=generarEstrofa();
-		
-		estrofa2=generarEstrofa();
-		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+" \n La estrofa 2 es \n"+estrofa2);
-		
-		cancion="La estrofa 1 es \n"+estrofa1+"La estrofa 2 es \n"+estrofa2;
-		
-	
-		
-	}
-	
-	
-		
-		return cancion;		
-
-	}
-	
-	
-	
 	public String generarEstrofa() {
 		
 		String renglonCancion = null;
@@ -114,22 +54,13 @@ public class Crear_cancion {
 	
 		
 		
-		String renglon1=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
-		String renglon2=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
-		String renglon3=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
-		String renglon4=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
+		//String renglon1=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
+		String renglon1,renglon2,renglon3,renglon4;
+		
+		//String renglon4=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
 
 		
-		if(numeroRenglones==6) {
-			
-			renglon1=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
-			renglon2=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
-			renglon3=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()]+palabras6[generarAleatorio()];
-			renglon4=palabras1[generarAleatorio()]+palabras2[generarAleatorio()]+palabras3[generarAleatorio()]+palabras4[generarAleatorio()]+palabras5[generarAleatorio()];
-			
-			renglonCancion=renglon1+"\n"+renglon2+"\n"+renglon3+"\n"+renglon4;
-		
-		}
+	
 		
 		
 		if(numeroRenglones==1) {
@@ -139,6 +70,19 @@ public class Crear_cancion {
 			renglon3=palabras1[generarAleatorio()];
 			renglon4=palabras1[generarAleatorio()];
 	
+			
+			renglonCancion=renglon1+"\n"+renglon2+"\n"+renglon3+"\n"+renglon4;
+			System.out.println(renglonCancion);
+			
+		}
+		
+		
+	if(numeroRenglones==2) {
+			
+			renglon1=palabras1[generarAleatorio()]+palabras2[generarAleatorio()];
+			renglon2=palabras1[generarAleatorio()]+palabras2[generarAleatorio()];
+			renglon3=palabras1[generarAleatorio()]+palabras2[generarAleatorio()];
+			renglon4=palabras1[generarAleatorio()]+palabras2[generarAleatorio()];
 			
 			renglonCancion=renglon1+"\n"+renglon2+"\n"+renglon3+"\n"+renglon4;
 			System.out.println(renglonCancion);
@@ -194,10 +138,98 @@ public class Crear_cancion {
 		
 		}
 		
-		
+
 		return renglonCancion;
 
 	}
+
+
+	public String generarCancion() {
+		
+		
+		EjemploFile archivo=new EjemploFile();
+		
+		
+		String cancion = null;
+	
+	
+		
+		
+		String estrofa1=generarEstrofa();
+		
+
+		String estrofa2=generarEstrofa();
+		
+		String estrofa3=generarEstrofa();
+		
+		String estrofa4=generarEstrofa();
+		
+		//archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"\nLa estrofa 2 es \n"+estrofa2+"\nLa estrofa 3 es \n"+estrofa3);
+		
+	if(numeroEstrofas==1) {
+		
+			estrofa1=generarEstrofa();
+			
+			archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1);
+			
+			cancion="La estrofa 1 es \n"+estrofa1;
+			
+		
+			
+		}
+	
+	if(numeroEstrofas==2) {
+		
+		estrofa1=generarEstrofa();
+		
+		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"\n"+"La estrofa 2 es \n"+estrofa2);
+		
+		cancion="La estrofa 1 es \n"+estrofa1+"\n"+"La estrofa 2 es \n"+estrofa2;
+		
+		
+	}
+	
+	if(numeroEstrofas==3) {
+		
+		estrofa1=generarEstrofa();
+		
+		estrofa2=generarEstrofa();
+		
+		estrofa3=generarEstrofa();
+		
+		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"La estrofa 2 es \n"+estrofa2+"La estrofa 3 es \n"+estrofa3);
+		
+		cancion="La estrofa 1 es \n"+estrofa1+" \n"+"La estrofa 2 es \n"+estrofa2+" \n"+"La estrofa 3 es \n"+estrofa3;
+		
+	
+		
+	}
+	
+	if(numeroEstrofas==4) {
+		
+		estrofa1=generarEstrofa();
+		
+		estrofa2=generarEstrofa();
+		
+		estrofa3=generarEstrofa();
+		
+		estrofa4=generarEstrofa();
+		
+		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"La estrofa 2 es \n"+estrofa2+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4);
+		
+		cancion="La estrofa 1 es \n"+estrofa1+" \n"+"La estrofa 2 es \n"+estrofa2+" \n"+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4;
+		
+	
+		
+	}
+	
+		
+		return cancion;		
+
+	}
+	
+	
+	
 	
 
 	public int generarAleatorio() {
