@@ -26,9 +26,15 @@ public class Controller {
 
 	private void funcionar() {
 		
+		int numeroEst=gui.pedirDatoEntero();	
+		int numeroReng=gui.pedirDatoEntero();	
+	  
+	  	c.setNumeroEstrofas(numeroEst);
 	
-		gui.mostrarResultados(c.generarCancion());
+	  	c.setNumeroRenglones(numeroReng);
 
+        gui.mostrarResultados(c.generarCancion());
+		gui.mostrarResultados(c.gestionarPropiedades());
 		
 	}
 }

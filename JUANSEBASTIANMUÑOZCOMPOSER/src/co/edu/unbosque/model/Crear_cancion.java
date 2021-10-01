@@ -9,13 +9,43 @@ import java.io.PrintWriter;
 import javax.swing.JFileChooser;
 
 import co.edu.unbosque.model.persistence.EjemploFile;
+import co.edu.unbosque.model.persistence.Propiedades;
 
 public class Crear_cancion {
 
-
+	private int numeroEstrofas;
+	
+	private int numeroRenglones;
 
 	
 	
+
+
+
+	public int getNumeroEstrofas() {
+		return numeroEstrofas;
+	}
+
+
+
+	public void setNumeroEstrofas(int numeroEstrofas) {
+		this.numeroEstrofas = numeroEstrofas;
+	}
+
+
+
+	public int getNumeroRenglones() {
+		return numeroRenglones;
+	}
+
+
+
+	public void setNumeroRenglones(int numeroRenglones) {
+		this.numeroRenglones = numeroRenglones;
+	}
+
+
+
 	public String generarCancion() {
 		
 		
@@ -62,6 +92,21 @@ public class Crear_cancion {
 		return (int) (Math.random() * (3- 0) + 0);
 	}
 	
+	
+	
+	public String gestionarPropiedades() {
+		
+		Propiedades prop=new Propiedades();
+		
+		prop.escribirPropiedades(numeroEstrofas, numeroRenglones);
 
+		
+		return "Se leyeron estas propiedades"+"\n"+prop.leerPropiedades();
+		
+	}
+
+
+
+	
 	
 }
