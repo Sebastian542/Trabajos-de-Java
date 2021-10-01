@@ -152,17 +152,13 @@ public class Crear_cancion {
 		
 		String cancion = null;
 	
-	
-		
 		
 		String estrofa1=generarEstrofa();
-		
-
 		String estrofa2=generarEstrofa();
-		
 		String estrofa3=generarEstrofa();
-		
 		String estrofa4=generarEstrofa();
+		String estrofa5=generarEstrofa();
+		String estrofa6=generarEstrofa();
 		
 		//archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"\nLa estrofa 2 es \n"+estrofa2+"\nLa estrofa 3 es \n"+estrofa3);
 		
@@ -217,7 +213,49 @@ public class Crear_cancion {
 		
 		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"La estrofa 2 es \n"+estrofa2+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4);
 		
-		cancion="La estrofa 1 es \n"+estrofa1+" \n"+"La estrofa 2 es \n"+estrofa2+" \n"+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4;
+		cancion="La estrofa 1 es \n"+estrofa1+" \n"+"La estrofa 2 es \n"+estrofa2+" \n"+" \n"+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4;
+		
+	
+		
+	}
+	
+	if(numeroEstrofas==5) {
+		
+		estrofa1=generarEstrofa();
+		
+		estrofa2=generarEstrofa();
+		
+		estrofa3=generarEstrofa();
+		
+		estrofa4=generarEstrofa();
+		
+		estrofa5=generarEstrofa();
+		
+		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"La estrofa 2 es \n"+estrofa2+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4+"La estrofa 5 es \n"+estrofa5);
+		
+		cancion="La estrofa 1 es \n"+estrofa1+" \n"+"La estrofa 2 es \n"+estrofa2+" \n"+"La estrofa 3 es \n"+estrofa3+" \n"+"La estrofa 4 es \n"+estrofa4+" \n"+"La estrofa 5 es \n"+estrofa5;
+		
+	
+		
+	}
+	
+	if(numeroEstrofas==6) {
+		
+		estrofa1=generarEstrofa();
+		
+		estrofa2=generarEstrofa();
+		
+		estrofa3=generarEstrofa();
+		
+		estrofa4=generarEstrofa();
+		
+		estrofa5=generarEstrofa();
+		
+		estrofa6=generarEstrofa();
+		
+		archivo.escribirArchivo("La estrofa 1 es \n"+estrofa1+"La estrofa 2 es \n"+estrofa2+"La estrofa 3 es \n"+estrofa3+"La estrofa 4 es \n"+estrofa4+"La estrofa 5 es \n"+estrofa5+"La estrofa 6 es \n"+estrofa6);
+		
+		cancion="La estrofa 1 es \n"+estrofa1+" \n"+"La estrofa 2 es \n"+estrofa2+" \n"+"La estrofa 3 es \n"+estrofa3+" \n"+"La estrofa 4 es \n"+estrofa4+" \n"+"La estrofa 5 es \n"+estrofa5+" \n"+"La estrofa 6 es \n"+estrofa6;
 		
 	
 		
