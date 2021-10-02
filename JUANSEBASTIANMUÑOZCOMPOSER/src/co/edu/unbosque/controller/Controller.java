@@ -10,7 +10,7 @@ public class Controller {
 
 	private View gui;
 	
-	private EjemploFile archivo;
+
 	
 	public Controller() {
 		
@@ -19,12 +19,14 @@ public class Controller {
 		
 		c=new Crear_cancion();
 		
-		archivo=new EjemploFile();
+		
 
 		funcionar();
 	}
 
 	private void funcionar() {
+		
+		gui.mostrarResultados("Bienvenido señor usuario a continuacion proporcione las caracteristicas que va a contener su cancion");
 		
 		int numeroEst=gui.pedirDatoEntero("Escriba el numero de estrofas");	
 		int numeroReng=gui.pedirDatoEntero("Escriba el número de frases");	
@@ -32,6 +34,8 @@ public class Controller {
 	  	c.setNumeroEstrofas(numeroEst);
 	
 	  	c.setNumeroRenglones(numeroReng);
+	  	
+	  	gui.mostrarResultados("A continuacion indique donde guardara la cancion");
 
         gui.mostrarResultados(c.generarCancion());
 		

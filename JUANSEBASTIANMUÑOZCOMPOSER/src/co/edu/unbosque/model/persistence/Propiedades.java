@@ -21,7 +21,7 @@ public class Propiedades {
 			
 			prop.setProperty("numeroFrases", numEst);
 		  
-			prop.setProperty("numeroRenglones", numReng);
+			prop.setProperty("numeroEstrofas", numReng);
 
 			prop.store(new FileOutputStream(archivoprop),null);
 			

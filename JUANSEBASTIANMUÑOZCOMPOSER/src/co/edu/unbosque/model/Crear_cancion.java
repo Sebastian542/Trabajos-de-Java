@@ -23,8 +23,8 @@ public class Crear_cancion {
 
 
 
-	public void setNumeroEstrofas(int numeroEstrofas) {
-		this.numeroEstrofas = numeroEstrofas;
+	public int setNumeroEstrofas(int numeroEstrofas) {
+		return this.numeroEstrofas = numeroEstrofas;
 	}
 
 
@@ -35,8 +35,8 @@ public class Crear_cancion {
 
 
 
-	public void setNumeroRenglones(int numeroRenglones) {
-		this.numeroRenglones = numeroRenglones;
+	public int setNumeroRenglones(int numeroRenglones) {
+		return this.numeroRenglones = numeroRenglones;
 	}
 
 	
