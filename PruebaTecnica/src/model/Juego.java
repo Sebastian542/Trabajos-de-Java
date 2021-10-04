@@ -57,7 +57,7 @@ public class Juego {
 		
 		aleatorio=generarAleatorio();
 		
-		System.out.println(aleatorio);
+		
 		
 		if(aleatorio==0) {
 			
@@ -177,7 +177,6 @@ public class Juego {
 		respuestaUsuario=gui.pedirDato(opciones);
 		String b="B";
 		
-		System.out.println(respuestaUsuario);
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -206,7 +205,7 @@ public class Juego {
 		respuestaUsuario=gui.pedirDato(opciones);
 		String b="B";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -235,7 +234,7 @@ public class Juego {
 		respuestaUsuario=gui.pedirDato(opciones);
 		String b="C";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -281,7 +280,7 @@ return puntuacion;
 		aleatorio=generarAleatorio();
 		
 		System.out.println(aleatorio);
-		
+
 		if(aleatorio==0) {
 			
 			  preguntasFaciles[0] = "Color de la esperanza : \n";
@@ -458,7 +457,7 @@ if(aleatorio==3) {
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="A";
 		
-		System.out.println(respuestaUsuario);
+	
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -494,7 +493,6 @@ return puntuacion;
 		
 		aleatorio=generarAleatorio();
 		
-		System.out.println(aleatorio);
 		
 		if(aleatorio==0) {
 			
@@ -611,7 +609,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="A";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -640,7 +638,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="B";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -669,7 +667,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="A";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -698,7 +696,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="A";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -725,7 +723,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="B";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -753,7 +751,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="D";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -781,7 +779,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="A";
 		
-		System.out.println(respuestaUsuario);
+		
 		
 		if(respuestaUsuario.equals(b) ){
 			
@@ -809,7 +807,7 @@ return puntuacion;
 		respuestaUsuario=gui.pedirDato(opcion);
 		String b="D";
 		
-		System.out.println(respuestaUsuario);
+	
 		
 		if(respuestaUsuario.equals(b) ){
 			
