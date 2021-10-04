@@ -19,6 +19,7 @@ public class Juego {
 
 
 
+	
 	public int generarAleatorio() {
 		
 		return (int) (Math.random() * (maximo- 0) + 0);
@@ -49,7 +50,7 @@ public class Juego {
 	
 	
 	
-	public int categoriaFacil() {
+	public String categoriaFacil() {
 
 		maximo=7;
 		
@@ -69,14 +70,16 @@ public class Juego {
 				
 				if(respuestaUsuario.equals(b) ){
 
-					puntuacion=puntuacion+10;		
+					puntuacion=puntuacion+10;	
+					
+					
 				}else {
 								
 				gui.mostrarResultados("Señor usuario perdio el juego");
 				
 				System.exit(0);
+			
 				
-				return puntuacion=0;
 				
 			
 			}
@@ -180,10 +183,9 @@ public class Juego {
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La respuesta es correcta");
+			
 			puntuacion=puntuacion+10;	
 			
-			categoriaMedia();
 			
 		}else {
 						
@@ -209,10 +211,9 @@ public class Juego {
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La respuesta es correcta");
-			puntuacion=puntuacion+10;	
 			
-			//categoriaFacil();
+			puntuacion=puntuacion+10;	
+
 			
 		}else {
 						
@@ -238,7 +239,7 @@ public class Juego {
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La respuesta es correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaFacil();
@@ -253,13 +254,9 @@ public class Juego {
 	   
    }
 		
-	   
-  
-   
 
    
-   
-return puntuacion;
+return "";
 		
 		
 	}
@@ -291,7 +288,7 @@ return puntuacion;
 				
 				if(respuestaUsuario.equals(b) ){
 
-					puntuacion=10;		
+					puntuacion=puntuacion+10;		
 				}else {
 								
 				gui.mostrarResultados("Señor usuario perdio el juego");
@@ -321,7 +318,7 @@ return puntuacion;
 					
 					if(respuestaUsuario.equals(b) ){
 
-						puntuacion=10;		
+						puntuacion=puntuacion+10;		
 					}else {
 									
 					gui.mostrarResultados("Señor usuario perdio el juego");
@@ -347,7 +344,7 @@ if(aleatorio==2) {
 			
 			if(respuestaUsuario.equals(b) ){
 
-				puntuacion=10;		
+				puntuacion=puntuacion+10;		
 			}else {
 							
 			gui.mostrarResultados("Señor usuario perdio el juego");
@@ -372,7 +369,7 @@ if(aleatorio==3) {
 		
 		if(respuestaUsuario.equals(b) ){
 
-			puntuacion=10;		
+			puntuacion=puntuacion+10;		
 		}else {
 						
 		gui.mostrarResultados("Señor usuario perdio el juego");
@@ -401,7 +398,7 @@ if(aleatorio==3) {
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			categoriaMedia();
@@ -431,7 +428,7 @@ if(aleatorio==3) {
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaMedia();
@@ -461,7 +458,7 @@ if(aleatorio==3) {
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaMedia();
@@ -613,7 +610,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -642,7 +639,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+		
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -671,7 +668,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+		
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -700,7 +697,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -727,7 +724,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -755,7 +752,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -783,7 +780,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
@@ -811,7 +808,7 @@ return puntuacion;
 		
 		if(respuestaUsuario.equals(b) ){
 			
-			gui.mostrarResultados("La rputa  correcta");
+			
 			puntuacion=puntuacion+10;	
 			
 			//categoriaDificiles();
