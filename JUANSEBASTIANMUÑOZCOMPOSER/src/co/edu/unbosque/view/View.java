@@ -8,9 +8,9 @@ public class View {
 		JOptionPane.showMessageDialog(null, dato);
 	}
 	
-	public String pedirDato(String mensaje) {
+	public String pedirDato() {
 		String dato = "";
-		dato = JOptionPane.showInputDialog(null,mensaje);
+		dato = JOptionPane.showInputDialog(null);
 		return dato;
 	}
 	
