@@ -1,16 +1,17 @@
 package co.edu.unbosque.controller;
 
-import co.edu.unbosque.model.ClaseX;
+
+import co.edu.unbosque.model.Fachada;
 import co.edu.unbosque.view.View;
 
 public class Controller {
 	
-	private ClaseX m;
+	private Fachada f;
 	private View gui;
 	
 	public Controller() {
-		m = new ClaseX();
+		f = new Fachada();
 		gui = new View();
-		gui.mostrarResultados(m.procesarDato(gui.pedirDato()));
+		//gui.mostrarResultados(m.procesarDato(gui.pedirDato()));
 	}
 }

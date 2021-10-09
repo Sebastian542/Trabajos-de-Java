@@ -1,6 +1,6 @@
 package co.edu.unbosque.model;
 
-public class Superman extends Kryptonian implements Flyer {
+public class Superman extends Animal implements Flyer {
 
 	
 	public String leapBuilding() {
@@ -11,35 +11,33 @@ public class Superman extends Kryptonian implements Flyer {
 	
 	public String stopBullet() {
 		
-		return null;
+		return "Soy superman y no puedo detener las balas";
 
 	}
 	
 	
 	public String takeOff() {
 		
-		return null;
+		return "Soy superman y puedo despegar";
 	}
 
 	
 	public String comer() {
-		
-		 this.comer();
-		
-		return "Soy animal y como";
+
+		return "Soy Superman y como";
 	}
 
 	
 
 	public String land() {
 		
-		return null;
+		return "Soy Superman y vivo en la tierra";
 	}
 	
 
 	public String fly() {
 		
-		return null;
+		return "Soy Superman y puedo volar";
 	}
 	
 	

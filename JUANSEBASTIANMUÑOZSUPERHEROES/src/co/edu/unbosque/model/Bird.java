@@ -4,43 +4,41 @@ public class Bird extends Animal implements Flyer {
 
 	
 	public String takeOff() {
+
+		return "Soy ave y despego";
 	
-		return null;
 	}
 	
-	public String builtNest() {
+	public String buildNest() {
 		
-		return null;
+		return "Soy ave y tengo un nido";
 
 		
 	}
 	
 	public String layEggs() {
 		
-		return null;
-		
+		return 	"Soy ave y pongo huevos";
 		
 	}
 	
 	
 	
 	public String comer() {
-		
-		 this.comer();
-		
-		return "Soy animal y como";
+
+		return "Soy ave y como";
 	}
 
 
 	public String land() {
 		
-		return null;
+		return "Soy ave y vivo en la tierra";
 	}
 
 
 	public String fly() {
 		
-		return null;
+		return "Soy ave y puedo volar";
 	}
 
 }
