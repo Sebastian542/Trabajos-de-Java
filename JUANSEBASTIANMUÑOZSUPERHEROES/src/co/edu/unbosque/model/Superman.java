@@ -5,7 +5,7 @@ public class Superman extends Animal implements Flyer {
 	
 	public String leapBuilding() {
 		
-		return null;
+		return "Soy superman y puedo volar entre edificios";
 
 	}
 	
