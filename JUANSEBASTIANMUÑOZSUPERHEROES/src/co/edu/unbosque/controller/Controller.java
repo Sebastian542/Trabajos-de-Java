@@ -13,5 +13,10 @@ public class Controller {
 		f = new Fachada();
 		gui = new View();
 		//gui.mostrarResultados(m.procesarDato(gui.pedirDato()));
+	gui.mostrarResultados(f.funcionar());
+	
+	//f.funcionar();
+	
+	
 	}
 }

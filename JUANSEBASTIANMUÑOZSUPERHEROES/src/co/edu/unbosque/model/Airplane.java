@@ -1,16 +1,22 @@
 package co.edu.unbosque.model;
 
-public class Airplane extends Vehicle implements Flyer{
+public class Airplane extends Vehicle {
 
-
-	public double tamaño() {
-		
-		return this.altura=3;
-	}
+	protected String modeloHelicoptero;
 	
+
+
+
+
+
+
+
+
 	public String takeOff() {
+
 	
-		return "El vehiculo de tipo airplane puede despegar";
+
+		return "El modelo del helicoptero es";
 	}
 
 
@@ -19,7 +25,6 @@ public class Airplane extends Vehicle implements Flyer{
 	
 		return "El vehiculo de tipo airplane vuela sobre la aire";
 	}
-
 
 	public String fly() {
 
