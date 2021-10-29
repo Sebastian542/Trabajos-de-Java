@@ -12,7 +12,7 @@ public class Numero {
 	}
 	
 	public String obtenerNumeroA() {
-		return "El numero es : "+ numero + "\n"  ;
+		return "El numero es modificado desde git : "+ numero + "\n"  ;
 	}
 
 	public String obtenerNumeroB() {
