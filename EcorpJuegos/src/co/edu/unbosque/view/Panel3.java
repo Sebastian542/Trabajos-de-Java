@@ -8,6 +8,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import co.edu.unbosque.controller.Controller;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 
@@ -22,8 +24,9 @@ public class Panel3 extends JPanel {
 	
 	/**
 	 * Create the panel.
+	 * @param control 
 	 */
-	public Panel3() {
+	public Panel3(Controller control) {
 		setLayout(new GridLayout(2,2));
 		TitledBorder border = BorderFactory.createTitledBorder("Partida");
 		border.setTitleColor(Color.BLACK);

@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import co.edu.unbosque.controller.Controller;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 
@@ -19,7 +21,7 @@ public class Panel1 extends JPanel {
 	private JButton butConvertir;
 	public static final String CONVERTIR = "Convertir";
 	
-	public Panel1() {
+	public Panel1(Controller control) {
 		setLayout( new GridLayout(2,2) );//se define el grid de 2x2
 		TitledBorder border = BorderFactory.createTitledBorder("Datos de Entrada");
 		border.setTitleColor(Color.BLACK);

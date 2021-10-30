@@ -11,22 +11,31 @@ import co.edu.unbosque.view.View;
 
 public class Controller implements ActionListener{
 
-	private Panel2 p2;
+
 	private ClaseX m;
 	private View gui;
 	
 	public Controller() {
 		m = new ClaseX();
+		
+		
+		//p2 = new Panel2(this);
+		//p2.setVisible(true);	
+		
+		
 		gui = new View(this);
-
 		gui.setVisible(true);
+		
+			
+		
+		
 		funcionar();
 		
 	}
 	
 	public void funcionar() {
 		
-		
+	
 
 	}
 	
@@ -35,14 +44,13 @@ public class Controller implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent evento) {
-		// TODO Auto-generated method stub
+	
 		
+		if (evento.getActionCommand().equals(gui.getPanel1)) {
+			String resultado = m.procesarDato(gui.getPanel1().getTxtNumero().getText());
+			String resultado1 = m.getY().procesarDatoClaseY(gui.getPanel1().getTxtNumero().getText());
+			gui.getPanelResultados().getTxtMonto().setText(resultado1);
 		
-		
-		//if (evento.getActionCommand().equals(gui.getPanelEntrada().CONVERTIR)) {
-			//String resultado = m.procesarDato(gui.getPanelEntrada().getTxtNumero().getText());
-			//String resultado1 = m.getY().procesarDatoClaseY(gui.getPanelEntrada().getTxtNumero().getText());
-			//gui.getPanelResultados().getTxtMonto().setText(resultado1);
-		//}
+		}
 	}
 }

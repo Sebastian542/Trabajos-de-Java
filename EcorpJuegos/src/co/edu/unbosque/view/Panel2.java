@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import co.edu.unbosque.controller.Controller;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JList;
@@ -23,8 +25,12 @@ public class Panel2 extends JPanel {
 	private JButton btnNewButton;
 	private JList list;
 	
-	public Panel2() {
+	public Panel2(Controller control) {
+		
 		setLayout( new GridLayout(2,2) );//se define el grid de 2x2
+		setSize(500,400); //tamaño en ancho y alto en pixeles
+	
+		
 		TitledBorder border = BorderFactory.createTitledBorder("Datos de Entrada");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
