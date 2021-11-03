@@ -27,21 +27,25 @@ public class Panel4 extends JPanel {
 	
 	public Panel4(Controller control) {
 		setLayout(new GridLayout(2, 2));
-		TitledBorder border = BorderFactory.createTitledBorder("Sistema de Información de Juegos");
+		TitledBorder border = BorderFactory.createTitledBorder("Sistema de Informacion de Juegos");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
 		
 		butjugadores = new JButton("Jugadores");
 		butjugadores.setActionCommand(JUGADORES);
+		add(butjugadores);
 		
 		butjuegos = new JButton("Juegos");
 		butjuegos.setActionCommand(JUEGOS);
+		add(butjuegos);
 		
 		butpartidas = new JButton("Partidas");
 		butpartidas.setActionCommand(PARTIDAS);
+		add(butpartidas);
 		
 		buttorneos = new JButton("Torneos");
 		buttorneos.setActionCommand(TORNEOS);
+		add(buttorneos);
 	}
 
 	public JButton getButjugadores() {
