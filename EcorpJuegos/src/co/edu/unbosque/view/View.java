@@ -46,12 +46,12 @@ public class View extends JFrame{
 
 		
 		p3 = new Panel3(control);
-		add(p3);
+		add(p3,BorderLayout.SOUTH);
 		
 
 
-		//p4 = new Panel4(control);
-	    //add(p4,BorderLayout.NORTH);
+		p4 = new Panel4(control);
+	   add(p4);
 		
 
 		
