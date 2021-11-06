@@ -17,10 +17,15 @@ import java.awt.Toolkit;
 public class IngresarDatos extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField nombre;
+	private JTextField edad;
+	private JTextField genero;
+	private JTextField puntos;
+	private JButton butEscribir;
+	private JButton butLeer;
+
+	public static final String ESCRIBIR = "Escribir";
+	public static final String LEER = "Leer";
 
 	/**
 	 * Launch the application.
@@ -73,32 +78,103 @@ public class IngresarDatos extends JFrame {
 		lblNewLabel_3.setBounds(66, 170, 46, 14);
 		contentPane.add(lblNewLabel_3);
 		
-		textField = new JTextField();
-		textField.setBounds(155, 43, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		nombre = new JTextField();
+		nombre.setBounds(155, 43, 86, 20);
+		contentPane.add(nombre);
+		nombre.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(155, 81, 86, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		edad = new JTextField();
+		edad.setBounds(155, 81, 86, 20);
+		contentPane.add(edad);
+		edad.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(155, 121, 86, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		genero = new JTextField();
+		genero.setBounds(155, 121, 86, 20);
+		contentPane.add(genero);
+		genero.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(155, 167, 86, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		puntos = new JTextField();
+		puntos.setBounds(155, 167, 86, 20);
+		contentPane.add(puntos);
+		puntos.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Leer");
-		btnNewButton.setBounds(66, 227, 89, 23);
-		contentPane.add(btnNewButton);
+		JButton butLeer = new JButton("Leer");
+		butLeer.setBounds(66, 227, 89, 23);
+		contentPane.add(butLeer);
+		butLeer.setActionCommand(LEER);
 		
-		JButton btnNewButton_1 = new JButton("Escribir");
-		btnNewButton_1.setBounds(245, 227, 89, 23);
-		contentPane.add(btnNewButton_1);
+	    butEscribir = new JButton("Escribir");
+		butEscribir.setBounds(245, 227, 89, 23);
+		contentPane.add(butEscribir);
+	
+		butEscribir.setActionCommand(ESCRIBIR);
+		
+		
+
 	}
+
+	public JTextField getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(JTextField nombre) {
+		this.nombre = nombre;
+	}
+
+	public JTextField getEdad() {
+		return edad;
+	}
+
+	public void setEdad(JTextField edad) {
+		this.edad = edad;
+	}
+
+	public JTextField getGenero() {
+		return genero;
+	}
+
+	public void setGenero(JTextField genero) {
+		this.genero = genero;
+	}
+
+	public JTextField getPuntos() {
+		return puntos;
+	}
+
+	public void setPuntos(JTextField puntos) {
+		this.puntos = puntos;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	public void setButEscribir(JButton butEscribir) {
+		this.butEscribir = butEscribir;
+	}
+	
+	
+	public static String getButEscribir() {
+		return ESCRIBIR;
+	}
+	
+	
+	public void setButLeer(JButton butLeer) {
+		this.butLeer = butLeer;
+	}
+	
+	public static String getLeer() {
+		return LEER;
+	}
+	
+	
+	
+	
+	
+	
 }

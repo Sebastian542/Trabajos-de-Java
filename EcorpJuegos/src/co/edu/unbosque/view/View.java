@@ -8,15 +8,16 @@ public class View extends JFrame{
 
 	//Constante generada por Eclipse  
 	private static final long serialVersionUID = 1L;
-
-	private IngresarDatos ingresar;
+	
 	private Panel1 p1;
 	private Panel2 p2;
 	private Panel3 p3;
 	private Panel4 p4;
 	
+	
+	private IngresarDatos ingresarDatos;
 	//private PanelEntrada panelEntrada; //Se declara un objeto de tipo PanelEntrada
-	//private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
+	private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
 
 	public View(Controller control) {
 		
@@ -32,8 +33,29 @@ public class View extends JFrame{
 		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
 		setLayout( new BorderLayout() );
 			
-		ingresar= new IngresarDatos(control);
-		add(ingresar,BorderLayout.NORTH);
+		ingresarDatos= new IngresarDatos(control);
+		add(ingresarDatos,BorderLayout.NORTH);
+		
+
+		
+		
+		panelResultados = new PanelResultados();
+		add(panelResultados,BorderLayout.CENTER);
+		
+		
+		//IngresarDatos.getButEscribir().addActionListener(control);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		//Se agrega al layout en la parte NORTH, el panel de entrada definido
@@ -70,6 +92,17 @@ public class View extends JFrame{
 		//panelEntrada.getButConvertir().addActionListener(control);
 	}
 
+	public IngresarDatos getIngresarDatos() {
+		return ingresarDatos;
+	}
+
+	public void setIngresarDatos(IngresarDatos ingresarDatos) {
+		this.ingresarDatos = ingresarDatos;
+	}
+
+	
+	
+	
 	
 	/*
 	public PanelEntrada getPanelEntrada() {
@@ -79,6 +112,7 @@ public class View extends JFrame{
 	public void setPanelEntrada(PanelEntrada panelEntrada) {
 		this.panelEntrada = panelEntrada;
 	}
+		*/
 
 	public PanelResultados getPanelResultados() {
 		return panelResultados;
@@ -88,6 +122,6 @@ public class View extends JFrame{
 		this.panelResultados = panelResultados;
 	}
 	
-	*/
+	
 	
 }
