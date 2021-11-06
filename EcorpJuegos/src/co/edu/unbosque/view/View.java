@@ -9,6 +9,7 @@ public class View extends JFrame{
 	//Constante generada por Eclipse  
 	private static final long serialVersionUID = 1L;
 
+	private IngresarDatos ingresar;
 	private Panel1 p1;
 	private Panel2 p2;
 	private Panel3 p3;
@@ -31,16 +32,21 @@ public class View extends JFrame{
 		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
 		setLayout( new BorderLayout() );
 			
+		ingresar= new IngresarDatos(control);
+		add(ingresar,BorderLayout.NORTH);
 		
 		
 		//Se agrega al layout en la parte NORTH, el panel de entrada definido
 		//
 		
+		
+		
+		/*
 		p1 = new Panel1(control);
 		add(p1,BorderLayout.NORTH);
 		
 		
-		p2 = new Panel2(control);
+	    p2 = new Panel2(control);
 		add(p2,BorderLayout.NORTH);
 		
 
@@ -53,7 +59,7 @@ public class View extends JFrame{
 		p4 = new Panel4(control);
 	   add(p4);
 		
-
+		*/
 		
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		
