@@ -22,13 +22,13 @@ public class View extends JFrame{
 
 	public View(Controller control) {
 		
-		// DefiniciÛn de los par·metros b·sicos de la ventana principal
+		// Definici√≥n de los par√°metros b√°sicos de la ventana principal
 		
-		setSize(600,400); //tamaÒo en ancho y alto en pixeles
-		setResizable(true); //Se puede cambiar el tamaÒo de la ventana?
+		setSize(600,400); //tama√±o en ancho y alto en pixeles
+		setResizable(true); //Se puede cambiar el tama√±o de la ventana?
 		
-		setTitle("TÌtulo de la Ventana Principal MVC"); //tÏtulo de la ventana
-		setDefaultCloseOperation(EXIT_ON_CLOSE);//quÈ debe hacer si cierra la ventana
+		setTitle("T√≠tulo de la Ventana Principal MVC"); //t√¨tulo de la ventana
+		setDefaultCloseOperation(EXIT_ON_CLOSE);//qu√© debe hacer si cierra la ventana
 		setLocationRelativeTo(null); //coloca la ventana al centro de la pantalla
 		
 		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
@@ -37,31 +37,17 @@ public class View extends JFrame{
 		//IngresarDatos.getButEscribir().addActionListener(control);
 		
 		//Se agrega al layout en la parte NORTH, el panel de entrada definido
-		//
 
-		//p1 = new Panel1(control);
-		//add(p1,BorderLayout.CENTER);
-		//add(p1);
-		//p2 = new Panel2(control);
-		//add(p2,BorderLayout.NORTH);
+		p1 = new Panel1(control);
 
-	    p2 = new Panel2(control);
-		add(p2,BorderLayout.CENTER);
-		//add(p2);
-
-		//p3 = new Panel3(control);
-		//add(p3,BorderLayout.SOUTH);
+	    	p2 = new Panel2(control);
+		add(p2,BorderLayout.CENTER);	
 
 		p3 = new Panel3(control);
-		//add(p3,BorderLayout.WEST);
 		add(p3,BorderLayout.CENTER);
-
-		//p4 = new Panel4(control);
-	   //add(p4);
 
 		p4 = new Panel4(control);
 		add(p4,BorderLayout.CENTER);
-		add(p4);
 
 	   
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
@@ -69,9 +55,8 @@ public class View extends JFrame{
 		//se agrega al boton ActionListener del objeto de Controlador
 		
 		p4.getButJugadores().addActionListener(control);
-	    p4.getButJuegos().addActionListener(control);
-	    p4.getButPartidas().addActionListener(control);
-	    //p4.getButTorneos().addActionListener(control);
+	    	p4.getButJuegos().addActionListener(control);
+	    	p4.getButPartidas().addActionListener(control);
 	}
 
 
