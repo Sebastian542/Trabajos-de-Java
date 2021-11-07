@@ -61,25 +61,35 @@ public class View extends JFrame{
 		
 		
 		
-		p1 = new Panel1(control);
-		add(p1,BorderLayout.NORTH);
+		//p1 = new Panel1(control);
+	//add(p1,BorderLayout.NORTH);
 		
 		
+
+		//p2 = new Panel2(control);
+		//add(p2,BorderLayout.NORTH);
+
 	    p2 = new Panel2(control);
+
 		add(p2,BorderLayout.CENTER);
-		
 
-		
+		add(p2);
+
+		//p3 = new Panel3(control);
+		//add(p3,BorderLayout.SOUTH);
+
 		p3 = new Panel3(control);
-		add(p3,BorderLayout.WEST);
-		
 
+		add(p3,BorderLayout.WEST);
+
+		add(p3,BorderLayout.CENTER);
+
+		//p4 = new Panel4(control);
+	   //add(p4);
 
 		p4 = new Panel4(control);
 	   add(p4,BorderLayout.SOUTH);
-		
 
-	   
 	   
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		
