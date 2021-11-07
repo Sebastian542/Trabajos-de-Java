@@ -37,6 +37,7 @@ public class Panel1 extends JPanel {
 		add(new JLabel(""));
 		add(new JLabel(""));
 		add(butConvertir);
+	
 	}
 	
 	public JLabel getLabEntrada() {
