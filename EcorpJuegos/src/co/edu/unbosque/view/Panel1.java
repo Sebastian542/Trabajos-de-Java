@@ -68,4 +68,5 @@ public class Panel1 extends JPanel {
 	public static String getConvertir() {
 		return CONVERTIR;
 	}
+// }
 }
