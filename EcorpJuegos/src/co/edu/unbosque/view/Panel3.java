@@ -27,8 +27,8 @@ public class Panel3 extends JPanel {
 	 * @param control 
 	 */
 	public Panel3(Controller control) {
+		setVisible(false);
 		setLayout(new GridLayout(2,2));
-	
 		TitledBorder border = BorderFactory.createTitledBorder("Partida");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
@@ -55,4 +55,37 @@ public class Panel3 extends JPanel {
 	public static String getConvertir() {
 		return CONVERTIR;
 	}
+	
+	
+	public JLabel getJugador1() {
+		return jugador1;
+	}
+	public void setJugador1(JLabel jugador1) {
+		this.jugador1 = jugador1;
+	}
+	public JLabel getJugador2() {
+		return jugador2;
+	}
+	public void setJugador2(JLabel jugador2) {
+		this.jugador2 = jugador2;
+	}
+	public JLabel getPuntaje1() {
+		return puntaje1;
+	}
+	public void setPuntaje1(JLabel puntaje1) {
+		this.puntaje1 = puntaje1;
+	}
+	public JLabel getPuntaje2() {
+		return puntaje2;
+	}
+	public void setPuntaje2(JLabel puntaje2) {
+		this.puntaje2 = puntaje2;
+	}
+	public JList getListaPartida() {
+		return listaPartida;
+	}
+	public void setListaPartida(JList listaPartida) {
+		this.listaPartida = listaPartida;
+	}
+	
 }

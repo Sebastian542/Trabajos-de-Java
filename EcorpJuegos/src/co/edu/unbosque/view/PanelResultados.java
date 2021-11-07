@@ -13,9 +13,10 @@ public class PanelResultados extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private JLabel labResultado;
 	private JTextField txtMonto;
-
+ 
 	public PanelResultados() {
 		
+		setVisible(false);
 		setLayout( new GridLayout(2,1) );
 		TitledBorder border = BorderFactory.createTitledBorder("Resultados");
 		border.setTitleColor(Color.BLACK);

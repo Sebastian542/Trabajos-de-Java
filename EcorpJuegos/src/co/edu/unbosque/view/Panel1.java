@@ -16,17 +16,26 @@ import java.awt.GridBagConstraints;
 import javax.swing.JLabel;
 import java.awt.Insets;
 public class Panel1 extends  JDialog {
-	
+
+	private static final long serialVersionUID = 1L;
+
 
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+
+	public static final String OK = "OK";
+	public static final String CANCEL = "Cancel";
+	
+
 	
 	public Panel1(Controller control) {
 		
-	
+
+		setVisible(false);
+
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -115,17 +124,27 @@ public class Panel1 extends  JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("OK");
-				okButton.setActionCommand("OK");
+				okButton.setActionCommand(OK);
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
 			}
 			{
 				JButton cancelButton = new JButton("Cancel");
-				cancelButton.setActionCommand("Cancel");
+				cancelButton.setActionCommand(CANCEL);
 				buttonPane.add(cancelButton);
 			}
 		}
 	}
+
+	
+	public static String getOk() {
+		return OK;
+	}
+
+	public static String getCancel() {
+		return CANCEL;
+	}
+
 
 }
 
