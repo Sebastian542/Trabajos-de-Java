@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 public class PanelResultados extends JPanel{
-
+	
 	private static final long serialVersionUID = 1L;
 	private JLabel labResultado;
 	private JTextField txtMonto;
