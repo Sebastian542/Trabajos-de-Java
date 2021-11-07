@@ -9,6 +9,8 @@ import co.edu.unbosque.controller.Controller;
 
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Panel4 extends JPanel {
 	private JButton  butjugadores;
@@ -26,6 +28,7 @@ public class Panel4 extends JPanel {
 	 */
 	
 	public Panel4(Controller control) {
+		setBackground(Color.GREEN);
 		setLayout(new GridLayout(2, 2));
 
 		TitledBorder border = BorderFactory.createTitledBorder("Sistema de Informacion de Juegos");
@@ -33,6 +36,10 @@ public class Panel4 extends JPanel {
 		setBorder( border );
 		
 		butjugadores = new JButton("Jugadores");
+		butjugadores.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		butjugadores.setActionCommand(JUGADORES);
 		add(butjugadores);
 		
