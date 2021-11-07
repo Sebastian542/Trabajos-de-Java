@@ -20,6 +20,8 @@ public class View extends JFrame{
 	//private PanelEntrada panelEntrada; //Se declara un objeto de tipo PanelEntrada
 	private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
 
+	private PanelResultados panel4;
+
 	public View(Controller control) {
 		
 		// Definición de los parámetros básicos de la ventana principal
@@ -33,63 +35,11 @@ public class View extends JFrame{
 		
 		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
 		setLayout( new BorderLayout() );
-			
-	
-
-		
-		
-
-		
-		//IngresarDatos.getButEscribir().addActionListener(control);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		//Se agrega al layout en la parte NORTH, el panel de entrada definido
-		//
-		
-		
-		
-		
-		//p1 = new Panel1(control);
-	//add(p1,BorderLayout.NORTH);
-		
-		
-
-		//p2 = new Panel2(control);
-		//add(p2,BorderLayout.NORTH);
-
-	    p2 = new Panel2(control);
-
-		add(p2,BorderLayout.CENTER);
-
-		add(p2);
-
-		//p3 = new Panel3(control);
-		//add(p3,BorderLayout.SOUTH);
-
-		p3 = new Panel3(control);
-
-		add(p3,BorderLayout.WEST);
-
-		add(p3,BorderLayout.CENTER);
-
-		//p4 = new Panel4(control);
-	   //add(p4);
 
 		p4 = new Panel4(control);
-	   add(p4,BorderLayout.SOUTH);
+	    add(p4);
 
+	   
 	   
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		
@@ -102,18 +52,13 @@ public class View extends JFrame{
 
 
 	
-	
-	
-	
 
 
-	public PanelResultados getPanelResultados() {
-		return panelResultados;
-	}
 
-	public void setPanelResultados(PanelResultados panelResultados) {
-		this.panelResultados = panelResultados;
-	}
+
+
+
+
 	
 	
 	
