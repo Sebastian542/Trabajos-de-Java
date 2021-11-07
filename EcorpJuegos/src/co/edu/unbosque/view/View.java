@@ -24,13 +24,13 @@ public class View extends JFrame{
 
 	public View(Controller control) {
 		
-		// Definici√≥n de los par√°metros b√°sicos de la ventana principal
+		// DefiniciÛn de los par·metros b·sicos de la ventana principal
 		
-		setSize(600,400); //tama√±o en ancho y alto en pixeles
-		setResizable(true); //Se puede cambiar el tama√±o de la ventana?
+		setSize(600,400); //tamaÒo en ancho y alto en pixeles
+		setResizable(true); //Se puede cambiar el tamaÒo de la ventana?
 		
-		setTitle("Ventana principal"); //t√¨tulo de la ventana
-		setDefaultCloseOperation(EXIT_ON_CLOSE);//qu√© debe hacer si cierra la ventana
+		setTitle("Ventana principal"); //tÏtulo de la ventana
+		setDefaultCloseOperation(EXIT_ON_CLOSE);//quÈ debe hacer si cierra la ventana
 		setLocationRelativeTo(null); //coloca la ventana al centro de la pantalla
 		
 		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.

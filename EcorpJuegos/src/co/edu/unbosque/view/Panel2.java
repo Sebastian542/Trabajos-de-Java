@@ -31,8 +31,7 @@ public class Panel2 extends JPanel {
 		setVisible(false);
 		setBackground(Color.BLACK);
 		setSize(700,658); //tamaño en ancho y alto en pixeles
-		
-		
+
 
 		setLayout(null);
 		
