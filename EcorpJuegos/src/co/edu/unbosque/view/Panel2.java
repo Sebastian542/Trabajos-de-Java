@@ -6,7 +6,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
-
 import co.edu.unbosque.controller.Controller;
 
 import java.awt.Color;
@@ -35,7 +34,7 @@ public class Panel2 extends JPanel {
 	public Panel2(Controller control) {
 		setVisible(false);
 		setBackground(new Color(72, 209, 204));
-		setSize(423,400); //tamaño en ancho y alto en pixeles
+		setSize(423,400); //tamaÃ±o en ancho y alto en pixeles
 		
 		TitledBorder border = BorderFactory.createTitledBorder("Datos de Entrada");
 		border.setTitleColor(Color.BLACK);
