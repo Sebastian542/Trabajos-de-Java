@@ -37,13 +37,11 @@ public class View extends JFrame{
 		setLayout( new BorderLayout() );
 
 
-		//IngresarDatos.getButEscribir().addActionListener(control);
-		
-		//Se agrega al layout en la parte NORTH, el panel de entrada definido
+	
 
 		p1 = new Panel1(control);
 
-	    	p2 = new Panel2(control);
+	    p2 = new Panel2(control);
 		add(p2,BorderLayout.CENTER);	
 
 		p3 = new Panel3(control);
