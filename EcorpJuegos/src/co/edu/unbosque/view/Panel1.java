@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import java.awt.GridBagConstraints;
 import javax.swing.JLabel;
 import java.awt.Insets;
+import java.awt.Font;
+import java.awt.Color;
 public class Panel1 extends  JDialog {
 
 	private static final long serialVersionUID = 1L;
@@ -34,106 +36,80 @@ public class Panel1 extends  JDialog {
 
 	
 	public Panel1(Controller control) {
+		getContentPane().setBackground(Color.BLACK);
 		
 
 		setVisible(false);
 
-		setBounds(100, 100, 450, 300);
-		getContentPane().setLayout(new BorderLayout());
+		setBounds(100, 100, 331, 289);
+		getContentPane().setLayout(null);
+		contentPanel.setBackground(Color.BLACK);
+		contentPanel.setBounds(0, 0, 315, 250);
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().add(contentPanel, BorderLayout.CENTER);
-		GridBagLayout gbl_contentPanel = new GridBagLayout();
-		gbl_contentPanel.columnWidths = new int[]{0, 0, 0, 0};
-		gbl_contentPanel.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_contentPanel.columnWeights = new double[]{0.0, 0.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		contentPanel.setLayout(gbl_contentPanel);
+		getContentPane().add(contentPanel);
+		contentPanel.setLayout(null);
 		{
 			JLabel lblNewLabel = new JLabel("Nombre");
-			GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-			gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
-			gbc_lblNewLabel.gridx = 0;
-			gbc_lblNewLabel.gridy = 0;
-			contentPanel.add(lblNewLabel, gbc_lblNewLabel);
+			lblNewLabel.setForeground(Color.WHITE);
+			lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+			lblNewLabel.setBounds(10, 27, 86, 14);
+			contentPanel.add(lblNewLabel);
 		}
 		{
 			textField = new JTextField();
-			GridBagConstraints gbc_textField = new GridBagConstraints();
-			gbc_textField.anchor = GridBagConstraints.WEST;
-			gbc_textField.insets = new Insets(0, 0, 5, 0);
-			gbc_textField.gridx = 2;
-			gbc_textField.gridy = 0;
-			contentPanel.add(textField, gbc_textField);
+			textField.setBounds(75, 25, 86, 20);
+			contentPanel.add(textField);
 			textField.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_1 = new JLabel("Edad");
-			GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
-			gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
-			gbc_lblNewLabel_1.gridx = 0;
-			gbc_lblNewLabel_1.gridy = 2;
-			contentPanel.add(lblNewLabel_1, gbc_lblNewLabel_1);
+			lblNewLabel_1.setForeground(Color.WHITE);
+			lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+			lblNewLabel_1.setBounds(10, 62, 70, 14);
+			contentPanel.add(lblNewLabel_1);
 		}
 		{
 			textField_1 = new JTextField();
-			GridBagConstraints gbc_textField_1 = new GridBagConstraints();
-			gbc_textField_1.anchor = GridBagConstraints.WEST;
-			gbc_textField_1.insets = new Insets(0, 0, 5, 0);
-			gbc_textField_1.gridx = 2;
-			gbc_textField_1.gridy = 2;
-			contentPanel.add(textField_1, gbc_textField_1);
+			textField_1.setBounds(75, 60, 86, 20);
+			contentPanel.add(textField_1);
 			textField_1.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_2 = new JLabel("Genero");
-			GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
-			gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
-			gbc_lblNewLabel_2.gridx = 0;
-			gbc_lblNewLabel_2.gridy = 4;
-			contentPanel.add(lblNewLabel_2, gbc_lblNewLabel_2);
+			lblNewLabel_2.setForeground(Color.WHITE);
+			lblNewLabel_2.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+			lblNewLabel_2.setBounds(10, 105, 70, 14);
+			contentPanel.add(lblNewLabel_2);
 		}
 		{
 			textField_2 = new JTextField();
-			GridBagConstraints gbc_textField_2 = new GridBagConstraints();
-			gbc_textField_2.anchor = GridBagConstraints.WEST;
-			gbc_textField_2.insets = new Insets(0, 0, 5, 0);
-			gbc_textField_2.gridx = 2;
-			gbc_textField_2.gridy = 4;
-			contentPanel.add(textField_2, gbc_textField_2);
+			textField_2.setBounds(75, 103, 86, 20);
+			contentPanel.add(textField_2);
 			textField_2.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_3 = new JLabel("Puntos");
-			GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
-			gbc_lblNewLabel_3.anchor = GridBagConstraints.NORTH;
-			gbc_lblNewLabel_3.insets = new Insets(0, 0, 0, 5);
-			gbc_lblNewLabel_3.gridx = 0;
-			gbc_lblNewLabel_3.gridy = 6;
-			contentPanel.add(lblNewLabel_3, gbc_lblNewLabel_3);
+			lblNewLabel_3.setForeground(Color.WHITE);
+			lblNewLabel_3.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+			lblNewLabel_3.setBounds(10, 158, 70, 14);
+			contentPanel.add(lblNewLabel_3);
 		}
 		{
 			textField_3 = new JTextField();
-			GridBagConstraints gbc_textField_3 = new GridBagConstraints();
-			gbc_textField_3.anchor = GridBagConstraints.WEST;
-			gbc_textField_3.gridx = 2;
-			gbc_textField_3.gridy = 6;
-			contentPanel.add(textField_3, gbc_textField_3);
+			textField_3.setBounds(75, 156, 86, 20);
+			contentPanel.add(textField_3);
 			textField_3.setColumns(10);
 		}
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBounds(0, 210, 315, 40);
+			contentPanel.add(buttonPane);
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("OK");
 				okButton.setActionCommand(OK);
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
-			}
-			{
-				JButton cancelButton = new JButton("Cancel");
-				cancelButton.setActionCommand(CANCEL);
-				buttonPane.add(cancelButton);
 			}
 			{
 				butVolver = new JButton("Volver");
