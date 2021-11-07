@@ -25,9 +25,11 @@ public class Panel1 extends  JDialog {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JButton butVolver;
 
 	public static final String OK = "OK";
 	public static final String CANCEL = "Cancel";
+	public static final String VOLVER = "Volver";
 	
 
 	
@@ -133,7 +135,13 @@ public class Panel1 extends  JDialog {
 				cancelButton.setActionCommand(CANCEL);
 				buttonPane.add(cancelButton);
 			}
+			{
+				butVolver = new JButton("Volver");
+				butVolver.setActionCommand(VOLVER);
+				buttonPane.add(butVolver);
+			}
 		}
+
 	}
 
 	
@@ -144,7 +152,21 @@ public class Panel1 extends  JDialog {
 	public static String getCancel() {
 		return CANCEL;
 	}
+	
+	public static String getVolver() {
+		return VOLVER;
+	}
 
+
+	public JButton getButVolver() {
+		return butVolver;
+	}
+
+
+	public void setButVolver(JButton butVolver) {
+		this.butVolver = butVolver;
+	}
+	
 
 }
 

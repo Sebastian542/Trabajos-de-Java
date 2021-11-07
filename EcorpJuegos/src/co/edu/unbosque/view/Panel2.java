@@ -9,9 +9,6 @@ import javax.swing.border.TitledBorder;
 import co.edu.unbosque.controller.Controller;
 
 import java.awt.Color;
-import java.awt.GridLayout;
-import javax.swing.JList;
-import javax.swing.SwingConstants;
 
 public class Panel2 extends JPanel {
 	
@@ -22,19 +19,22 @@ public class Panel2 extends JPanel {
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
-	private JButton btnNewButton_1;
-	private JButton btnNewButton_2;
+	private JButton btnNewButton_1;//Escribir
+	private JButton btnNewButton_2;//Leer
+	private JButton btnNewButton_3;//Volver
 	private JTextField puntaje1;
 	private JTextField puntaje2;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
-	public static final String CONVERTIR = "Convertir";
+	public static final String ESCRIBIR = "Escribir";
+	public static final String LEER = "Leer";
+	public static final String VOLVER = "Volver";
 	
 	public Panel2(Controller control) {
 		setVisible(false);
-		setBackground(new Color(72, 209, 204));
-		setSize(423,400); //tamaño en ancho y alto en pixeles
+		setBackground(new Color(89, 172, 166));
+		setSize(600,400); //tamaño en ancho y alto en pixeles
 		
 		TitledBorder border = BorderFactory.createTitledBorder("Datos de Entrada");
 		border.setTitleColor(Color.BLACK);
@@ -50,21 +50,21 @@ public class Panel2 extends JPanel {
 		add(lblNewLabel_2);
 		
 		puntaje1 = new JTextField();
-		puntaje1.setBounds(323, 53, 86, 20);
+		puntaje1.setBounds(423, 53, 86, 20);
 		add(puntaje1);
 		puntaje1.setColumns(10);
 		
 		puntaje2 = new JTextField();
-		puntaje2.setBounds(323, 104, 86, 20);
+		puntaje2.setBounds(423, 104, 86, 20);
 		add(puntaje2);
 		puntaje2.setColumns(10);
 		
-		lblNewLabel_3 = new JLabel("Puntaje");
-		lblNewLabel_3.setBounds(254, 57, 46, 14);
+		lblNewLabel_3 = new JLabel("Puntaje 1");
+		lblNewLabel_3.setBounds(354, 57, 66, 14);
 		add(lblNewLabel_3);
 		
-		lblNewLabel_4 = new JLabel("Puntaje");
-		lblNewLabel_4.setBounds(254, 107, 46, 14);
+		lblNewLabel_4 = new JLabel("Puntaje 2");
+		lblNewLabel_4.setBounds(354, 107, 66, 14);
 		add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("Tipo de juego :");
@@ -73,27 +73,45 @@ public class Panel2 extends JPanel {
 		
 		btnNewButton_1 = new JButton("Escribir");
 		btnNewButton_1.setBounds(323, 226, 89, 23);
+		btnNewButton_1.setActionCommand(ESCRIBIR);
 		add(btnNewButton_1);
 		
 		btnNewButton_2 = new JButton("Leer");
 		btnNewButton_2.setBounds(82, 226, 89, 23);
+		btnNewButton_2.setActionCommand(LEER);
 		add(btnNewButton_2);
 		
-		textField_1 = new JTextField();
+		btnNewButton_3 = new JButton("Volver");
+		btnNewButton_3.setBounds(205, 226, 89, 23);
+		btnNewButton_1.setActionCommand(VOLVER);
+		add(btnNewButton_3);
+		
+		textField_1 = new JTextField();//Tipo de juego
 		textField_1.setBounds(146, 156, 86, 20);
 		add(textField_1);
 		textField_1.setColumns(10);
 		
-		textField_2 = new JTextField();
+		textField_2 = new JTextField();//Jugador 1
 		textField_2.setBounds(122, 54, 86, 20);
 		add(textField_2);
 		textField_2.setColumns(10);
 		
-		textField_3 = new JTextField();
+		textField_3 = new JTextField();//Jugador 2
 		textField_3.setBounds(122, 104, 86, 20);
 		add(textField_3);
 		textField_3.setColumns(10);
 		
+	}
+	public static String getVolver() {
+		return VOLVER;
+	}
+	
+	public static String getLeer() {
+		return LEER;
+	}
+	
+	public static String getEscribir() {
+		return ESCRIBIR;
 	}
 
 	public JLabel getNombreJugador1() {
@@ -160,6 +178,12 @@ public class Panel2 extends JPanel {
 		this.btnNewButton_2 = btnNewButton_2;
 	}
 
+	public JButton getBtnNewButton_3() {
+		return btnNewButton_3;
+	}
+	public void setBtnNewButton_3(JButton btnNewButton_3) {
+		this.btnNewButton_3 = btnNewButton_3;
+	}
 	public JTextField getPuntaje1() {
 		return puntaje1;
 	}

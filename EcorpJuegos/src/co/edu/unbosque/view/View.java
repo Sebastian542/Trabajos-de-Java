@@ -52,7 +52,10 @@ public class View extends JFrame{
 
 	  
 		//se agrega al boton ActionListener del objeto de Controlador
-		
+			p1.getButVolver().addActionListener(control);
+			p2.getBtnNewButton_1().addActionListener(control);
+			p2.getBtnNewButton_2().addActionListener(control);
+			p2.getBtnNewButton_3().addActionListener(control);
 			p4.getButjugadores().addActionListener(control);
 	    	p4.getButjuegos().addActionListener(control);
 	    	p4.getButpartidas().addActionListener(control);
