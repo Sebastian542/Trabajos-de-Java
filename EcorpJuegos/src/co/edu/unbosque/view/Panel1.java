@@ -40,7 +40,7 @@ public class Panel1 extends JPanel {
 	}
 	
 	public JLabel getLabEntrada() {
-		return //labEntrada;
+		return labEntrada;
 	}
 
 	public void setLabEntrada(JLabel labEntrada) {
