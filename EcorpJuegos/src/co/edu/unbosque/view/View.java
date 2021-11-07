@@ -46,7 +46,9 @@ public class View extends JFrame{
 
 		p3 = new Panel3(control);
 		add(p3,BorderLayout.CENTER);
-
+		
+		p4 = new Panel4(control);
+		add(p4,BorderLayout.CENTER);
 
 	  
 		//se agrega al boton ActionListener del objeto de Controlador
