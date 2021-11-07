@@ -27,8 +27,8 @@ public class Panel3 extends JPanel {
 	 * @param control 
 	 */
 	public Panel3(Controller control) {
+		setVisible(false);
 		setLayout(new GridLayout(2,2));
-	
 		TitledBorder border = BorderFactory.createTitledBorder("Partida");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );

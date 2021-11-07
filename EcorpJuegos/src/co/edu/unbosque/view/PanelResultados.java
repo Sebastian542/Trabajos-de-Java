@@ -16,6 +16,7 @@ public class PanelResultados extends JPanel{
 
 	public PanelResultados() {
 		
+		setVisible(false);
 		setLayout( new GridLayout(2,1) );
 		TitledBorder border = BorderFactory.createTitledBorder("Resultados");
 		border.setTitleColor(Color.BLACK);

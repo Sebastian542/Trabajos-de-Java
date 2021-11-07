@@ -1,20 +1,19 @@
 package co.edu.unbosque.view;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
 import co.edu.unbosque.controller.Controller;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 
 public class Panel4 extends JPanel {
-	private JButton  butjugadores;
-	private JButton  butjuegos;
-	private JButton  butpartidas;
-	private JButton  buttorneos;
+	private JButton  butJugadores;
+	private JButton  butJuegos;
+	private JButton  butPartidas;
+	private JButton  butTorneos;
 	public static final String JUGADORES = "Jugadores";
 	public static final String JUEGOS = "Juegos";
 	public static final String PARTIDAS = "Partidas";
@@ -26,75 +25,81 @@ public class Panel4 extends JPanel {
 	 */
 	
 	public Panel4(Controller control) {
-		setLayout(new GridLayout(2, 2));
-
+		setVisible(true);
 		TitledBorder border = BorderFactory.createTitledBorder("Sistema de Informacion de Juegos");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
 		
-		butjugadores = new JButton("Jugadores");
-		butjugadores.setActionCommand(JUGADORES);
-		add(butjugadores);
+		butJugadores = new JButton("Jugadores");
+		butJugadores.setBounds(175, 70, 200, 20);
+		butJugadores.setActionCommand(JUGADORES);
+		add(butJugadores);
 		
-		butjuegos = new JButton("Juegos");
-		butjuegos.setActionCommand(JUEGOS);
-		add(butjuegos);
+		butJuegos = new JButton("Juegos");
+		butJuegos.setBounds(175, 50, 200, 20);
+		butJuegos.setActionCommand(JUEGOS);
+		add(butJuegos);
 		
-		butpartidas = new JButton("Partidas");
-		butpartidas.setActionCommand(PARTIDAS);
-		add(butpartidas);
+		butPartidas = new JButton("Partidas");
+		butPartidas.setBounds(175, 20, 200, 20);
+		butPartidas.setActionCommand(PARTIDAS);
+		add(butPartidas);
 		
-		buttorneos = new JButton("Torneos");
-		buttorneos.setActionCommand(TORNEOS);
-		add(buttorneos);
-	}
-
-	public JButton getButjugadores() {
-		return butjugadores;
-	}
-
-	public void setButjugadores(JButton butjugadores) {
-		this.butjugadores = butjugadores;
-	}
-
-	public JButton getButjuegos() {
-		return butjuegos;
-	}
-
-	public void setButjuegos(JButton butjuegos) {
-		this.butjuegos = butjuegos;
-	}
-
-	public JButton getButpartidas() {
-		return butpartidas;
-	}
-
-	public void setButpartidas(JButton butpartidas) {
-		this.butpartidas = butpartidas;
-	}
-
-	public JButton getButtorneos() {
-		return buttorneos;
-	}
-
-	public void setButtorneos(JButton buttorneos) {
-		this.buttorneos = buttorneos;
+		/*butTorneos = new JButton("Torneos");
+		butTorneos.setBounds(175, 90, 200, 20);
+		butTorneos.setActionCommand(TORNEOS);
+		add(butTorneos);*/
 	}
 
 	public static String getJugadores() {
 		return JUGADORES;
 	}
+	
+	public void setButJugadores(JButton butJugadores) {
+		this.butJugadores = butJugadores;
+	}
+
+	public JButton getButJugadores() {
+		return butJugadores;
+	}
+	
 
 	public static String getJuegos() {
 		return JUEGOS;
 	}
+	
+	public JButton getButJuegos() {
+		return butJuegos;
+	}
+	
+	public void setButJuegos(JButton butJuegos) {
+		this.butJuegos = butJuegos;
+	}
+
 
 	public static String getPartidas() {
 		return PARTIDAS;
 	}
+	
+	public JButton getButPartidas() {
+		return butPartidas;
+	}
 
-	public static String getTorneos() {
+	public void setButPartidas(JButton butPartidas) {
+		this.butPartidas = butPartidas;
+	}
+
+
+	/*public static String getTorneos() {
 		return TORNEOS;
 	}
+
+	public JButton getButTorneos() {
+		return butTorneos;
+	}
+
+	public void setButTorneos(JButton butTorneos) {
+		this.butTorneos = butTorneos;
+	}*/
 	
 }
