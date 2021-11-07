@@ -42,10 +42,7 @@ public class Controller implements ActionListener{
 	
 
 	}
-	
 
-	
-	
 	@Override
 	public void actionPerformed(ActionEvent evento) {
 		if(evento.getActionCommand().equals(gui.getP4().JUGADORES)) {
