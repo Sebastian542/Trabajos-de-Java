@@ -12,6 +12,7 @@ import co.edu.unbosque.controller.Controller;
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JList;
+import javax.swing.SwingConstants;
 
 public class Panel2 extends JPanel {
 
@@ -24,50 +25,83 @@ public class Panel2 extends JPanel {
 	private JLabel lblNewLabel_1;
 	private JButton btnNewButton;
 	private JList list;
+	private JTextField puntaje1;
+	private JTextField puntaje2;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
 	
 	public Panel2(Controller control) {
-		
-		setLayout( new GridLayout(2,2) );//se define el grid de 2x2
 		setSize(500,400); //tamaño en ancho y alto en pixeles
 	
 		
 		TitledBorder border = BorderFactory.createTitledBorder("Datos de Entrada");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
-		nombreJugador1 = new JLabel("El nombre del jugador 1 es :");
-		add(nombreJugador1);
+		setLayout(null);
 		
-		textField = new JTextField();
-		add(textField);
-		textField.setColumns(10);
+		JLabel lblNewLabel_2 = new JLabel("Jugador 1");
+		lblNewLabel_2.setBounds(50, 56, 70, 17);
+		add(lblNewLabel_2);
 		
-		lblNewLabel_1 = new JLabel("Tipo de juego");
-		add(lblNewLabel_1);
+		JLabel lblNewLabel_3 = new JLabel("Jugador 2");
+		lblNewLabel_3.setBounds(50, 106, 70, 17);
+		add(lblNewLabel_3);
 		
+		puntaje1 = new JTextField();
+		puntaje1.setBounds(323, 53, 86, 20);
+		add(puntaje1);
+		puntaje1.setColumns(10);
 		
-		JList listajuegos;
-		String juego[] = { "Cartas", "Mesa", "Ping pong"};
-		listajuegos = new JList( juego );
-
-		list = new JList(juego);
+		puntaje2 = new JTextField();
+		puntaje2.setBounds(323, 104, 86, 20);
+		add(puntaje2);
+		puntaje2.setColumns(10);
 		
-	
-		lblNewLabel = new JLabel("El nombre del jugador 2 es:");
-		add(lblNewLabel);
+		JLabel lblNewLabel_4 = new JLabel("Puntaje");
+		lblNewLabel_4.setBounds(254, 57, 46, 14);
+		add(lblNewLabel_4);
 		
-		textField_1 = new JTextField();
-		add(textField_1);
-		textField_1.setColumns(10);
+		JLabel lblNewLabel_5 = new JLabel("Puntaje");
+		lblNewLabel_5.setBounds(254, 107, 46, 14);
+		add(lblNewLabel_5);
 		
+		JLabel lblNewLabel_6 = new JLabel("Tipo de juego :");
+		lblNewLabel_6.setBounds(50, 162, 86, 31);
+		add(lblNewLabel_6);
 		
+		textField_2 = new JTextField();
+		textField_2.setBounds(146, 167, 86, 20);
+		add(textField_2);
+		textField_2.setColumns(10);
 		
-		btnNewButton = new JButton("Comenzar juego");
-		add(btnNewButton);
+		JButton btnNewButton_1 = new JButton("Escribir");
+		btnNewButton_1.setBounds(323, 226, 89, 23);
+		add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Leer");
+		btnNewButton_2.setBounds(82, 226, 89, 23);
+		add(btnNewButton_2);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(122, 54, 86, 20);
+		add(textField_3);
+		textField_3.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(122, 104, 86, 20);
+		add(textField_4);
+		textField_4.setColumns(10);
+		
 	}
 	
 
 
-	public static String getConvertir() {
-		return CONVERTIR;
+	public static String getEscribir() {
+		return ESCRIBIR;
+	}
+	
+	public static String getLeer() {
+		return LEER;
 	}
 }

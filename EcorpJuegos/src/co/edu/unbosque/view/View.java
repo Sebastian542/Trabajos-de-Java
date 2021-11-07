@@ -8,14 +8,17 @@ public class View extends JFrame{
 
 	//Constante generada por Eclipse  
 	private static final long serialVersionUID = 1L;
-
+	
 	private Panel1 p1;
 	private Panel2 p2;
 	private Panel3 p3;
 	private Panel4 p4;
 	
+
+
+
 	//private PanelEntrada panelEntrada; //Se declara un objeto de tipo PanelEntrada
-	//private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
+	private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
 
 	public View(Controller control) {
 		
@@ -31,30 +34,68 @@ public class View extends JFrame{
 		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
 		setLayout( new BorderLayout() );
 			
+	
+
+		
+		
+
+		
+		//IngresarDatos.getButEscribir().addActionListener(control);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		//Se agrega al layout en la parte NORTH, el panel de entrada definido
 		//
 		
+		
+		
+		
 		p1 = new Panel1(control);
-		add(p1,BorderLayout.NORTH);
+		add(p1);
 		
 		
+<<<<<<< HEAD
 		//p2 = new Panel2(control);
 		//add(p2,BorderLayout.NORTH);
+=======
+	    p2 = new Panel2(control);
+		add(p2);
+>>>>>>> branch 'master' of https://github.com/Sebastian542/Trabajos-de-Java
 		
 
 		
+<<<<<<< HEAD
 		//p3 = new Panel3(control);
 		//add(p3,BorderLayout.SOUTH);
+=======
+		p3 = new Panel3(control);
+		add(p3,BorderLayout.CENTER);
+>>>>>>> branch 'master' of https://github.com/Sebastian542/Trabajos-de-Java
 		
 
 
+<<<<<<< HEAD
 		//p4 = new Panel4(control);
 	   //add(p4);
+=======
+		p4 = new Panel4(control);
+	   add(p4,BorderLayout.SOUTH);
+>>>>>>> branch 'master' of https://github.com/Sebastian542/Trabajos-de-Java
 		
 
-		
+	   
+	   
 		//Se agrega al layout en la parte CENTER, el panel de entrada definido
 		
 		//p3 = new Panel3(control);
@@ -64,15 +105,12 @@ public class View extends JFrame{
 		//panelEntrada.getButConvertir().addActionListener(control);
 	}
 
-	
-	/*
-	public PanelEntrada getPanelEntrada() {
-		return panelEntrada;
-	}
 
-	public void setPanelEntrada(PanelEntrada panelEntrada) {
-		this.panelEntrada = panelEntrada;
-	}
+	
+	
+	
+	
+
 
 	public PanelResultados getPanelResultados() {
 		return panelResultados;
@@ -82,6 +120,6 @@ public class View extends JFrame{
 		this.panelResultados = panelResultados;
 	}
 	
-	*/
+	
 	
 }
