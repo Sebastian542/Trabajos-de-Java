@@ -24,7 +24,7 @@ public class View extends JFrame{
 		
 		// Definición de los parámetros básicos de la ventana principal
 		
-		setSize(500,400); //tamaño en ancho y alto en pixeles
+		setSize(600,400); //tamaño en ancho y alto en pixeles
 		setResizable(true); //Se puede cambiar el tamaño de la ventana?
 		
 		setTitle("Título de la Ventana Principal MVC"); //tìtulo de la ventana
@@ -62,16 +62,16 @@ public class View extends JFrame{
 		
 		
 		p1 = new Panel1(control);
-		add(p1);
+		add(p1,BorderLayout.NORTH);
 		
 		
 	    p2 = new Panel2(control);
-		add(p2);
+		add(p2,BorderLayout.CENTER);
 		
 
 		
 		p3 = new Panel3(control);
-		add(p3,BorderLayout.CENTER);
+		add(p3,BorderLayout.WEST);
 		
 
 

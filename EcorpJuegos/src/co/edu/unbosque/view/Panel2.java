@@ -32,7 +32,8 @@ public class Panel2 extends JPanel {
 	private JTextField textField_4;
 	
 	public Panel2(Controller control) {
-		setSize(500,400); //tamaño en ancho y alto en pixeles
+		setBackground(new Color(72, 209, 204));
+		setSize(423,400); //tamaño en ancho y alto en pixeles
 	
 		
 		TitledBorder border = BorderFactory.createTitledBorder("Datos de Entrada");
@@ -67,11 +68,11 @@ public class Panel2 extends JPanel {
 		add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("Tipo de juego :");
-		lblNewLabel_6.setBounds(50, 162, 86, 31);
+		lblNewLabel_6.setBounds(50, 151, 86, 31);
 		add(lblNewLabel_6);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(146, 167, 86, 20);
+		textField_2.setBounds(146, 156, 86, 20);
 		add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -97,11 +98,5 @@ public class Panel2 extends JPanel {
 	
 
 
-	public static String getEscribir() {
-		return ESCRIBIR;
-	}
-	
-	public static String getLeer() {
-		return LEER;
-	}
+
 }
