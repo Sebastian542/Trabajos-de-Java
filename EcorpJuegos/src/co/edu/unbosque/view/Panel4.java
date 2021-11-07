@@ -27,6 +27,7 @@ public class Panel4 extends JPanel {
 	
 	public Panel4(Controller control) {
 		setLayout(new GridLayout(2, 2));
+
 		TitledBorder border = BorderFactory.createTitledBorder("Sistema de Informacion de Juegos");
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );

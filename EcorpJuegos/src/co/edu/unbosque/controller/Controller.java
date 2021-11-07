@@ -46,9 +46,9 @@ public class Controller implements ActionListener{
 	public void actionPerformed(ActionEvent evento) {
 	
 		
-		if (evento.getActionCommand().equals(gui.getIngresarDatos().ESCRIBIR)) {
+		if (evento.getActionCommand().equals(gui.getPanel2().ESCRIBIR)) {
 			//String resultado = m.procesarDato(gui.getIngresarDatos().getNombre());
-			String resultado1 = m.getY().procesarDatoClaseY(gui.getIngresarDatos().getGenero().getText());
+			String resultado1 = m.getY().procesarDatoClaseY(gui.getPanel2().getGenero().getText());
 			
 			System.out.println("Almacene esto"+resultado1);
 			gui.getPanelResultados().getTxtMonto().setText(resultado1);
