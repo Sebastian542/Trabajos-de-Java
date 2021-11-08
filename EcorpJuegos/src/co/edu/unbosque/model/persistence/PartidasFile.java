@@ -12,8 +12,8 @@ import java.io.ObjectOutputStream;
 import java.util.Random;
 
 public class PartidasFile {
-	private String ruta = "./partida/partidas.dat";
-	private String rutaReg = "./partida/regpartida.dat";
+	private String ruta = "./data/partidas.dat";
+	private String rutaReg = "./data/regpartida.dat";
 
 	private int REGISTROS = 10;
 	private File f; 
@@ -93,11 +93,11 @@ public class PartidasFile {
 
 	public String escribirRegistro() {
 		String mensaje = "Registro de la Partida";
-		RegPartidas partida[] = new RegPartidas[4];
-		partida[0] = new RegPartidas("Ronda1","", "", 0,0);
-		partida[1] = new RegPartidas("Ronda2","", "", 0,0);
-		partida[2] = new RegPartidas("SemiFinal","", "", 0,0);
-		partida[3] = new RegPartidas("Final","", "", 0,0);
+		RegPartidas partida[] = new RegPartidas[6];
+		partida[0] = new RegPartidas("Ronda1","test", "t", "t", 0,0);
+		partida[1] = new RegPartidas("Ronda2","a", "a","a", 0,0);
+		partida[2] = new RegPartidas("SemiFinal","c","c", "c", 0,0);
+		partida[3] = new RegPartidas("Final","ez", "ez", "ez", 0,0);
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
@@ -120,9 +120,10 @@ public class PartidasFile {
 	        for (int i = 0; i < datos.length; i++) {
 	        	System.out.println(datos[i].getTipoPartida());
 	        	System.out.println(datos[i].getJugador1());
-	          System.out.println(datos[i].getJugador2());
-	          System.out.println(datos[i].getPuntaje1());
-	          System.out.println(datos[i].getPuntaje2());
+	        	System.out.println(datos[i].getJugador2());
+	        	System.out.println(datos[i].getPuntaje1());
+	        	System.out.println(datos[i].getPuntaje2());
+	        	System.out.println(datos[i].getJuego());
 	        }
 
 		} catch (IOException | ClassNotFoundException e) {
@@ -130,4 +131,21 @@ public class PartidasFile {
 			e.printStackTrace();
 		}
 	}
+
+	public RegPartidas[] getDatos() {
+		return datos;
+	}
+
+	public void setDatos(RegPartidas[] datos) {
+		this.datos = datos;
+	}
+	
+	public double[] getNumeros() {
+		return numeros;
+	}
+
+	public void setNumeros(double[] numeros) {
+		this.numeros = numeros;
+	}
+
 }

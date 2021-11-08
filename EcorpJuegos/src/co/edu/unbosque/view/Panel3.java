@@ -4,14 +4,18 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.AttributeSet.ColorAttribute;
 
 import co.edu.unbosque.controller.Controller;
 
 import java.awt.Color;
+import java.awt.Font;
 
 public class Panel3 extends JPanel {
+	
 	private static final long serialVersionUID = 1L;
 	private JLabel labjugador1;
 	private JLabel labjugador2;
@@ -26,10 +30,14 @@ public class Panel3 extends JPanel {
 	private JTextField txtTipoPartida;
 	private JTextField txtjuego;
 	private JButton butLeer;
+	private JButton butLeerReg;
 	private JButton butEscribir;
+	private JButton butEscribirReg;
 	private JButton butVolver;
 	public static final String ESCRIBIR = "Escribir";
+	public static final String ESCRIBIR_REG = "Escribir_Reg";
 	public static final String LEER = "Leer";
+	public static final String LEER_REG = "Leer_Reg";
 	public static final String VOLVER = "Volver";
 	/**
 	 * Create the panel.
@@ -37,79 +45,101 @@ public class Panel3 extends JPanel {
 	 */
 	public Panel3(Controller control) {
 		setVisible(false);
-		setBackground(new Color(89, 172, 166));
-		setSize(600,400); //tamaÃ±o en ancho y alto en pixeles
+		setBackground(Color.BLACK);
+		setSize(584,180); //tamaño en ancho y alto en pixeles
 		setLayout(null);
 		TitledBorder border = BorderFactory.createTitledBorder("Partida");
-		border.setTitleColor(Color.BLACK);
-		setBorder( border );
+		border.setTitleColor(Color.WHITE);
+		setBorder(border);
 		
-		labjugador1 = new JLabel("JUGADOR 1");
-		labjugador1.setBounds(50, 56, 70, 17);
+		labjugador1 = new JLabel("Jugador 1");
+		labjugador1.setForeground(Color.WHITE);
+		labjugador1.setBounds(50, 30, 106, 17);
+		labjugador1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		add(labjugador1);
 		
 		txtjugador1 = new JTextField();
-		txtjugador1.setBounds(122, 54, 86, 20);
+		txtjugador1.setBounds(152, 30, 86, 20);
 		add(txtjugador1);
 		txtjugador1.setColumns(10);
 		
-		labjugador2 = new JLabel("JUGADOR 2");
-		labjugador2.setBounds(50, 106, 70, 17);
+		labjugador2 = new JLabel("Jugador 2");
+		labjugador2.setForeground(Color.WHITE);
+		labjugador2.setBounds(50, 60, 106, 17);
+		labjugador2.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		add(labjugador2);
 		
 		txtjugador2 = new JTextField();
-		txtjugador2.setBounds(122, 104, 86, 20);
+		txtjugador2.setBounds(152, 60, 86, 20);
 		add(txtjugador2);
 		txtjugador2.setColumns(10);
 		
-		labpuntaje1 = new JLabel("PUNTAJE 1");
-		labpuntaje1.setBounds(354, 57, 66, 14);
+		labpuntaje1 = new JLabel("Puntaje 1");
+		labpuntaje1.setForeground(Color.WHITE);
+		labpuntaje1.setBounds(354, 30, 106, 14);
+		labpuntaje1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		add(labpuntaje1);
 		
 		txtpuntaje1 = new JTextField();
-		txtpuntaje1.setBounds(423, 53, 86, 20);
+		txtpuntaje1.setBounds(423, 30, 86, 20);
 		add(txtpuntaje1);
 		txtpuntaje1.setColumns(10);
 		
-		labpuntaje2 = new JLabel("PUNTAJE 2");
-		labpuntaje2.setBounds(354, 107, 66, 14);
+		labpuntaje2 = new JLabel("Puntaje 2");
+		labpuntaje2.setForeground(Color.WHITE);
+		labpuntaje2.setBounds(354, 60, 106, 14);
+		labpuntaje2.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		add(labpuntaje2);
 		
 		txtpuntaje2 = new JTextField();
-		txtpuntaje2.setBounds(423, 104, 86, 20);
+		txtpuntaje2.setBounds(423, 60, 86, 20);
 		add(txtpuntaje2);
 		txtpuntaje2.setColumns(10);
 		
-		labjuego = new JLabel("JUEGO");
-		labjuego.setBounds(354, 157, 66, 14);
+		labjuego = new JLabel("Juego");
+		labjuego.setBounds(354, 90, 106, 20);
+		labjuego.setForeground(Color.WHITE);
+		labjuego.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		add(labjuego);
 		
 		txtjuego = new JTextField();
-		txtjuego.setBounds(423, 154, 86, 20);
+		txtjuego.setBounds(423, 90, 86, 20);
 		add(txtjuego);
 		txtjuego.setColumns(10);
 		
-		labtipoPartida = new JLabel("TIPO DE PARTIDA");
-		labtipoPartida.setBounds(50, 151, 106, 31);
+		labtipoPartida = new JLabel("Tipo de Partida");
+		labtipoPartida.setBounds(50, 90, 106, 31);
+		labtipoPartida.setForeground(Color.WHITE);
+		labtipoPartida.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		add(labtipoPartida);
 		
 		txtTipoPartida = new JTextField();
-		txtTipoPartida.setBounds(152, 156, 86, 20);
+		txtTipoPartida.setBounds(152, 90, 86, 20);
 		add(txtTipoPartida);
 		txtTipoPartida.setColumns(10);
 		
 		butEscribir = new JButton("Escribir");
-		butEscribir.setBounds(323, 226, 89, 23);
+		butEscribir.setBounds(152, 130, 89, 23);
 		butEscribir.setActionCommand(ESCRIBIR);
 		add(butEscribir);
 		
+		butEscribirReg = new JButton("Escribir_Reg");
+		butEscribirReg.setBounds(16, 130, 125, 23);
+		butEscribirReg.setActionCommand(ESCRIBIR_REG);
+		add(butEscribirReg);
+		
 		butLeer = new JButton("Leer");
-		butLeer.setBounds(82, 226, 89, 23);
+		butLeer.setBounds(252, 130, 89, 23);
 		butLeer.setActionCommand(LEER);
 		add(butLeer);
 		
+		butLeerReg = new JButton("Leer_Reg");
+		butLeerReg.setBounds(352, 130, 89, 23);
+		butLeerReg.setActionCommand(LEER_REG);
+		add(butLeerReg);
+		
 		butVolver = new JButton("Volver");
-		butVolver.setBounds(205, 226, 89, 23);
+		butVolver.setBounds(452, 130, 89, 23);
 		butVolver.setActionCommand(VOLVER);
 		add(butVolver);
 		
@@ -126,6 +156,15 @@ public class Panel3 extends JPanel {
 	public static String getEscribir() {
 		return ESCRIBIR;
 	}
+	
+	public static String getEscribirReg() {
+		return ESCRIBIR_REG;
+	}
+	
+	public static String getLeerReg() {
+		return LEER_REG;
+	}
+	
 	public JLabel getLabjugador1() {
 		return labjugador1;
 	}
@@ -215,6 +254,18 @@ public class Panel3 extends JPanel {
 	}
 	public void setTxtjuego(JTextField txtjuego) {
 		this.txtjuego = txtjuego;
+	}
+	public JButton getButLeerReg() {
+		return butLeerReg;
+	}
+	public void setButLeerReg(JButton butLeerReg) {
+		this.butLeerReg = butLeerReg;
+	}
+	public JButton getButEscribirReg() {
+		return butEscribirReg;
+	}
+	public void setButEscribirReg(JButton butEscribirReg) {
+		this.butEscribirReg = butEscribirReg;
 	}
 	
 }	

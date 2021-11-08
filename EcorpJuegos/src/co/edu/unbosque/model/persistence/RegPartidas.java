@@ -9,11 +9,13 @@ public class RegPartidas implements Serializable {
 	private String tipoPartida;
 	private String jugador1;
 	private String jugador2;
+	private String juego;
 	private double puntaje1;
 	private double puntaje2;
 	
-	public RegPartidas(String tipoPartida, String jugador1,String jugador2, double puntaje1, double puntaje2){
+	public RegPartidas(String juego, String tipoPartida, String jugador1,String jugador2, double puntaje1, double puntaje2){
 		this.tipoPartida = tipoPartida;
+		this.juego = juego;
 		this.jugador1 = jugador1;
 		this.jugador2 = jugador2;
 		this.puntaje1 = puntaje1;
@@ -60,10 +62,19 @@ public class RegPartidas implements Serializable {
 		this.puntaje2 = puntaje2;
 	}
 
+	public String getJuego() {
+		return juego;
+	}
+
+	public void setJuego(String juego) {
+		this.juego = juego;
+	}
+
 	@Override
 	public String toString() {
-		return "RegPartidas [tipoPartida=" + tipoPartida + ", jugador1=" + jugador1 + ", jugador2=" + jugador2
-				+ ", puntaje1=" + puntaje1 + ", puntaje2=" + puntaje2 + "]";
+		return "RegPartidas [tipoPartida=" + this.tipoPartida + ", jugador1=" + this.jugador1 +
+				", jugador2=" + this.jugador2+ ", puntaje1=" + this.puntaje1 + 
+				", puntaje2=" + this.puntaje2 + "]";
 	}
 	
 }
