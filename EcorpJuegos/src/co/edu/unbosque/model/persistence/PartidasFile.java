@@ -49,7 +49,7 @@ public class PartidasFile {
 		// TODO Auto-generated constructor stub
 		numeros = new double[10];
 		valores = new int[10];
-		datos = new RegPartidas[10];
+		datos = new RegPartidas[6];
 	}
 
 	public String escribirArchivoBinario() {
@@ -94,10 +94,12 @@ public class PartidasFile {
 	public String escribirRegistro() {
 		String mensaje = "Registro de la Partida";
 		RegPartidas partida[] = new RegPartidas[6];
-		partida[0] = new RegPartidas("Ronda1","test", "t", "t", 0,0);
-		partida[1] = new RegPartidas("Ronda2","a", "a","a", 0,0);
-		partida[2] = new RegPartidas("SemiFinal","c","c", "c", 0,0);
-		partida[3] = new RegPartidas("Final","ez", "ez", "ez", 0,0);
+		partida[0] = new RegPartidas("a","test", "Jugador1", "lul", 0,0);
+		partida[1] = new RegPartidas("e","a", "Jugador2","as", 0,0);
+		partida[2] = new RegPartidas("ez","c","Puntaje1", "ok", 0,0);
+		partida[3] = new RegPartidas("ez","ez", "Puntaje2", "okz", 0,0);
+		partida[4] = new RegPartidas("ez","ez", "Juego", "okz", 0,0);
+		partida[5] = new RegPartidas("ez","ez", "Tipo de Partida", "pog", 0,0);
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
@@ -118,11 +120,11 @@ public class PartidasFile {
 	        datos = (RegPartidas[])in.readObject();
 	        in.close();
 	        for (int i = 0; i < datos.length; i++) {
-	        	System.out.println(datos[i].getTipoPartida());
 	        	System.out.println(datos[i].getJugador1());
 	        	System.out.println(datos[i].getJugador2());
 	        	System.out.println(datos[i].getPuntaje1());
 	        	System.out.println(datos[i].getPuntaje2());
+	        	System.out.println(datos[i].getTipoPartida());
 	        	System.out.println(datos[i].getJuego());
 	        }
 

@@ -50,6 +50,7 @@ public class Controller implements ActionListener{
 			gui.getPr3().getTxtMonto().setText("");
 			gui.getPr3().getTxtValores().setText("");
 			gui.getPreg3().setVisible(true);
+			gui.setSize(600,580);
 
 		}
 		
@@ -69,6 +70,7 @@ public class Controller implements ActionListener{
 			gui.getPr3().setVisible(false);
 			gui.getPreg3().setVisible(false);
 			gui.getP4().setVisible(true);
+			gui.setSize(600,400);
 		}
 		String resultado;
 		if(evento.getActionCommand().equals(gui.getP3().ESCRIBIR)){

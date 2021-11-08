@@ -62,7 +62,7 @@ public class View extends JFrame{
 		getContentPane().add(pr3);
 		
 		preg3 = new Panel3Registro();
-		preg3.setBounds(0,180,584,180);
+		preg3.setBounds(0,360,584,180);
 		getContentPane().add(preg3);
 		
 		p4 = new Panel4(control);

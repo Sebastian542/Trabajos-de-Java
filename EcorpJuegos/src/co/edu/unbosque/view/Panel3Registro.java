@@ -24,8 +24,9 @@ public class Panel3Registro extends JPanel{
 	public Panel3Registro() {
 		setVisible(false);
 		setLayout( new GridLayout(1,6) );
+		setBackground(Color.BLACK);
 		TitledBorder border = BorderFactory.createTitledBorder("Lectura Registros");
-		border.setTitleColor(Color.BLACK);
+		border.setTitleColor(Color.WHITE);
 		setBorder( border );
 		labArchivo = new JLabel("Resultado de Registros");
 		
