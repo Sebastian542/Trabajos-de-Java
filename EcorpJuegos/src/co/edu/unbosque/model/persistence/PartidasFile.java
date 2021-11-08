@@ -94,12 +94,12 @@ public class PartidasFile {
 	public String escribirRegistro() {
 		String mensaje = "Registro de la Partida";
 		RegPartidas partida[] = new RegPartidas[6];
-		partida[0] = new RegPartidas("a","test", "Jugador1", "lul", 0,0);
-		partida[1] = new RegPartidas("e","a", "Jugador2","as", 0,0);
-		partida[2] = new RegPartidas("ez","c","Puntaje1", "ok", 0,0);
-		partida[3] = new RegPartidas("ez","ez", "Puntaje2", "okz", 0,0);
-		partida[4] = new RegPartidas("ez","ez", "Juego", "okz", 0,0);
-		partida[5] = new RegPartidas("ez","ez", "Tipo de Partida", "pog", 0,0);
+		partida[0] = new RegPartidas("test0","Ronda0", "Jugador1", "Final0", 1,1);
+		partida[1] = new RegPartidas("test1","Ronda1", "Jugador2","SemiFinal0", 2,2);
+		partida[2] = new RegPartidas("test2","Ronda2","Puntaje1", "Final1", 3,3);
+		partida[3] = new RegPartidas("test3","Ronda3", "Puntaje2", "SemiFinal1", 4,4);
+		partida[4] = new RegPartidas("test4","Ronda4", "Juego", "Final2", 5,5);
+		partida[5] = new RegPartidas("test5","Ronda5", "Tipo de Partida", "SemiFinal2", 6,6);
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
