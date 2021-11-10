@@ -14,15 +14,23 @@ import java.awt.Font;
 public class Panel2 extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
+	
 	private JLabel nombreJugador1;
-	private JButton btnNewButton_1;//Escribir
-	private JButton btnNewButton_2;//Leer
-	private JButton btnNewButton_3;//Volver
-	public static final String ESCRIBIR = "Escribir";
-	public static final String LEER = "Leer";
-	public static final String VOLVER = "Volver";
+	
+	private JButton btnEscribir;//Escribir
+	private JButton btnLeer;//Leer
+	private JButton btnVolver;//Volver
+	
+
+	
+
+	public static final String ESCRIBIR2 = "Escribir";
+	public static final String LEER2 = "Leer";
+	public static final String VOLVER2 = "Volver";
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_6;
+	
+	
 	private JTextField textField;
 	private JTextField textField_4;
 	
@@ -35,20 +43,20 @@ public class Panel2 extends JPanel {
 
 		setLayout(null);
 		
-		btnNewButton_1 = new JButton("Escribir");
-		btnNewButton_1.setBounds(323, 226, 89, 23);
-		btnNewButton_1.setActionCommand(ESCRIBIR);
-		add(btnNewButton_1);
+		btnEscribir = new JButton("Escribir");
+		btnEscribir.setBounds(323, 226, 89, 23);
+		btnEscribir.setActionCommand(ESCRIBIR2);
+		add(btnEscribir);
 		
-		btnNewButton_2 = new JButton("Leer");
-		btnNewButton_2.setBounds(82, 226, 89, 23);
-		btnNewButton_2.setActionCommand(LEER);
-		add(btnNewButton_2);
+		btnLeer = new JButton("Leer");
+		btnLeer.setBounds(82, 226, 89, 23);
+		btnLeer.setActionCommand(LEER2);
+		add(btnLeer);
 		
-		btnNewButton_3 = new JButton("Volver");
-		btnNewButton_3.setBounds(205, 226, 89, 23);
-		btnNewButton_1.setActionCommand(VOLVER);
-		add(btnNewButton_3);
+		btnVolver = new JButton("Volver");
+		btnVolver.setBounds(205, 226, 89, 23);
+		btnEscribir.setActionCommand(VOLVER2);
+		add(btnVolver);
 		
 		lblNewLabel = new JLabel("Nombre del juego ");
 		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
@@ -73,18 +81,24 @@ public class Panel2 extends JPanel {
 		textField_4.setColumns(10);
 		
 	}
-	public static String getVolver() {
-		return VOLVER;
+	public static String getVolver2() {
+		return VOLVER2;
 	}
 	
-	public static String getLeer() {
-		return LEER;
+	public static String getLeer2() {
+		return LEER2;
 	}
 	
-	public static String getEscribir() {
-		return ESCRIBIR;
+	public static String getEscribir2() {
+		return ESCRIBIR2;
 	}
 
+	
+	
+
+
+	
+	
 	public JLabel getNombreJugador1() {
 		return nombreJugador1;
 	}
@@ -95,29 +109,36 @@ public class Panel2 extends JPanel {
 
 
 
-	public JButton getBtnNewButton_1() {
-		return btnNewButton_1;
-	}
 
-	public void setBtnNewButton_1(JButton btnNewButton_1) {
-		this.btnNewButton_1 = btnNewButton_1;
-	}
 
-	public JButton getBtnNewButton_2() {
-		return btnNewButton_2;
+	public JButton getBtnEscribir() {
+		return btnEscribir;
 	}
-
-	public void setBtnNewButton_2(JButton btnNewButton_2) {
-		this.btnNewButton_2 = btnNewButton_2;
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
 	}
-
-	public JButton getBtnNewButton_3() {
-		return btnNewButton_3;
+	
+	
+	
+	
+	
+	
+	public JButton getBtnLeer() {
+		return btnLeer;
 	}
-	public void setBtnNewButton_3(JButton btnNewButton_3) {
-		this.btnNewButton_3 = btnNewButton_3;
+	
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
 	}
-
+	
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
+	}
+	
+	
 	
 	
 

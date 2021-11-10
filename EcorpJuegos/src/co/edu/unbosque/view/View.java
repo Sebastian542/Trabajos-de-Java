@@ -19,33 +19,22 @@ public class View extends JFrame{
 	private Panel3 p3;
 	private Panel4 p4;
 	
+
 	private Panel3Resultados pr3;
 	private Panel3Registro preg3;
-	
 
-
-
-	//private PanelEntrada panelEntrada; //Se declara un objeto de tipo PanelEntrada
-	private PanelResultados panelResultados; //Se declara un objeto de tipo PanelResultados
-
-	private PanelResultados panel4;
 
 	public View(Controller control) {
 		
 		// Definición de los parámetros básicos de la ventana principal
 		setBackground(Color.BLACK);
-		setSize(600,400); //tamaño en ancho y alto en pixeles
-		setResizable(true); //Se puede cambiar el tamaño de la ventana?
+		setSize(600,400); //Tamaño en ancho y alto en pixeles
+		setResizable(false); //Se puede cambiar el tamaño de la ventana?
 		getContentPane().setLayout(null);
-		setTitle("Ventana principal"); //tìtulo de la ventana
-		setDefaultCloseOperation(EXIT_ON_CLOSE);//qué debe hacer si cierra la ventana
-		setLocationRelativeTo(null); //coloca la ventana al centro de la pantalla
-		
-		//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
-		setLayout( null);
-
-
-	
+		setTitle("Sistema de Informacion de Juegos"); //Tìtulo de la ventana
+		setDefaultCloseOperation(EXIT_ON_CLOSE);//Qué debe hacer si cierra la ventana
+		setLocationRelativeTo(null); //Coloca la ventana al centro de la pantalla
+		setLayout( null); //Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
 
 		p1 = new Panel1(control);
 		
@@ -69,23 +58,31 @@ public class View extends JFrame{
 		p4.setBounds(0, 0, 584, 362);
 		getContentPane().add(p4);
 
-	  
 		//se agrega al boton ActionListener del objeto de Controlador
-			p1.getButVolver().addActionListener(control);
+		p1.getButVolver().addActionListener(control);
+		
+		p1.getLeerButton().addActionListener(control);
+		p1.getEscrButton().addActionListener(control);
 			
-			p2.getBtnNewButton_1().addActionListener(control);
-			p2.getBtnNewButton_2().addActionListener(control);
-			p2.getBtnNewButton_3().addActionListener(control);
+		
+	
+		
+		p2.getBtnVolver().addActionListener(control);
+	
+		p2.getBtnEscribir().addActionListener(control);
+	
+		p2.getBtnLeer().addActionListener(control);
+		
+		
+		p3.getButEscribir().addActionListener(control);
+		p3.getButEscribirReg().addActionListener(control);
+	   	p3.getButLeer().addActionListener(control);
+	   	p3.getButLeerReg().addActionListener(control);
+	   	p3.getButVolver().addActionListener(control);
 			
-			p3.getButEscribir().addActionListener(control);
-			p3.getButEscribirReg().addActionListener(control);
-	    	p3.getButLeer().addActionListener(control);
-	    	p3.getButLeerReg().addActionListener(control);
-	    	p3.getButVolver().addActionListener(control);
-			
-			p4.getButjugadores().addActionListener(control);
-	    	p4.getButjuegos().addActionListener(control);
-	    	p4.getButpartidas().addActionListener(control);
+		p4.getButjugadores().addActionListener(control);
+	   	p4.getButjuegos().addActionListener(control);
+    	p4.getButpartidas().addActionListener(control);
 	}
 	
 	public void escribirMensaje(String mensaje) {
@@ -96,8 +93,25 @@ public class View extends JFrame{
 		for (int i= 0 ; i<numReg ; i++) {
 			getPr3().getTxtMonto().append(String.valueOf(numeros[i])+"\n");
 			getPr3().getTxtValores().append(String.valueOf(valores[i])+"\n");
-		}	
-	}	
+		}
+		
+	}
+	
+	/*public void mostrarCifras2(int numReg, int valores[], double numeros[]) {
+		for (int i= 0 ; i<numReg ; i++) {
+			getPr3().getTxtMonto().append(String.valueOf(numeros[i])+"\n");
+			getPr3().getTxtValores().append(String.valueOf(valores[i])+"\n");
+		}
+		
+	}
+	
+	public void mostrarCifras1(int numReg, int valores[], double numeros[]) {
+		for (int i= 0 ; i<numReg ; i++) {
+			getPr3().getTxtMonto().append(String.valueOf(numeros[i])+"\n");
+			getPr3().getTxtValores().append(String.valueOf(valores[i])+"\n");
+		}
+		
+	}*/	
 	
 	public void mostrarRegistros3(int numReg, RegPartidas[] datos) {
 		for (int i= 0 ; i<numReg ; i++) {
@@ -110,14 +124,27 @@ public class View extends JFrame{
 		}	
 	}
 	
-	public PanelResultados getPanelResultados() {
-		return panelResultados;
+	/*public void mostrarRegistros2(int numReg, RegPartidas[] datos) {
+		for (int i= 0 ; i<numReg ; i++) {
+			getPreg3().getTxtjugador1().append(String.valueOf(datos[i].getJugador1())+"\n");
+			getPreg3().getTxtjugador2().append(String.valueOf(datos[i].getJugador2())+"\n");
+			getPreg3().getTxtpuntaje1().append(String.valueOf(datos[i].getPuntaje1())+"\n");
+			getPreg3().getTxtpuntaje2().append(String.valueOf(datos[i].getPuntaje2())+"\n");
+			getPreg3().getTxtTipoPartida().append(String.valueOf(datos[i].getTipoPartida())+"\n");
+			getPreg3().getTxtJuego().append(String.valueOf(datos[i].getJuego())+"\n");
+		}	
 	}
-
-	public void setPanelResultados(PanelResultados panelResultados) {
-		this.panelResultados = panelResultados;
-	}
-
+	
+	public void mostrarRegistros1(int numReg, RegPartidas[] datos) {
+		for (int i= 0 ; i<numReg ; i++) {
+			getPreg3().getTxtjugador1().append(String.valueOf(datos[i].getJugador1())+"\n");
+			getPreg3().getTxtjugador2().append(String.valueOf(datos[i].getJugador2())+"\n");
+			getPreg3().getTxtpuntaje1().append(String.valueOf(datos[i].getPuntaje1())+"\n");
+			getPreg3().getTxtpuntaje2().append(String.valueOf(datos[i].getPuntaje2())+"\n");
+			getPreg3().getTxtTipoPartida().append(String.valueOf(datos[i].getTipoPartida())+"\n");
+			getPreg3().getTxtJuego().append(String.valueOf(datos[i].getJuego())+"\n");
+		}	
+	}*/
 
 	public Panel1 getP1() {
 		return p1;
@@ -173,8 +200,5 @@ public class View extends JFrame{
 	public void setPreg3(Panel3Registro preg3) {
 		this.preg3 = preg3;
 	}
-	
-	
-
 	
 }

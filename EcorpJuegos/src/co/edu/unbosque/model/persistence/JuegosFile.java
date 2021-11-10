@@ -1,4 +1,7 @@
+
+
 package co.edu.unbosque.model.persistence;
+
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -11,9 +14,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Random;
 
-public class PartidasFile {
-	private String ruta = "./data/partidas.dat";
-	private String rutaReg = "./data/regpartidas.dat";
+
+
+public class JuegosFile {
+	
+
+	private String ruta = "./data/juegos.dat";
+	private String rutaReg = "./data/regjuegos.dat";
 
 	private int REGISTROS = 10;
 	private File f; 
@@ -21,11 +28,10 @@ public class PartidasFile {
 	private DataOutputStream dos;
 	private FileInputStream fis;     
 	private DataInputStream dis;
-
 	private double numeros[];
 	private int valores[];
-	private RegPartidas reg;
-	private RegPartidas[] datos;
+	private RegJuegos reg;
+	private RegJuegos[] datos;
 	
 
 	public int getREGISTROS() {
@@ -45,11 +51,11 @@ public class PartidasFile {
 		this.valores = valores;
 	}
 
-	public PartidasFile() {
+	public JuegosFile() {
 		// TODO Auto-generated constructor stub
 		numeros = new double[10];
 		valores = new int[10];
-		datos = new RegPartidas[10];
+		datos = new RegJuegos[10];
 	}
 
 	public String escribirArchivoBinario() {
@@ -62,7 +68,7 @@ public class PartidasFile {
 			dos=new DataOutputStream(fos);     
 			for (int i=0;i<REGISTROS;i++){ 
 				dos.writeInt(i);
-				dos.writeDouble(r.nextDouble());//NÂº aleatorio     
+				dos.writeDouble(r.nextDouble());//Nº aleatorio     
 			}     
 			dos.close();
 		} 
@@ -81,6 +87,7 @@ public class PartidasFile {
 			fis = new FileInputStream(f);
 			dis = new DataInputStream(fis);
 			for (int i=0; i<REGISTROS ; i++){
+				//System.out.println(dis.readDouble());
 				numeros[i] = dis.readDouble();
 				valores[i] = dis.readInt();
 			}
@@ -92,18 +99,14 @@ public class PartidasFile {
 	}
 
 	public String escribirRegistro() {
-		String mensaje = "Registro de la Partida";
-		RegPartidas partida[] = new RegPartidas[6];
-		partida[0] = new RegPartidas("test0","Ronda0", "Jugador1", "Final0", 1,1);
-		partida[1] = new RegPartidas("test1","Ronda1", "Jugador2","SemiFinal0", 2,2);
-		partida[2] = new RegPartidas("test2","Ronda2","Puntaje1", "Final1", 3,3);
-		partida[3] = new RegPartidas("test3","Ronda3", "Puntaje2", "SemiFinal1", 4,4);
-		partida[4] = new RegPartidas("test4","Ronda4", "Juego", "Final2", 5,5);
-		partida[5] = new RegPartidas("test5","Ronda5", "Tipo de Partida", "SemiFinal2", 6,6);
+		String mensaje = "Registro de Empleado Ingresado!";
+		RegJuegos juegos[] = new RegJuegos[3];
+		juegos[0] = new RegJuegos("Empleado apellido1","");
+		juegos[1] = new RegJuegos("Empleado apellido2","");
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
-			out.writeObject(partida);
+			out.writeObject(juegos);
 			out.close();
 		}
 		catch (IOException e) {
@@ -117,15 +120,11 @@ public class PartidasFile {
         ObjectInputStream in;
 		try {
 			in = new ObjectInputStream(new FileInputStream(rutaReg));
-	        datos = (RegPartidas[])in.readObject();
+	        datos = (RegJuegos[])in.readObject();
 	        in.close();
 	        for (int i = 0; i < datos.length; i++) {
-	        	System.out.println(datos[i].getJugador1());
-	        	System.out.println(datos[i].getJugador2());
-	        	System.out.println(datos[i].getPuntaje1());
-	        	System.out.println(datos[i].getPuntaje2());
-	        	System.out.println(datos[i].getTipoPartida());
-	        	System.out.println(datos[i].getJuego());
+	            System.out.println(datos[i].getTipo());
+	            System.out.println(datos[i].getNombre());
 	        }
 
 		} catch (IOException | ClassNotFoundException e) {
@@ -134,14 +133,14 @@ public class PartidasFile {
 		}
 	}
 
-	public RegPartidas[] getDatos() {
+	public RegJuegos[] getDatos() {
 		return datos;
 	}
 
-	public void setDatos(RegPartidas[] datos) {
+	public void setDatos(RegJuegos[] datos) {
 		this.datos = datos;
 	}
-	
+
 	public double[] getNumeros() {
 		return numeros;
 	}
@@ -149,5 +148,6 @@ public class PartidasFile {
 	public void setNumeros(double[] numeros) {
 		this.numeros = numeros;
 	}
+	
 
 }
