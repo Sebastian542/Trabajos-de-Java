@@ -1,7 +1,4 @@
-
-
 package co.edu.unbosque.model.persistence;
-
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -14,13 +11,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Random;
 
-
-
-public class PersistenciaPanel2 {
-	
-
-	private String ruta = "C:\\data\\prueba.out";
-	private String rutaReg = "C:\\data\\registro.out";
+public class JugadorFile {
+	private String ruta = "./data/jugadores.dat";
+	private String rutaReg = "./data/regjugadores.dat";
 
 	private int REGISTROS = 10;
 	private File f; 
@@ -30,8 +23,8 @@ public class PersistenciaPanel2 {
 	private DataInputStream dis;
 	private double numeros[];
 	private int valores[];
-	private RegistroPanel2 reg;
-	private RegistroPanel2[] datos;
+	private RegJugador reg;
+	private RegJugador[] datos;
 	
 
 	public int getREGISTROS() {
@@ -51,18 +44,18 @@ public class PersistenciaPanel2 {
 		this.valores = valores;
 	}
 
-	public PersistenciaPanel2() {
+	public JugadorFile() {
 		// TODO Auto-generated constructor stub
 		numeros = new double[10];
 		valores = new int[10];
-		datos = new RegistroPanel2[10];
+		datos = new RegJugador[10];
 	}
 
 	public String escribirArchivoBinario() {
 		String mensaje="Archivo Generado Exitosamente!";
 		f=new File(ruta);
 		Random r=new Random(); 
-		double d=18.76353; 
+		//double d=18.76353; 
 		try{     
 			fos=new FileOutputStream(f);     
 			dos=new DataOutputStream(fos);     
@@ -100,14 +93,13 @@ public class PersistenciaPanel2 {
 
 	public String escribirRegistro() {
 		String mensaje = "Registro de Empleado Ingresado!";
-		RegistroPanel2 staff[] = new RegistroPanel2[3];
-		staff[0] = new RegistroPanel2("Empleado apellido1",23,1000);
-		staff[1] = new RegistroPanel2("Empleado apellido2",45,4000);
-		staff[2] = new RegistroPanel2("Empleado apellido3",37,8000);
+		RegJugador jugador[] = new RegJugador[2];
+		jugador[0] = new RegJugador("Zed",6,"M",8.3);
+		jugador[1] = new RegJugador("Kindred",2,"F",1.3);
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
-			out.writeObject(staff);
+			out.writeObject(jugador);
 			out.close();
 		}
 		catch (IOException e) {
@@ -121,12 +113,13 @@ public class PersistenciaPanel2 {
         ObjectInputStream in;
 		try {
 			in = new ObjectInputStream(new FileInputStream(rutaReg));
-	        datos = (RegistroPanel2[])in.readObject();
+	        datos = (RegJugador[])in.readObject();
 	        in.close();
 	        for (int i = 0; i < datos.length; i++) {
-	            System.out.println(datos[i].getEdad());
 	            System.out.println(datos[i].getNombre());
-	            System.out.println(datos[i].getSalario());
+	            System.out.println(datos[i].getEdad());
+	            System.out.println(datos[i].getGenero());
+	            System.out.println(datos[i].getPuntaje());
 	        }
 
 		} catch (IOException | ClassNotFoundException e) {
@@ -135,11 +128,11 @@ public class PersistenciaPanel2 {
 		}
 	}
 
-	public RegistroPanel2[] getDatos() {
+	public RegJugador[] getDatos() {
 		return datos;
 	}
 
-	public void setDatos(RegistroPanel2[] datos) {
+	public void setDatos(RegJugador[] datos) {
 		this.datos = datos;
 	}
 
@@ -150,6 +143,4 @@ public class PersistenciaPanel2 {
 	public void setNumeros(double[] numeros) {
 		this.numeros = numeros;
 	}
-	
-
 }

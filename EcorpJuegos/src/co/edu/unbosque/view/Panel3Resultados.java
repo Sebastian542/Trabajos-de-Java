@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
@@ -16,6 +17,8 @@ public class Panel3Resultados extends JPanel{
 	private JLabel labResultado;
 	private JTextArea txtMonto;
 	private JTextArea txtValores;
+	private JScrollPane scrollMonto;
+	private JScrollPane scrollValores;
  
 	public Panel3Resultados() {
 		
@@ -30,19 +33,26 @@ public class Panel3Resultados extends JPanel{
 		labResultado.setForeground(Color.WHITE);
 		labResultado.setBounds(50, 20, 106, 17);
 		labResultado.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		txtMonto = new JTextArea("");
+		txtMonto = new JTextArea();
 		txtMonto.setBounds(20,50,250,120);
 		txtMonto.setForeground(Color.BLACK);
 		txtMonto.setBackground(Color.WHITE);
-		txtValores = new JTextArea("");
+		scrollMonto = new JScrollPane(txtMonto);
+		scrollMonto.setBounds(20,50,250,120);
+		txtValores = new JTextArea();
 		txtValores.setBounds(310,50,250,120);
 		txtValores.setForeground(Color.BLACK);
 		txtValores.setBackground(Color.WHITE);
+		scrollValores = new JScrollPane(txtValores);
+		scrollValores.setBounds(310,50,250,120);
 		
+		add(scrollMonto);
+		add(scrollValores);
 		add(labResultado);
-		add(txtMonto);
-		add(txtValores);
 		
+		
+		scrollMonto.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollValores.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 	}
 
 	public JLabel getLabResultado() {
@@ -68,5 +78,22 @@ public class Panel3Resultados extends JPanel{
 	public void setTxtValores(JTextArea txtValores) {
 		this.txtValores = txtValores;
 	}
+
+	public JScrollPane getScrollMonto() {
+		return scrollMonto;
+	}
+
+	public void setScrollMonto(JScrollPane scrollMonto) {
+		this.scrollMonto = scrollMonto;
+	}
+
+	public JScrollPane getScrollValores() {
+		return scrollValores;
+	}
+
+	public void setScrollValores(JScrollPane scrollValores) {
+		this.scrollValores = scrollValores;
+	}
+	
 
 }

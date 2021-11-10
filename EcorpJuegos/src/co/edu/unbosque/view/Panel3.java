@@ -34,11 +34,11 @@ public class Panel3 extends JPanel {
 	private JButton butEscribir;
 	private JButton butEscribirReg;
 	private JButton butVolver;
-	public static final String ESCRIBIR = "Escribir";
-	public static final String ESCRIBIR_REG = "Escribir_Reg";
-	public static final String LEER = "Leer";
-	public static final String LEER_REG = "Leer_Reg";
-	public static final String VOLVER = "Volver";
+	public static final String ESCRIBIR3 = "Escribir";
+	public static final String ESCRIBIR_REG3 = "Escribir_Reg";
+	public static final String LEER3 = "Leer";
+	public static final String LEER_REG3 = "Leer_Reg";
+	public static final String VOLVER3 = "Volver";
 	/**
 	 * Create the panel.
 	 * @param control 
@@ -120,49 +120,49 @@ public class Panel3 extends JPanel {
 		
 		butEscribir = new JButton("Escribir");
 		butEscribir.setBounds(152, 130, 89, 23);
-		butEscribir.setActionCommand(ESCRIBIR);
+		butEscribir.setActionCommand(ESCRIBIR3);
 		add(butEscribir);
 		
 		butEscribirReg = new JButton("Escribir_Reg");
 		butEscribirReg.setBounds(16, 130, 125, 23);
-		butEscribirReg.setActionCommand(ESCRIBIR_REG);
+		butEscribirReg.setActionCommand(ESCRIBIR_REG3);
 		add(butEscribirReg);
 		
 		butLeer = new JButton("Leer");
 		butLeer.setBounds(252, 130, 89, 23);
-		butLeer.setActionCommand(LEER);
+		butLeer.setActionCommand(LEER3);
 		add(butLeer);
 		
 		butLeerReg = new JButton("Leer_Reg");
 		butLeerReg.setBounds(352, 130, 89, 23);
-		butLeerReg.setActionCommand(LEER_REG);
+		butLeerReg.setActionCommand(LEER_REG3);
 		add(butLeerReg);
 		
 		butVolver = new JButton("Volver");
 		butVolver.setBounds(452, 130, 89, 23);
-		butVolver.setActionCommand(VOLVER);
+		butVolver.setActionCommand(VOLVER3);
 		add(butVolver);
 		
 		
 	}
-	public static String getVolver() {
-		return VOLVER;
+	public static String getVolver3() {
+		return VOLVER3;
 	}
 	
-	public static String getLeer() {
-		return LEER;
+	public static String getLeer3() {
+		return LEER3;
 	}
 	
-	public static String getEscribir() {
-		return ESCRIBIR;
+	public static String getEscribir3() {
+		return ESCRIBIR3;
 	}
 	
-	public static String getEscribirReg() {
-		return ESCRIBIR_REG;
+	public static String getEscribirReg3() {
+		return ESCRIBIR_REG3;
 	}
 	
-	public static String getLeerReg() {
-		return LEER_REG;
+	public static String getLeerReg3() {
+		return LEER_REG3;
 	}
 	
 	public JLabel getLabjugador1() {

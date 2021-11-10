@@ -18,9 +18,9 @@ public class Panel2 extends JPanel {
 	private JButton btnNewButton_1;//Escribir
 	private JButton btnNewButton_2;//Leer
 	private JButton btnNewButton_3;//Volver
-	public static final String ESCRIBIR = "Escribir";
-	public static final String LEER = "Leer";
-	public static final String VOLVER = "Volver";
+	public static final String ESCRIBIR2 = "Escribir";
+	public static final String LEER2 = "Leer";
+	public static final String VOLVER2 = "Volver";
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_6;
 	private JTextField textField;
@@ -37,17 +37,17 @@ public class Panel2 extends JPanel {
 		
 		btnNewButton_1 = new JButton("Escribir");
 		btnNewButton_1.setBounds(323, 226, 89, 23);
-		btnNewButton_1.setActionCommand(ESCRIBIR);
+		btnNewButton_1.setActionCommand(ESCRIBIR2);
 		add(btnNewButton_1);
 		
 		btnNewButton_2 = new JButton("Leer");
 		btnNewButton_2.setBounds(82, 226, 89, 23);
-		btnNewButton_2.setActionCommand(LEER);
+		btnNewButton_2.setActionCommand(LEER2);
 		add(btnNewButton_2);
 		
 		btnNewButton_3 = new JButton("Volver");
 		btnNewButton_3.setBounds(205, 226, 89, 23);
-		btnNewButton_1.setActionCommand(VOLVER);
+		btnNewButton_1.setActionCommand(VOLVER2);
 		add(btnNewButton_3);
 		
 		lblNewLabel = new JLabel("Nombre del juego ");
@@ -73,16 +73,16 @@ public class Panel2 extends JPanel {
 		textField_4.setColumns(10);
 		
 	}
-	public static String getVolver() {
-		return VOLVER;
+	public static String getVolver2() {
+		return VOLVER2;
 	}
 	
-	public static String getLeer() {
-		return LEER;
+	public static String getLeer2() {
+		return LEER2;
 	}
 	
-	public static String getEscribir() {
-		return ESCRIBIR;
+	public static String getEscribir2() {
+		return ESCRIBIR2;
 	}
 
 	public JLabel getNombreJugador1() {

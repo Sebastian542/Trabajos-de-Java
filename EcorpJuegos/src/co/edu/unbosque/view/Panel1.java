@@ -28,11 +28,12 @@ public class Panel1 extends  JDialog {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JButton butVolver;
+	private JButton escrButton;
+	private JButton leerButton;
 
-	public static final String OK = "OK";
-	public static final String CANCEL = "Cancel";
-	public static final String VOLVER = "Volver";
-	
+	public static final String LEER1 = "Leer";
+	public static final String ESCRIBIR1 = "Escribir";
+	public static final String VOLVER1 = "Volver";
 
 	
 	public Panel1(Controller control) {
@@ -40,7 +41,6 @@ public class Panel1 extends  JDialog {
 		
 
 		setVisible(false);
-
 		setBounds(100, 100, 331, 289);
 		getContentPane().setLayout(null);
 		contentPanel.setBackground(Color.BLACK);
@@ -106,33 +106,40 @@ public class Panel1 extends  JDialog {
 			contentPanel.add(buttonPane);
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			{
-				JButton okButton = new JButton("OK");
-				okButton.setActionCommand(OK);
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
+				leerButton = new JButton("Leer");
+				leerButton.setActionCommand(LEER1);
+				buttonPane.add(leerButton);
+				getRootPane().setDefaultButton(leerButton);
+			}
+			{
+				escrButton = new JButton("Escribir");
+				escrButton.setActionCommand(ESCRIBIR1);
+				buttonPane.add(escrButton);
+				getRootPane().setDefaultButton(escrButton);
 			}
 			{
 				butVolver = new JButton("Volver");
-				butVolver.setActionCommand(VOLVER);
+				butVolver.setActionCommand(VOLVER1);
 				buttonPane.add(butVolver);
+				getRootPane().setDefaultButton(butVolver);
 			}
 		}
 
+
 	}
 
 	
-	public static String getOk() {
-		return OK;
+	public static String getLeer1() {
+		return LEER1;
 	}
 
-	public static String getCancel() {
-		return CANCEL;
+	public static String getEscribir1() {
+		return ESCRIBIR1;
 	}
 	
-	public static String getVolver() {
-		return VOLVER;
+	public static String getVolver1() {
+		return VOLVER1;
 	}
-
 
 	public JButton getButVolver() {
 		return butVolver;
@@ -141,6 +148,26 @@ public class Panel1 extends  JDialog {
 
 	public void setButVolver(JButton butVolver) {
 		this.butVolver = butVolver;
+	}
+
+
+	public JButton getEscrButton() {
+		return escrButton;
+	}
+
+
+	public void setEscrButton(JButton escrButton) {
+		this.escrButton = escrButton;
+	}
+
+
+	public JButton getLeerButton() {
+		return leerButton;
+	}
+
+
+	public void setLeerButton(JButton leerButton) {
+		this.leerButton = leerButton;
 	}
 	
 
