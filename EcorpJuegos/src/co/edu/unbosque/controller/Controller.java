@@ -83,7 +83,7 @@ public class Controller implements ActionListener{
 		
 		String resultado;
 		
-		if(evento.getActionCommand().equals(gui.getP3().ESCRIBIR2)){
+		if(evento.getActionCommand().equals(gui.getP2().ESCRIBIR2)){
 			resultado = md.getPF().escribirArchivoBinario();
 			//resultado = pd.getBf().escribirArchivoBinario();
 			gui.escribirMensaje(resultado);
