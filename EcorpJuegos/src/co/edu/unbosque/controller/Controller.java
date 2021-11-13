@@ -38,8 +38,8 @@ public class Controller implements ActionListener{
 		
 		}
 		
-		
 		/*
+		
 		if(evento.getActionCommand().equals(gui.getP4().PARTIDAS)) {
 			gui.getP4().setVisible(false);
 			gui.getP3().setVisible(true);
@@ -64,13 +64,8 @@ public class Controller implements ActionListener{
 			gui.getP4().setVisible(true);
 			gui.setVisible(true);
 		}
-		
-		if(evento.getActionCommand().equals(gui.getP2().VOLVER2)){
-			gui.getP2().setVisible(false);
-			gui.getP4().setVisible(true);
 
-		}
-		
+
 		if(evento.getActionCommand().equals(gui.getP3().VOLVER3)){
 			gui.getP3().setVisible(false);
 			gui.getPr3().setVisible(false);
@@ -84,10 +79,31 @@ public class Controller implements ActionListener{
 		String resultado;
 		
 		if(evento.getActionCommand().equals(gui.getP2().ESCRIBIR2)){
-			resultado = md.getPF().escribirArchivoBinario();
+			
+			System.out.println("SE DIO CLICK A ESCRIBIR");
+			resultado = md.getGF().escribirArchivoBinario();
+
 			//resultado = pd.getBf().escribirArchivoBinario();
 			gui.escribirMensaje(resultado);
 			
+		}
+		
+		
+		if(evento.getActionCommand().equals(gui.getP2().LEER2)){
+			md.getGF().leerArchivoBinario();
+			//pd.getBf().leerArchivoBinario();
+			gui.mostrarCifras3(
+					md.getGF().getREGISTROS(),
+					md.getGF().getValores(), 
+					md.getGF().getNumeros()
+					);
+		}
+		
+		
+		if(evento.getActionCommand().equals(gui.getP2().VOLVER2)){
+			gui.getP2().setVisible(false);
+			gui.getP4().setVisible(true);
+
 		}
 		
 		

@@ -1,5 +1,6 @@
 package co.edu.unbosque.view;
 
+import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -21,24 +22,25 @@ public class Panel2 extends JPanel {
 	private JButton btnLeer;//Leer
 	private JButton btnVolver;//Volver
 	
-
-	
-
 	public static final String ESCRIBIR2 = "Escribir";
+	public static final String ESCRIBIR_REG2 = "Escribir_Reg";
 	public static final String LEER2 = "Leer";
+	public static final String LEER_REG2 = "Leer_Reg";
 	public static final String VOLVER2 = "Volver";
-	private JLabel lblNewLabel;
-	private JLabel lblNewLabel_6;
+	
+	private JLabel lblNjuego;
+	private JLabel lblTjuego;
 	
 	
-	private JTextField textField;
-	private JTextField textField_4;
+	private JTextField nombreJuego;
+	private JTextField tipoJuego;
 	
 	public Panel2(Controller control) {
+		
 		setForeground(Color.WHITE);
 		setVisible(false);
 		setBackground(Color.BLACK);
-		setSize(584,362); //tamaño en ancho y alto en pixeles
+		setSize(584,261); //tamaño en ancho y alto en pixeles
 
 
 		setLayout(null);
@@ -58,85 +60,100 @@ public class Panel2 extends JPanel {
 		btnEscribir.setActionCommand(VOLVER2);
 		add(btnVolver);
 		
-		lblNewLabel = new JLabel("Nombre del juego ");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setBounds(58, 84, 124, 14);
-		add(lblNewLabel);
+		lblNjuego = new JLabel("Nombre del juego ");
+		lblNjuego.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblNjuego.setForeground(Color.WHITE);
+		lblNjuego.setBounds(58, 84, 124, 14);
+		add(lblNjuego);
 		
-		lblNewLabel_6 = new JLabel("Tipo de juego");
-		lblNewLabel_6.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		lblNewLabel_6.setForeground(Color.WHITE);
-		lblNewLabel_6.setBounds(58, 130, 89, 14);
-		add(lblNewLabel_6);
+		lblTjuego = new JLabel("Tipo de juego");
+		lblTjuego.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblTjuego.setForeground(Color.WHITE);
+		lblTjuego.setBounds(58, 130, 89, 14);
+		add(lblTjuego);
 		
-		textField = new JTextField();
-		textField.setBounds(184, 82, 86, 20);
-		add(textField);
-		textField.setColumns(10);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(184, 128, 86, 20);
-		add(textField_4);
-		textField_4.setColumns(10);
+		nombreJuego = new JTextField();
+		nombreJuego.setBounds(192, 82, 86, 20);
+		add(nombreJuego);
+		nombreJuego.setColumns(10);
+		
+		tipoJuego = new JTextField();
+		tipoJuego.setBounds(192, 128, 86, 20);
+		add(tipoJuego);
+		tipoJuego.setColumns(10);
 		
 	}
-	public static String getVolver2() {
-		return VOLVER2;
+
+	public JTextField getNombreJuego() {
+		return nombreJuego;
 	}
+
+	public void setNombreJuego(JTextField nombreJuego) {
+		this.nombreJuego = nombreJuego;
+	}
+
+	public JTextField getTipoJuego() {
+		return tipoJuego;
+	}
+
+	public void setTipoJuego(JTextField tipoJuego) {
+		this.tipoJuego = tipoJuego;
+	}
+
 	
-	public static String getLeer2() {
-		return LEER2;
-	}
+	
+	
+	
 	
 	public static String getEscribir2() {
 		return ESCRIBIR2;
 	}
 
-	
-	
-
-
-	
-	
-	public JLabel getNombreJugador1() {
-		return nombreJugador1;
+	public static String getEscribirReg2() {
+		return ESCRIBIR_REG2;
 	}
 
-	public void setNombreJugador1(JLabel nombreJugador1) {
-		this.nombreJugador1 = nombreJugador1;
+	public static String getLeer2() {
+		return LEER2;
 	}
 
+	public static String getLeerReg2() {
+		return LEER_REG2;
+	}
 
-
-
+	public static String getVolver2() {
+		return VOLVER2;
+	}
 
 	public JButton getBtnEscribir() {
 		return btnEscribir;
 	}
+
 	public void setBtnEscribir(JButton btnEscribir) {
 		this.btnEscribir = btnEscribir;
 	}
-	
-	
-	
-	
-	
-	
+
 	public JButton getBtnLeer() {
 		return btnLeer;
 	}
-	
+
 	public void setBtnLeer(JButton btnLeer) {
 		this.btnLeer = btnLeer;
 	}
-	
+
 	public JButton getBtnVolver() {
 		return btnVolver;
 	}
+
 	public void setBtnVolver(JButton btnVolver) {
 		this.btnVolver = btnVolver;
 	}
+	
+	
+
+
+
 	
 	
 	

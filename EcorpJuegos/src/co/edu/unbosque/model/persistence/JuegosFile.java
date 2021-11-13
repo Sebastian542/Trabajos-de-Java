@@ -38,8 +38,8 @@ public class JuegosFile {
 		return REGISTROS;
 	}
 
-	public void setREGISTROS(int rEGISTROS) {
-		REGISTROS = rEGISTROS;
+	public void setREGISTROS(int REGISTROS) {
+		REGISTROS = REGISTROS;
 	}
 
 	
@@ -59,13 +59,14 @@ public class JuegosFile {
 	}
 
 	public String escribirArchivoBinario() {
-		String mensaje="Archivo Generado Exitosamente!";
+		String mensaje="Archivo de juegos Generado Exitosamente!";
 		f=new File(ruta);
 		Random r=new Random(); 
 		//double d=18.76353; 
 		try{     
 			fos=new FileOutputStream(f);     
 			dos=new DataOutputStream(fos);     
+		
 			for (int i=0;i<REGISTROS;i++){ 
 				dos.writeInt(i);
 				dos.writeDouble(r.nextDouble());//Nº aleatorio     
@@ -99,10 +100,10 @@ public class JuegosFile {
 	}
 
 	public String escribirRegistro() {
-		String mensaje = "Registro de Empleado Ingresado!";
+		String mensaje = "Registro del panel 2 almacenado";
 		RegJuegos juegos[] = new RegJuegos[3];
-		juegos[0] = new RegJuegos("Empleado apellido1","");
-		juegos[1] = new RegJuegos("Empleado apellido2","");
+		juegos[0] = new RegJuegos("Juego 1","");
+		juegos[1] = new RegJuegos("Juego 2","");
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));

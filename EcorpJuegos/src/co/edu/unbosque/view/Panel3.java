@@ -36,6 +36,7 @@ public class Panel3 extends JPanel {
 	private JButton butEscribir;
 	private JButton butEscribirReg;
 	private JButton butVolver;
+	
 	public static final String ESCRIBIR3 = "Escribir";
 	public static final String ESCRIBIR_REG3 = "Escribir_Reg";
 	public static final String LEER3 = "Leer";
@@ -166,6 +167,8 @@ public class Panel3 extends JPanel {
 	public static String getLeerReg3() {
 		return LEER_REG3;
 	}
+	
+	
 	
 	public JLabel getLabjugador1() {
 		return labjugador1;
