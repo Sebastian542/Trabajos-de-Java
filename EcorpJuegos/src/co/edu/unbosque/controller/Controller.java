@@ -32,13 +32,9 @@ public class Controller implements ActionListener{
 //			gui.setVisible(false);
 		}
 
-		if(evento.getActionCommand().equals(gui.getP4().JUEGOS)) {
-			gui.getP2().setVisible(true);
-			gui.getP4().setVisible(false);
+	
 		
-		}
-		
-		/*
+	
 		
 		if(evento.getActionCommand().equals(gui.getP4().PARTIDAS)) {
 			gui.getP4().setVisible(false);
@@ -57,7 +53,7 @@ public class Controller implements ActionListener{
 			
 		}
 		
-		*/
+		
 
 		if(evento.getActionCommand().equals(gui.getP1().VOLVER1)){
 			gui.getP1().setVisible(false);
@@ -65,18 +61,11 @@ public class Controller implements ActionListener{
 			gui.setVisible(true);
 		}
 
-
-		if(evento.getActionCommand().equals(gui.getP3().VOLVER3)){
-			gui.getP3().setVisible(false);
-			gui.getPr3().setVisible(false);
-			gui.getPreg3().setVisible(false);
-			gui.getP4().setVisible(true);
-			gui.setSize(600,400);
-		}
 		
 		
 		
 		String resultado;
+		
 		
 		if(evento.getActionCommand().equals(gui.getP2().ESCRIBIR2)){
 			
@@ -92,7 +81,7 @@ public class Controller implements ActionListener{
 		if(evento.getActionCommand().equals(gui.getP2().LEER2)){
 			md.getGF().leerArchivoBinario();
 			//pd.getBf().leerArchivoBinario();
-			gui.mostrarCifras3(
+			gui.mostrarCifras2(
 					md.getGF().getREGISTROS(),
 					md.getGF().getValores(), 
 					md.getGF().getNumeros()
@@ -105,6 +94,10 @@ public class Controller implements ActionListener{
 			gui.getP4().setVisible(true);
 
 		}
+		
+		
+		
+		//opciones del panel 3
 		
 		
 		if(evento.getActionCommand().equals(gui.getP3().ESCRIBIR3)){
@@ -136,39 +129,15 @@ public class Controller implements ActionListener{
 					md.getPF().getDatos());
 		}
 		
-		/*if(evento.getActionCommand().equals(gui.getP1().LEER1)){//p1
-			md.getJF().leerArchivoBinario();
-			//pd.getBf().leerArchivoBinario();
-			gui.mostrarCifras1(
-					md.getJF().getREGISTROS(),
-					md.getJF().getValores(), 
-					md.getJF().getNumeros()
-					);
+		if(evento.getActionCommand().equals(gui.getP3().VOLVER3)){
+			gui.getP3().setVisible(false);
+			gui.getPr3().setVisible(false);
+			gui.getPreg3().setVisible(false);
+			gui.getP4().setVisible(true);
+			gui.setSize(600,400);
 		}
 		
-		if(evento.getActionCommand().equals(gui.getP1().ESCRIBIR1)){//p1
-			resultado = md.getJF().escribirArchivoBinario();
-			//resultado = pd.getBf().escribirArchivoBinario();
-			gui.escribirMensaje(resultado);
-			
-		}
-		
-		if(evento.getActionCommand().equals(gui.getP2().LEER2)){//p2
-			md.getGF().leerArchivoBinario();
-			//pd.getBf().leerArchivoBinario();
-			gui.mostrarCifras2(
-					md.getGF().getREGISTROS(),
-					md.getGF().getValores(), 
-					md.getGF().getNumeros()
-					);
-		}
-		
-		if(evento.getActionCommand().equals(gui.getP2().ESCRIBIR2)){//p2
-			resultado = md.getGF().escribirArchivoBinario();
-			//resultado = pd.getBf().escribirArchivoBinario();
-			gui.escribirMensaje(resultado);
-			
-		}*/
+
 	}
 }
 

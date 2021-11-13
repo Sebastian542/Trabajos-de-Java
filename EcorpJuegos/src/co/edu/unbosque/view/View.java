@@ -94,7 +94,7 @@ public class View extends JFrame{
 		
 	}
 	
-	/*public void mostrarCifras2(int numReg, int valores[], double numeros[]) {
+	public void mostrarCifras2(int numReg, int valores[], double numeros[]) {
 		for (int i= 0 ; i<numReg ; i++) {
 			getPr3().getTxtMonto().append(String.valueOf(numeros[i])+"\n");
 			getPr3().getTxtValores().append(String.valueOf(valores[i])+"\n");
@@ -102,7 +102,7 @@ public class View extends JFrame{
 		
 	}
 	
-	public void mostrarCifras1(int numReg, int valores[], double numeros[]) {
+	/*public void mostrarCifras1(int numReg, int valores[], double numeros[]) {
 		for (int i= 0 ; i<numReg ; i++) {
 			getPr3().getTxtMonto().append(String.valueOf(numeros[i])+"\n");
 			getPr3().getTxtValores().append(String.valueOf(valores[i])+"\n");
@@ -121,17 +121,15 @@ public class View extends JFrame{
 		}	
 	}
 	
-	/*public void mostrarRegistros2(int numReg, RegPartidas[] datos) {
+	public void mostrarRegistros2(int numReg, RegPartidas[] datos) {
 		for (int i= 0 ; i<numReg ; i++) {
-			getPreg3().getTxtjugador1().append(String.valueOf(datos[i].getJugador1())+"\n");
-			getPreg3().getTxtjugador2().append(String.valueOf(datos[i].getJugador2())+"\n");
-			getPreg3().getTxtpuntaje1().append(String.valueOf(datos[i].getPuntaje1())+"\n");
-			getPreg3().getTxtpuntaje2().append(String.valueOf(datos[i].getPuntaje2())+"\n");
+
 			getPreg3().getTxtTipoPartida().append(String.valueOf(datos[i].getTipoPartida())+"\n");
 			getPreg3().getTxtJuego().append(String.valueOf(datos[i].getJuego())+"\n");
 		}	
 	}
 	
+	/*
 	public void mostrarRegistros1(int numReg, RegPartidas[] datos) {
 		for (int i= 0 ; i<numReg ; i++) {
 			getPreg3().getTxtjugador1().append(String.valueOf(datos[i].getJugador1())+"\n");

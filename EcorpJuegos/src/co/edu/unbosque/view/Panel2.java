@@ -16,8 +16,7 @@ public class Panel2 extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private JLabel nombreJugador1;
-	
+
 	private JButton btnEscribir;//Escribir
 	private JButton btnLeer;//Leer
 	private JButton btnVolver;//Volver
