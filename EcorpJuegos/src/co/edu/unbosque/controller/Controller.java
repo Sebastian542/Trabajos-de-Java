@@ -10,31 +10,53 @@ import co.edu.unbosque.view.View;
 public class Controller implements ActionListener{
 
 	private View gui;
-	//private Partidas pd;
 	private Mundo md;
-	
+	private RegPartidas rgpartida;
+
 	public Controller() {
 		md = new Mundo();
-		//pd = new Partidas();
+		rgpartida = new RegPartidas();
 		gui = new View(this);
 		gui.setVisible(true);
+		
 		
 	}
 
 	public void actionPerformed(ActionEvent evento) {
-	
-		
-		
+		String aux = "";
+		String aux2 = "";
+		String aux3 = "";
+		String aux4 = "";
+//		String aux5 = "";
+//		String aux6 = "";
+		double aux7 = 0.0;
+		double aux8 = 0.0;
+//		int aux9;
 	
 		if(evento.getActionCommand().equals(gui.getP4().JUGADORES)) {
 			gui.getP1().setVisible(true);
-//			gui.getP4().setVisible(false);
-//			gui.setVisible(false);
+
 		}
 
-	
+		if(evento.getActionCommand().equals(gui.getP4().JUEGOS)) {
+			gui.getP2().setVisible(true);
+			gui.getP4().setVisible(false);
 		
+		}
 	
+//		///////////////PANEL 1//////////////////////////////////////////////////////
+		if(evento.getActionCommand().equals(gui.getP1().VOLVER1)){
+			gui.getP1().setVisible(false);
+			gui.getP4().setVisible(true);
+			gui.setVisible(true);
+		}
+//		///////////////PANEL 2//////////////////////////////////////////////////////
+		if(evento.getActionCommand().equals(gui.getP2().VOLVER2)){
+			gui.getP2().setVisible(false);
+			gui.getP4().setVisible(true);
+
+		}
+//		///////////////PANEL 3//////////////////////////////////////////////////////
 		
 		if(evento.getActionCommand().equals(gui.getP4().PARTIDAS)) {
 			gui.getP4().setVisible(false);
@@ -46,98 +68,43 @@ public class Controller implements ActionListener{
 			gui.getP3().getTxtpuntaje2().setText("");
 			gui.getP3().getTxtTipoPartida().setText("");
 			gui.getPr3().setVisible(true);
-			gui.getPr3().getTxtMonto().setText("");
-			gui.getPr3().getTxtValores().setText("");
-			gui.getPreg3().setVisible(true);
-			gui.setSize(600,580);
 			
-		}
-		
-		
-
-		if(evento.getActionCommand().equals(gui.getP1().VOLVER1)){
-			gui.getP1().setVisible(false);
-			gui.getP4().setVisible(true);
-			gui.setVisible(true);
-		}
-
-		
-		
-		
-		String resultado;
-		
-		
-		if(evento.getActionCommand().equals(gui.getP2().ESCRIBIR2)){
-			
-			System.out.println("SE DIO CLICK A ESCRIBIR");
-			resultado = md.getGF().escribirArchivoBinario();
-
-			//resultado = pd.getBf().escribirArchivoBinario();
-			gui.escribirMensaje(resultado);
-			
-		}
-		
-		
-		if(evento.getActionCommand().equals(gui.getP2().LEER2)){
-			md.getGF().leerArchivoBinario();
-			//pd.getBf().leerArchivoBinario();
-			gui.mostrarCifras2(
-					md.getGF().getREGISTROS(),
-					md.getGF().getValores(), 
-					md.getGF().getNumeros()
-					);
-		}
-		
-		
-		if(evento.getActionCommand().equals(gui.getP2().VOLVER2)){
-			gui.getP2().setVisible(false);
-			gui.getP4().setVisible(true);
-
-		}
-		
-		
-		
-		//opciones del panel 3
-		
-		
-		if(evento.getActionCommand().equals(gui.getP3().ESCRIBIR3)){
-			resultado = md.getPF().escribirArchivoBinario();
-			//resultado = pd.getBf().escribirArchivoBinario();
-			gui.escribirMensaje(resultado);
-			
-		}
-		
-		if(evento.getActionCommand().equals(gui.getP3().ESCRIBIR_REG3)){
-			gui.escribirMensaje(md.getPF().escribirRegistro());
-			//gui.escribirMensaje(pd.getBf().escribirRegistro());
-		}
-		
-		if(evento.getActionCommand().equals(gui.getP3().LEER3)){
-			md.getPF().leerArchivoBinario();
-			//pd.getBf().leerArchivoBinario();
-			gui.mostrarCifras3(
-					md.getPF().getREGISTROS(),
-					md.getPF().getValores(), 
-					md.getPF().getNumeros()
-					);
-		}
-		
-		if(evento.getActionCommand().equals(gui.getP3().LEER_REG3)){
-			md.getPF().leerRegistro();
-			//pd.getBf().leerRegistro();
-			gui.mostrarRegistros3(6,
-					md.getPF().getDatos());
 		}
 		
 		if(evento.getActionCommand().equals(gui.getP3().VOLVER3)){
 			gui.getP3().setVisible(false);
 			gui.getPr3().setVisible(false);
-			gui.getPreg3().setVisible(false);
 			gui.getP4().setVisible(true);
+			gui.getP3().getTxtjuego().setText("");
+			gui.getP3().getTxtjugador1().setText("");
+			gui.getP3().getTxtjugador2().setText("");
+			gui.getP3().getTxtpuntaje1().setText("");
+			gui.getP3().getTxtpuntaje2().setText("");
+			gui.getP3().getTxtTipoPartida().setText("");
 			gui.setSize(600,400);
 		}
-		
 
+		if(evento.getActionCommand().equals(gui.getP3().ESCRIBIR3)){
+			aux = gui.getP3().getTxtjugador1().getText();
+			rgpartida.setJugador1(aux);
+			aux7 = Double.parseDouble(gui.getP3().getTxtpuntaje1().getText());
+			rgpartida.setPuntaje1(aux7);
+			aux2 = gui.getP3().getTxtjugador2().getText();
+			rgpartida.setJugador2(aux2);
+			aux8 =  Double.parseDouble(gui.getP3().getTxtpuntaje2().getText());
+			rgpartida.setPuntaje2(aux8);
+			aux3 = gui.getP3().getTxtjuego().getText();
+			rgpartida.setJuego(aux3);
+			aux4 = gui.getP3().getTxtTipoPartida().getText();
+			rgpartida.setTipoPartida(aux4);
+			md.getPF().escribirPartida(rgpartida);
+		}
+		
+		if(evento.getActionCommand().equals(gui.getP3().LEER3)){
+			md.getPF().leerPartida(rgpartida);
+			System.out.println(rgpartida);
+			gui.mostrarPartida(rgpartida);
+		}
 	}
-}
+}	
 

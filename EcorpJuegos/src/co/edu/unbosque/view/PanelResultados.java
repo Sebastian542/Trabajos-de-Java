@@ -2,17 +2,17 @@ package co.edu.unbosque.view;
 
 import java.awt.Color;
 import java.awt.Font;
-
+import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-public class Panel2Resultados extends JPanel{
+public class PanelResultados extends JPanel{
 	
-
 	private static final long serialVersionUID = 1L;
 	private JLabel labResultado;
 	private JTextArea txtMonto;
@@ -20,7 +20,7 @@ public class Panel2Resultados extends JPanel{
 	private JScrollPane scrollMonto;
 	private JScrollPane scrollValores;
  
-	public Panel2Resultados() {
+	public PanelResultados() {
 		
 		setVisible(false);
 		setLayout(null);

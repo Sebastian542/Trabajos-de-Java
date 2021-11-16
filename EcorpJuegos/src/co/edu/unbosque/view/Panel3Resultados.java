@@ -1,99 +1,131 @@
 package co.edu.unbosque.view;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.GridLayout;
+
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 public class Panel3Resultados extends JPanel{
 	
+	private JTextArea txtjugador1;
+	private JTextArea txtjugador2;
+	private JTextArea txtpuntaje1;
+	private JTextArea txtpuntaje2;
+	private JTextArea txtTipoPartida;
+	private JTextArea txtJuego;
+	private JScrollPane scrolljugador1;
+	private JScrollPane scrolljugador2;
+	private JScrollPane scrollpuntaje1;
+	private JScrollPane scrollpuntaje2;
+	private JScrollPane scrollTipoPartida;
+	private JScrollPane scrollJuego;
+	private JLabel labArchivo;
+	
 	private static final long serialVersionUID = 1L;
-	private JLabel labResultado;
-	private JTextArea txtMonto;
-	private JTextArea txtValores;
-	private JScrollPane scrollMonto;
-	private JScrollPane scrollValores;
- 
+	
 	public Panel3Resultados() {
-		
 		setVisible(false);
-		setLayout(null);
-		setSize(584,180);
+		setLayout( new GridLayout(1,6) );
 		setBackground(Color.BLACK);
-		TitledBorder border = BorderFactory.createTitledBorder("Resultados");
+		TitledBorder border = BorderFactory.createTitledBorder("Lectura Registros");
 		border.setTitleColor(Color.WHITE);
-		setBorder(border);
-		labResultado = new JLabel("El Resultado es:");
-		labResultado.setForeground(Color.WHITE);
-		labResultado.setBounds(50, 20, 106, 17);
-		labResultado.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		txtMonto = new JTextArea();
-		txtMonto.setBounds(20,50,250,120);
-		txtMonto.setForeground(Color.BLACK);
-		txtMonto.setBackground(Color.WHITE);
-		scrollMonto = new JScrollPane(txtMonto);
-		scrollMonto.setBounds(20,50,250,120);
-		txtValores = new JTextArea();
-		txtValores.setBounds(310,50,250,120);
-		txtValores.setForeground(Color.BLACK);
-		txtValores.setBackground(Color.WHITE);
-		scrollValores = new JScrollPane(txtValores);
-		scrollValores.setBounds(310,50,250,120);
+		setBorder( border );
+		labArchivo = new JLabel("Resultado de Registros");
 		
-		add(scrollMonto);
-		add(scrollValores);
-		add(labResultado);
+		txtjugador1 = new JTextArea();
+		txtjugador1.setForeground(Color.BLACK);
+		txtjugador1.setBackground(Color.WHITE);
+
+		txtpuntaje1 = new JTextArea();
+		txtpuntaje1.setForeground(Color.BLACK);
+		txtpuntaje1.setBackground(Color.WHITE);
 		
+		txtjugador2 = new JTextArea();
+		txtjugador2.setForeground(Color.BLACK);
+		txtjugador2.setBackground(Color.WHITE);
 		
-		scrollMonto.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollValores.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		txtpuntaje2 = new JTextArea();
+		txtpuntaje2.setForeground(Color.BLACK);
+		txtpuntaje2.setBackground(Color.WHITE);
+		
+		txtTipoPartida = new JTextArea();
+		txtTipoPartida.setForeground(Color.BLACK);
+		txtTipoPartida.setBackground(Color.WHITE);
+		
+		txtJuego = new JTextArea();
+		txtJuego.setForeground(Color.BLACK);
+		txtJuego.setBackground(Color.WHITE);
+
+
+		add(txtjugador1);
+		add(txtpuntaje1);
+		add(txtjugador2);
+		add(txtpuntaje2);
+		add(txtJuego);
+		add(txtTipoPartida);
+
 	}
 
-	public JLabel getLabResultado() {
-		return labResultado;
+	public JTextArea getTxtjugador1() {
+		return txtjugador1;
 	}
 
-	public void setLabResultado(JLabel labResultado) {
-		this.labResultado = labResultado;
+	public void setTxtjugador1(JTextArea txtjugador1) {
+		this.txtjugador1 = txtjugador1;
 	}
 
-	public JTextArea getTxtMonto() {
-		return txtMonto;
+	public JTextArea getTxtjugador2() {
+		return txtjugador2;
 	}
 
-	public void setTxtMonto(JTextArea txtMonto) {
-		this.txtMonto = txtMonto;
+	public void setTxtjugador2(JTextArea txtjugador2) {
+		this.txtjugador2 = txtjugador2;
 	}
 
-	public JTextArea getTxtValores() {
-		return txtValores;
+	public JTextArea getTxtpuntaje1() {
+		return txtpuntaje1;
 	}
 
-	public void setTxtValores(JTextArea txtValores) {
-		this.txtValores = txtValores;
+	public void setTxtpuntaje1(JTextArea txtpuntaje1) {
+		this.txtpuntaje1 = txtpuntaje1;
 	}
 
-	public JScrollPane getScrollMonto() {
-		return scrollMonto;
+	public JTextArea getTxtpuntaje2() {
+		return txtpuntaje2;
 	}
 
-	public void setScrollMonto(JScrollPane scrollMonto) {
-		this.scrollMonto = scrollMonto;
+	public void setTxtpuntaje2(JTextArea txtpuntaje2) {
+		this.txtpuntaje2 = txtpuntaje2;
 	}
 
-	public JScrollPane getScrollValores() {
-		return scrollValores;
+	public JTextArea getTxtTipoPartida() {
+		return txtTipoPartida;
 	}
 
-	public void setScrollValores(JScrollPane scrollValores) {
-		this.scrollValores = scrollValores;
+	public void setTxtTipoPartida(JTextArea txtTipoPartida) {
+		this.txtTipoPartida = txtTipoPartida;
+	}
+
+	public JTextArea getTxtJuego() {
+		return txtJuego;
+	}
+
+	public void setTxtJuego(JTextArea txtJuego) {
+		this.txtJuego = txtJuego;
+	}
+
+	public JLabel getLabArchivo() {
+		return labArchivo;
+	}
+
+	public void setLabArchivo(JLabel labArchivo) {
+		this.labArchivo = labArchivo;
 	}
 	
-
+	
 }

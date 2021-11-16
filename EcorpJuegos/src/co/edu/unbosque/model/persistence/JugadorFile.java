@@ -94,8 +94,6 @@ public class JugadorFile {
 	public String escribirRegistro() {
 		String mensaje = "Registro de Empleado Ingresado!";
 		RegJugador jugador[] = new RegJugador[2];
-		jugador[0] = new RegJugador("Zed",6,"M",8.3);
-		jugador[1] = new RegJugador("Kindred",2,"F",1.3);
 
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));

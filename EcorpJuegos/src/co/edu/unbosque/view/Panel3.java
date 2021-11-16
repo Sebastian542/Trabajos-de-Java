@@ -36,7 +36,6 @@ public class Panel3 extends JPanel {
 	private JButton butEscribir;
 	private JButton butEscribirReg;
 	private JButton butVolver;
-	
 	public static final String ESCRIBIR3 = "Escribir";
 	public static final String ESCRIBIR_REG3 = "Escribir_Reg";
 	public static final String LEER3 = "Leer";
@@ -126,23 +125,23 @@ public class Panel3 extends JPanel {
 		butEscribir.setActionCommand(ESCRIBIR3);
 		add(butEscribir);
 		
-		butEscribirReg = new JButton("Escribir_Reg");
-		butEscribirReg.setBounds(16, 130, 125, 23);
-		butEscribirReg.setActionCommand(ESCRIBIR_REG3);
-		add(butEscribirReg);
+//		butEscribirReg = new JButton("Escribir_Reg");
+//		butEscribirReg.setBounds(16, 130, 125, 23);
+//		butEscribirReg.setActionCommand(ESCRIBIR_REG3);
+//		add(butEscribirReg);
 		
 		butLeer = new JButton("Leer");
 		butLeer.setBounds(252, 130, 89, 23);
 		butLeer.setActionCommand(LEER3);
 		add(butLeer);
 		
-		butLeerReg = new JButton("Leer_Reg");
-		butLeerReg.setBounds(352, 130, 89, 23);
-		butLeerReg.setActionCommand(LEER_REG3);
-		add(butLeerReg);
+//		butLeerReg = new JButton("Leer_Reg");
+//		butLeerReg.setBounds(352, 130, 89, 23);452, 130, 89, 23
+//		butLeerReg.setActionCommand(LEER_REG3);
+//		add(butLeerReg);
 		
 		butVolver = new JButton("Volver");
-		butVolver.setBounds(452, 130, 89, 23);
+		butVolver.setBounds(352, 130, 89, 23);
 		butVolver.setActionCommand(VOLVER3);
 		add(butVolver);
 		
@@ -167,8 +166,6 @@ public class Panel3 extends JPanel {
 	public static String getLeerReg3() {
 		return LEER_REG3;
 	}
-	
-	
 	
 	public JLabel getLabjugador1() {
 		return labjugador1;
@@ -237,7 +234,6 @@ public class Panel3 extends JPanel {
 		this.txtTipoPartida = txtTipoPartida;
 	}
 	
-	
 	public JButton getButLeer() {
 		return butLeer;
 	}
@@ -280,5 +276,6 @@ public class Panel3 extends JPanel {
 	public void setButEscribirReg(JButton butEscribirReg) {
 		this.butEscribirReg = butEscribirReg;
 	}
+	
 	
 }	
