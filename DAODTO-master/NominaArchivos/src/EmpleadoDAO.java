@@ -10,16 +10,21 @@ import java.util.ArrayList;
 public class EmpleadoDAO {
 
 	private ArrayList<EmpleadoDTO> nomina;
+	
 	private BinariosFile archivoEmpleado;
 
 	public EmpleadoDAO() {
+		
 		nomina = new ArrayList<EmpleadoDTO>();
+		
 		archivoEmpleado = new BinariosFile();
 	}
 	
 	public EmpleadoDTO buscarEmpleado(String correo) {
 		nomina = archivoEmpleado.leerArchivoEmpleado();
+	
 		for(EmpleadoDTO empleado : nomina) {
+			
 			if(empleado.getCorreo().equals(correo)) {
 				return empleado;
 			}
