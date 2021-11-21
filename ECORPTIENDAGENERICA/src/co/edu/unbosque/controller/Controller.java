@@ -3,12 +3,13 @@ package co.edu.unbosque.controller;
 
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import co.edu.unbosque.model.Mundo;
 
 import co.edu.unbosque.view.View;
 
-public class Controller implements ActionListener {
+public class Controller implements  ActionListener {
 
 	//Atributos que vienen del Modelo (mundo) 
 	private Mundo bd;
@@ -32,9 +33,9 @@ public class Controller implements ActionListener {
 		// TODO Auto-generated method stub
 		String resultado;
 		
+
 		
-		
-		if (evento.getActionCommand().equals(gui.getPanelEntrada().ESCRIBIR)) {
+		if (evento.getActionCommand().equals(gui.getM2().ESCRIBIR2)) {
 			resultado = bd.getBD().escribirArchivoBinario();
 			gui.escribirMensaje(resultado);
 		}

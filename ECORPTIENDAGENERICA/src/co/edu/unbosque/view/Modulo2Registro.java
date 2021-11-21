@@ -6,13 +6,29 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import co.edu.unbosque.controller.Controller;
+
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Modulo2Registro extends JFrame {
 
 	private JPanel contentPane;
+	
+	private JButton btnEscribir;//Escribir
+	private JButton btnLeer;//Leer
+	private JButton btnVolver;//Volver
+	
+	public static final String ESCRIBIR2 = "Escribir";
+	public static final String LEER2 = "Leer";
+	public static final String VOLVER2 = "Volver";
+
+	
 	private JTextField cedula;
 	private JTextField nombre;
 	private JTextField direccion;
@@ -42,10 +58,11 @@ public class Modulo2Registro extends JFrame {
 */
 	/**
 	 * Create the frame.
+	 * @param control 
 	 */
-	public Modulo2Registro() {
+	public Modulo2Registro(Controller control) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 408, 345);
+		setBounds(100, 100, 487, 345);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -95,7 +112,40 @@ public class Modulo2Registro extends JFrame {
 		correo.setBounds(146, 255, 86, 20);
 		contentPane.add(correo);
 		correo.setColumns(10);
+		
+		JButton btnLeer = new JButton("Leer");
+		btnLeer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnLeer.setBounds(331, 96, 89, 23);
+		contentPane.add(btnLeer);
+		
+		JButton btnEscribir = new JButton("Escribir");
+		btnEscribir.setBounds(331, 145, 89, 23);
+		contentPane.add(btnEscribir);
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.setBounds(331, 192, 89, 23);
+		contentPane.add(btnVolver);
 	}
+	
+
+	public static String getEscribir2() {
+		return ESCRIBIR2;
+	}
+
+
+	public static String getLeer2() {
+		return LEER2;
+	}
+
+
+	public static String getVolver2() {
+		return VOLVER2;
+	}
+
+
 
 	public JTextField getCedula() {
 		return cedula;
@@ -136,8 +186,32 @@ public class Modulo2Registro extends JFrame {
 	public void setCorreo(JTextField correo) {
 		this.correo = correo;
 	}
+
+	public JButton getBtnEscribir() {
+		return btnEscribir;
+	}
+
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
+	}
+
+	public JButton getBtnLeer() {
+		return btnLeer;
+	}
+
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
+	}
+
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
+	}
 	
 	
-	
-	
+
+
 }

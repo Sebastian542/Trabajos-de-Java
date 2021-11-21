@@ -10,7 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.TitledBorder;
 
-public class PanelResultados extends JPanel{
+public class Panel2Resultados extends JPanel{
 
 	private static final long serialVersionUID = 1L;
 	private JLabel labResultado;
@@ -25,7 +25,7 @@ public class PanelResultados extends JPanel{
 		this.txtValores = txtValores;
 	}
 
-	public PanelResultados() {
+	public Panel2Resultados() {
 		
 		setLayout( new GridLayout(1,2) );
 		TitledBorder border = BorderFactory.createTitledBorder("Resultados Archivos Binarios");
