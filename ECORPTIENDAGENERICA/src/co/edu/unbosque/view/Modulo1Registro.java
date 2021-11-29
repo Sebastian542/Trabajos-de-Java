@@ -20,7 +20,7 @@ import java.awt.event.ActionEvent;
 
 public class Modulo1Registro extends JFrame {
 	
-		// modulo 1 OK
+		// m1 ok
 	public static final String LEER = "Leer";
 	
 	private JLabel nombre_de_la_tienda;	
