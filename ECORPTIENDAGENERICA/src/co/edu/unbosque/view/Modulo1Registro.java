@@ -59,29 +59,7 @@ public class Modulo1Registro extends JFrame {
 	
 	private JTextField nombre_del_gerente1;
 	
-	public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-			
-			public void run() {
-				
-				try {
-					
-					Modulo1Registro frame = new Modulo1Registro();
-					
-					frame.setVisible(true);
-					
-				} catch (Exception e) {
-					
-					e.printStackTrace();
-					
-				}
-				
-			}
-			
-		});
-		
-	}
+
 
     	public Modulo1Registro() {
     		

@@ -99,10 +99,10 @@ public class Modelo2Persistencia {
 	public String escribirRegistro() {
 		String mensaje = "Registro de Empleado Ingresado!";
 		RegistroModelo2 staff[] = new RegistroModelo2[3];
-		staff[0] = new RegistroModelo2();
-		staff[1] = new RegistroModelo2();
-		staff[2] = new RegistroModelo2();
-
+		
+		//Datos de prueba
+		staff[0] = new RegistroModelo2(1, "Sebastian", "Prueba", 1234,"Correo en prueba");
+	
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
 			out.writeObject(staff);
@@ -122,9 +122,11 @@ public class Modelo2Persistencia {
 	        datos = (RegistroModelo2[])in.readObject();
 	        in.close();
 	        for (int i = 0; i < datos.length; i++) {
-	            System.out.println(datos[i].getEdad());
+	            System.out.println(datos[i].getCedula());
 	            System.out.println(datos[i].getNombre());
-	            System.out.println(datos[i].getSalario());
+	            System.out.println(datos[i].getDireccion());
+	            System.out.println(datos[i].getTelefono());
+	            System.out.println(datos[i].getCorreo());
 	        }
 
 		} catch (IOException | ClassNotFoundException e) {

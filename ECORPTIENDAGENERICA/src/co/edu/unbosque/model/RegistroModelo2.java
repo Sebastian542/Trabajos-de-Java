@@ -15,8 +15,10 @@ public class RegistroModelo2 implements Serializable{
 	private int telefono;
 	private String correo;
 	
+
 	public RegistroModelo2(int cedula, String nombre, String direccion, int telefono, String correo) {
-	
+		
+
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.direccion = direccion;

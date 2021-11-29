@@ -42,21 +42,16 @@ public class View extends JFrame{
 				setLocationRelativeTo(null); //coloca la ventana al centro de la pantalla
 				//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
 				setLayout( new BorderLayout() );
+				
 				//Se agrega al layout en la parte NORTH, el panel de entrada definido
 
 				
+				
+				
 			   	m2=new Modulo2Registro();
-				add(m2,BorderLayout.NORTH);
 				
-				
-				
-				//se agrega al boton ActionListener del objeto de Controlador - cambio
-				
-				//m2.getBtnVolver().addActionListener(control);
-				
+				add(m2);
 
-				getContentPane().add(m2);
-				
 				m2.getBtnEscribir().addActionListener(control);
 			
 				m2.getBtnLeer().addActionListener(control);
