@@ -1,27 +1,25 @@
 package co.edu.unbosque.view;
+
+
 import java.awt.BorderLayout;
-
-
 import java.awt.EventQueue;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-
-public class Modulo2Registro extends JFrame {
+public class Modulo2Registro extends JPanel {
 	
 	
 	private JButton btnEscribir;//Escribir
 	private JButton btnLeer;//Leer
 	private JButton btnVolver;//Volver
 	
-	public static final String ESCRIBIR2 = "Escribir";
-	public static final String LEER2 = "Leer";
-	public static final String VOLVER2 = "Volver";
+	public static final String ESCRIBIR2 = "Escribir2";
+	public static final String LEER2 = "Leer2";
+	public static final String VOLVER2 = "Volver2";
 	
 	
 	
@@ -56,18 +54,19 @@ public class Modulo2Registro extends JFrame {
 	 * Create the frame.
 	 * @param control 
 	 */
-   	public Modulo2Registro() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public Modulo2Registro() {
+		
+	
 		setBounds(100, 100, 391, 280);
 		setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Cedula------");
-		lblNewLabel.setBounds(51, 33, 86, 14);
+		JLabel lblNewLabel = new JLabel("Cedula");
+		lblNewLabel.setBounds(51, 33, 46, 14);
 		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre");
 		lblNewLabel_1.setBounds(51, 75, 46, 14);
-		add(lblNewLabel_1);
+	    add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Direccion");
 		lblNewLabel_2.setBounds(51, 117, 75, 14);
@@ -75,7 +74,7 @@ public class Modulo2Registro extends JFrame {
 		
 		JLabel lblNewLabel_3 = new JLabel("Telefono");
 		lblNewLabel_3.setBounds(51, 164, 75, 14);
-		add(lblNewLabel_3);
+	    add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Correo");
 		lblNewLabel_4.setBounds(51, 206, 46, 14);
@@ -98,7 +97,7 @@ public class Modulo2Registro extends JFrame {
 		
 		telefono = new JTextField();
 		telefono.setBounds(160, 161, 86, 20);
-	    add(telefono);
+        add(telefono);
 		telefono.setColumns(10);
 		
 		correo = new JTextField();
@@ -106,19 +105,24 @@ public class Modulo2Registro extends JFrame {
 		add(correo);
 		correo.setColumns(10);
 		
-		JButton butLeer = new JButton("Leer");		
-		butLeer.setActionCommand(LEER2);
-		butLeer.setBounds(270, 71, 89, 23);
-	    add(butLeer);
 		
-		JButton butEscribir = new JButton("Escribir");
-		butEscribir.setActionCommand(ESCRIBIR2);
-		butEscribir.setBounds(270, 113, 89, 23);
-		add(butEscribir);
 		
-		JButton butVolver = new JButton("Volver");
-		butVolver.setBounds(270, 160, 89, 23);
-		add(butVolver);
+		
+		btnLeer = new JButton("Leer");
+		btnLeer.setBounds(270, 71, 89, 23);
+		btnLeer.setActionCommand(LEER2);
+		add(btnLeer);
+		
+		btnEscribir = new JButton("Escribir");
+		btnEscribir.setBounds(270, 113, 89, 23);
+		btnEscribir.setActionCommand(ESCRIBIR2);
+		add(btnEscribir);
+		
+		
+		btnVolver = new JButton("Volver");
+		btnVolver.setBounds(270, 160, 89, 23);
+		add(btnVolver);
+		
 	}
 	
 

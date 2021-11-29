@@ -8,6 +8,7 @@ import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import co.edu.unbosque.view.Modulo2Registro;
 
 import co.edu.unbosque.controller.Controller;
 
@@ -32,33 +33,38 @@ public class View extends JFrame{
 		// Definición de los parámetros básicos de la ventana principal
 		
 
-				setBackground(Color.BLACK);
-				setSize(600,400);
-				setResizable(false); 
-				getContentPane().setLayout(null);
-				setTitle("Sistema de Informacion de Juegos"); 
-				setDefaultCloseOperation(EXIT_ON_CLOSE);
-				setLocationRelativeTo(null); 
-				setLayout(null);
-
-
+		// Definición de los parámetros básicos de la ventana principal
+		
+				setSize(500,400); //tamaño en ancho y alto en pixeles
+				setResizable(false); //Se puede cambiar el tamaño de la ventana?
+				setTitle("Título de la Ventana Principal"); //tìtulo de la ventana
+				setDefaultCloseOperation(EXIT_ON_CLOSE);//qué debe hacer si cierra la ventana
+				setLocationRelativeTo(null); //coloca la ventana al centro de la pantalla
+				//Establece el layout (lienzo) que vamos a utilizar dentro de la ventana principal.
+				setLayout( new BorderLayout() );
 				//Se agrega al layout en la parte NORTH, el panel de entrada definido
 
-				m2 = new Modulo2Registro();
-				m2.setBounds(0, 0, 300, 400);
-			
 				
+			   	m2=new Modulo2Registro();
 				add(m2,BorderLayout.NORTH);
 				
 				
+				
+				//se agrega al boton ActionListener del objeto de Controlador - cambio
+				
+				//m2.getBtnVolver().addActionListener(control);
+				
 
-		
-		m2.getBtnLeer().addActionListener(control);
-		m2.getBtnEscribir().addActionListener(control);
-	
-		m2.getBtnVolver().addActionListener(control);
-		
+				getContentPane().add(m2);
+				
+				m2.getBtnEscribir().addActionListener(control);
+			
+				m2.getBtnLeer().addActionListener(control);
+				
+				m2.getBtnVolver().addActionListener(control);
 
+
+				
 		
 	}
 	
