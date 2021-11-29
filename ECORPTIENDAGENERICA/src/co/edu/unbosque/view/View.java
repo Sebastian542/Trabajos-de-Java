@@ -55,6 +55,7 @@ public class View extends JFrame{
 		
 		m2.getBtnLeer().addActionListener(control);
 		m2.getBtnEscribir().addActionListener(control);
+	
 		m2.getBtnVolver().addActionListener(control);
 		
 

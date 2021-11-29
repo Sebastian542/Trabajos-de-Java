@@ -59,27 +59,27 @@ public class Modulo2Registro extends JFrame {
    	public Modulo2Registro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 391, 280);
-		getContentPane().setLayout(null);
+		setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Cedula");
-		lblNewLabel.setBounds(51, 33, 46, 14);
-		getContentPane().add(lblNewLabel);
+		JLabel lblNewLabel = new JLabel("Cedula------");
+		lblNewLabel.setBounds(51, 33, 86, 14);
+		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre");
 		lblNewLabel_1.setBounds(51, 75, 46, 14);
-		getContentPane().add(lblNewLabel_1);
+		add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Direccion");
 		lblNewLabel_2.setBounds(51, 117, 75, 14);
-		getContentPane().add(lblNewLabel_2);
+		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Telefono");
 		lblNewLabel_3.setBounds(51, 164, 75, 14);
-		getContentPane().add(lblNewLabel_3);
+		add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Correo");
 		lblNewLabel_4.setBounds(51, 206, 46, 14);
-		getContentPane().add(lblNewLabel_4);
+		add(lblNewLabel_4);
 		
 		cedula = new JTextField();
 		cedula.setBounds(160, 41, 86, 20);

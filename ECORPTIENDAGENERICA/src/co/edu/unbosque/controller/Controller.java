@@ -35,7 +35,7 @@ public class Controller implements  ActionListener {
 		// TODO Auto-generated method stub
 		String resultado;
 		
-
+		System.out.println("Entre al action");
 		
 		if (evento.getActionCommand().equals(gui.getM2().ESCRIBIR2)) {
 			resultado = bd.getBD().escribirArchivoBinario();
