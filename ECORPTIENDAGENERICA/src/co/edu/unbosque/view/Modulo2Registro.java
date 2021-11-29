@@ -1,5 +1,7 @@
 package co.edu.unbosque.view;
 import java.awt.BorderLayout;
+
+
 import java.awt.EventQueue;
 
 import javax.swing.JButton;
@@ -8,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 
 public class Modulo2Registro extends JFrame {
 	
@@ -53,7 +56,7 @@ public class Modulo2Registro extends JFrame {
 	 * Create the frame.
 	 * @param control 
 	 */
-	public Modulo2Registro() {
+   	public Modulo2Registro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 391, 280);
 		getContentPane().setLayout(null);

@@ -23,6 +23,7 @@ public class Controller implements  ActionListener {
 		//aqui van los constructores tanto de Mundo, como de Vista
 		
 		bd = new Mundo();
+		///view
 		
 		gui = new View(this);
 		
