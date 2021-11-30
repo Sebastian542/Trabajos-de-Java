@@ -14,7 +14,7 @@ public class Modulo2DAO {
 	private Modelo2Persistencia archivoModelo2;
 	
 	public Modulo2DAO() {
-		
+		//prueba
 		m2DTO = new ArrayList<Modulo2DTO>();
 		archivoModelo2 = new Modelo2Persistencia();
 	}
