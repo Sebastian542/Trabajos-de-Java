@@ -9,145 +9,52 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.Random;
 
 
-import co.edu.unbosque.model.RegistroModelo2;
+import co.edu.unbosque.model.Modulo2DTO;
+
 
 public class Modelo2Persistencia {
-
-
-	private String ruta = "C:\\data\\prueba.out";
-	private String rutaReg = "C:\\data\\registro.out";
-
-	private int REGISTROS = 10;
-	private File f; 
-	private FileOutputStream fos;     
-	private DataOutputStream dos;
-	private FileInputStream fis;     
-	private DataInputStream dis;
-	private double numeros[];
-	private int valores[];
-	private RegistroModelo2 reg;
-	private RegistroModelo2[] datos;
 	
+	private String ruta = "\\data\\cliente.dat";//guarda en directorio predeterminado del usuario (i.e. C:\\data\\juegos.dat).
 
-	public int getREGISTROS() {
-		return REGISTROS;
-	}
-
-	public void setREGISTROS(int rEGISTROS) {
-		REGISTROS = rEGISTROS;
-	}
-
+	private String nombreArchivoJuego="cleinte.dat";
+	private File f;
+			
 	
-	public int[] getValores() {
-		return valores;
-	}
-
-	public void setValores(int[] valores) {
-		this.valores = valores;
-	}
-
-	public Modelo2Persistencia() {
-		// TODO Auto-generated constructor stub
-		numeros = new double[10];
-		valores = new int[10];
-		datos = new RegistroModelo2[10];
-	}
-
-	public String escribirArchivoBinario() {
+	public String escribirArchivoModulo2(ArrayList<Modulo2DTO> rgmd2) {
 		String mensaje="Archivo Generado Exitosamente!";
-		f=new File(ruta);
-		Random r=new Random(); 
-		double d=18.76353; 
-		try{     
-			fos=new FileOutputStream(f);     
-			dos=new DataOutputStream(fos);     
-			for (int i=0;i<REGISTROS;i++){ 
-				dos.writeInt(i);
-				dos.writeDouble(r.nextDouble());//Nº aleatorio     
-			}     
-			dos.close();
-		} 
-		catch(FileNotFoundException e){     
-			mensaje= "No se encontro el archivo"; 
-		} 
-		catch(IOException e){     
-			mensaje = "Error al escribir"; 
-		}
-		return mensaje;
-	}
-	
-	public void leerArchivoBinario() {
 		f = new File(ruta);
 		try {
-			fis = new FileInputStream(f);
-			dis = new DataInputStream(fis);
-			for (int i=0; i<REGISTROS ; i++){
-				//System.out.println(dis.readDouble());
-				numeros[i] = dis.readDouble();
-				valores[i] = dis.readInt();
-			}
-			dis.close();
-		}
-		catch(IOException e){     
-			e.printStackTrace(); 
-		} 
-	}
-
-	public String escribirRegistro() {
-		String mensaje = "Registro de Empleado Ingresado!";
-		RegistroModelo2 staff[] = new RegistroModelo2[3];
-		
-		//Datos de prueba
-		staff[0] = new RegistroModelo2(1, "Sebastian", "Prueba", 1234,"Correo en prueba");
-	
-		try {
-			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaReg));
-			out.writeObject(staff);
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(ruta));
+			out.writeObject(rgmd2);
 			out.close();
-		}
-		catch (IOException e) {
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			mensaje = "Archivo no encontrado";
+		} catch (IOException e) {
 			e.printStackTrace();
 			mensaje = "Error de IO";
 		}
 		return mensaje;
 	}
 	
-	public void leerRegistro() {
-        ObjectInputStream in;
+	public ArrayList<Modulo2DTO> leerArchivoModulo2() {
+		f.getAbsoluteFile();
+		ObjectInputStream in;
+		ArrayList<Modulo2DTO> rgModulo2 = null;
 		try {
-			in = new ObjectInputStream(new FileInputStream(rutaReg));
-	        datos = (RegistroModelo2[])in.readObject();
+			in = new ObjectInputStream(new FileInputStream(ruta));
+			rgModulo2 = (ArrayList<Modulo2DTO>)in.readObject();
 	        in.close();
-	        for (int i = 0; i < datos.length; i++) {
-	            System.out.println(datos[i].getCedula());
-	            System.out.println(datos[i].getNombre());
-	            System.out.println(datos[i].getDireccion());
-	            System.out.println(datos[i].getTelefono());
-	            System.out.println(datos[i].getCorreo());
-	        }
 
 		} catch (IOException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return rgModulo2;
 	}
 
-	public RegistroModelo2[] getDatos() {
-		return datos;
-	}
-
-	public void setDatos(RegistroModelo2[] datos) {
-		this.datos = datos;
-	}
-
-	public double[] getNumeros() {
-		return numeros;
-	}
-
-	public void setNumeros(double[] numeros) {
-		this.numeros = numeros;
-	}
+	
 }
