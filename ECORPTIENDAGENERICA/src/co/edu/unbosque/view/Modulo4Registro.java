@@ -15,10 +15,10 @@ import java.awt.Font;
 public class Modulo4Registro extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField nproducto;
+	private JTextField nproveedor;
+	private JTextField pcompra;
+	private JTextField pventa;
 
 	/**
 	 * Launch the application.
@@ -73,36 +73,36 @@ public class Modulo4Registro extends JFrame {
 		lblNewLabel_3.setBounds(230, 79, 114, 14);
 		contentPane.add(lblNewLabel_3);
 		
-		textField = new JTextField();
-		textField.setBounds(134, 27, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		nproducto = new JTextField();
+		nproducto.setBounds(134, 27, 86, 20);
+		contentPane.add(nproducto);
+		nproducto.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(338, 27, 86, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		nproveedor = new JTextField();
+		nproveedor.setBounds(338, 27, 86, 20);
+		contentPane.add(nproveedor);
+		nproveedor.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(134, 76, 86, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		pcompra = new JTextField();
+		pcompra.setBounds(134, 76, 86, 20);
+		contentPane.add(pcompra);
+		pcompra.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(338, 76, 86, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		pventa = new JTextField();
+		pventa.setBounds(338, 76, 86, 20);
+		contentPane.add(pventa);
+		pventa.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Escribir");
-		btnNewButton.setBounds(86, 135, 89, 23);
-		contentPane.add(btnNewButton);
+		JButton btnEscribir = new JButton("Escribir");
+		btnEscribir.setBounds(86, 135, 89, 23);
+		contentPane.add(btnEscribir);
 		
-		JButton btnNewButton_1 = new JButton("Leer");
-		btnNewButton_1.setBounds(205, 135, 89, 23);
-		contentPane.add(btnNewButton_1);
+		JButton btnLeer = new JButton("Leer");
+		btnLeer.setBounds(205, 135, 89, 23);
+		contentPane.add(btnLeer);
 		
-		JButton btnNewButton_2 = new JButton("Volver");
-		btnNewButton_2.setBounds(304, 135, 89, 23);
-		contentPane.add(btnNewButton_2);
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.setBounds(304, 135, 89, 23);
+		contentPane.add(btnVolver);
 	}
 }
