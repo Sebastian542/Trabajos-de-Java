@@ -20,7 +20,8 @@ public class Modelo2Persistencia {
 	
 	private String ruta = "\\data\\cliente.dat";//guarda en directorio predeterminado del usuario (i.e. C:\\data\\juegos.dat).
 
-	private String nombreArchivoJuego="cliente.dat";
+	private String nombreArchivoModulo2="cliente.dat";
+	
 	private File f;
 			
 	
@@ -42,8 +43,11 @@ public class Modelo2Persistencia {
 	}
 	
 	public ArrayList<Modulo2DTO> leerArchivoModulo2() {
+		
 		f.getAbsoluteFile();
+		
 		ObjectInputStream in;
+		
 		ArrayList<Modulo2DTO> rgModulo2 = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(ruta));
@@ -57,5 +61,16 @@ public class Modelo2Persistencia {
 		return rgModulo2;
 	}
 
+
+	public String getNombreArchivoModulo2() {
+		return nombreArchivoModulo2;
+	}
+
+	public void setNombreArchivoModulo2(String nombreArchivoModulo2) {
+		this.nombreArchivoModulo2 = nombreArchivoModulo2;
+	}
+
+
+	
 	
 }

@@ -58,17 +58,15 @@ public class Controller implements  ActionListener {
 			
 			
 			aux1=Integer.parseInt(gui.getM2().getCedula().getText());
-
 			rgmd2.setCedula(aux1);
 
 			
 			String aux2=gui.getM2().getNombre().getText();
+			rgmd2.setNombre(aux2);
 			
-			
-			//md2DTO.setNombre(aux2);
-			
-			
-			
+			rgmd2.setDireccion(null);
+			rgmd2.setTelefono(0);
+			rgmd2.setCorreo(null);
 	
 			bd.getMd2().escribirArchivoModulo2(rgsModulo2);
 	
