@@ -14,15 +14,15 @@ public class Panel2Resultados extends JPanel{
 
 	private static final long serialVersionUID = 1L;
 	private JLabel labResultado;
-	private JTextArea txtMonto;
-	private JTextArea txtValores;
+	private JTextArea txtNombre;
+	private JTextArea txtCedula;
 	
 	public JTextArea getTxtValores() {
-		return txtValores;
+		return txtCedula;
 	}
 
 	public void setTxtValores(JTextArea txtValores) {
-		this.txtValores = txtValores;
+		this.txtCedula = txtValores;
 	}
 
 	public Panel2Resultados() {
@@ -32,18 +32,23 @@ public class Panel2Resultados extends JPanel{
 		border.setTitleColor(Color.BLACK);
 		setBorder( border );
 		labResultado = new JLabel("Listado de Resultados Archivo");
-		txtValores = new JTextArea("");
-		txtValores.setForeground(Color.BLACK);
-		txtValores.setBackground(Color.WHITE);
+		txtCedula = new JTextArea("");
+		txtCedula.setForeground(Color.BLACK);
+		txtCedula.setBackground(Color.WHITE);
 	
-		txtMonto = new JTextArea("");
-		txtMonto.setForeground(Color.BLACK);
-		txtMonto.setBackground(Color.WHITE);
+		txtNombre = new JTextArea("");
+		txtNombre.setForeground(Color.BLACK);
+		txtNombre.setBackground(Color.WHITE);
 		//add(labResultado);
 		//add(new JLabel(""));
 		//add(new JLabel(""));
-		add(txtValores);
-		add(txtMonto);
+		add(txtCedula);
+		add(txtNombre);
+		
+		JTextArea txtTelefono = new JTextArea("");
+		txtTelefono.setForeground(Color.BLACK);
+		txtTelefono.setBackground(Color.WHITE);
+		add(txtTelefono);
 	}
 
 	public JLabel getLabResultado() {
@@ -55,10 +60,10 @@ public class Panel2Resultados extends JPanel{
 	}
 
 	public JTextArea getTxtMonto() {
-		return txtMonto;
+		return txtNombre;
 	}
 
 	public void setTxtMonto(JTextArea txtMonto) {
-		this.txtMonto = txtMonto;
+		this.txtNombre = txtMonto;
 	}
 }

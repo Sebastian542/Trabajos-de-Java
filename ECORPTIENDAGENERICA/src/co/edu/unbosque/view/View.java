@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.border.Border;
 
 import co.edu.unbosque.view.Modulo2Registro;
 
@@ -53,12 +54,15 @@ public class View extends JFrame{
 			   	m2=new Modulo2Registro();
 				
 				add(m2);
-
-				m2.getBtnEscribir().addActionListener(control);
+				
+				pr2 = new Panel2Resultados();
+		    	pr2.setBounds(300, 0, 286, 362);
+		    	getContentPane().add(pr2);
+				
 			
 				m2.getBtnLeer().addActionListener(control);
 				
-				m2.getBtnVolver().addActionListener(control);
+			//	m2.getBtnVolver().addActionListener(control);
 
 
 				
@@ -98,7 +102,7 @@ public class View extends JFrame{
 	public void imprimirModulo2(ArrayList<Modulo2DTO> m2dto) {
 		for(Modulo2DTO rJcln : m2dto) {
 		
-			getM2().getNombre().append(String.valueOf(rJcln.getNombre())+"\n");
+			//getM2().getNombre().append(String.valueOf(rJcln.getNombre())+"\n");
 			
 		}
 	}

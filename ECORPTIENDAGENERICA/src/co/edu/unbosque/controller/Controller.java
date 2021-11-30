@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.JTextField;
+
 
 import co.edu.unbosque.model.Modulo2DTO;
 import co.edu.unbosque.model.Mundo;
@@ -20,9 +22,10 @@ public class Controller implements  ActionListener {
 	//Atributos que vienen de Vista - GUI
 	private View gui;
 	
-	private Modulo2DTO md2DTO;
 	
-	private ArrayList<Modulo2DTO> rgsModulo2;
+	
+	 ArrayList<Modulo2DTO> rgsModulo2;
+	private Modulo2DTO rgmd2;
 	
 	public Controller() {
 		
@@ -30,6 +33,10 @@ public class Controller implements  ActionListener {
 		
 		bd = new Mundo();
 		///view
+		
+		rgsModulo2 = new ArrayList<Modulo2DTO>();
+		rgmd2 = new Modulo2DTO(0, null, null, 0, null);
+		
 		
 		gui = new View(this);
 		
@@ -40,22 +47,33 @@ public class Controller implements  ActionListener {
 	public void actionPerformed(ActionEvent evento) {
 		// TODO Auto-generated method stub
 		String resultado;
-		
-		System.out.println("Entre al action");
-		
-	
+
 		
 		if(evento.getActionCommand().equals(gui.getM2().ESCRIBIR2)) {
 			
-			String aux=gui.getM2().getNombre().getText();
+			
+			System.out.println("Click a escribir");
+			
+			int aux1;
 			
 			
-			md2DTO.setNombre(aux);
+			aux1=Integer.parseInt(gui.getM2().getCedula().getText());
+
+			rgmd2.setCedula(aux1);
+
+			
+			String aux2=gui.getM2().getNombre().getText();
+			
+			
+			//md2DTO.setNombre(aux2);
+			
+			
 			
 	
 			bd.getMd2().escribirArchivoModulo2(rgsModulo2);
 	
 		}
+		
 		
 		
 		if(evento.getActionCommand().equals(gui.getM2().LEER2)) {
