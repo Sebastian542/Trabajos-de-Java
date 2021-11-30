@@ -53,11 +53,12 @@ public class View extends JFrame{
 				
 			   	m2=new Modulo2Registro();
 				
-				add(m2);
+				add(m2,BorderLayout.CENTER);
 				
 				pr2 = new Panel2Resultados();
 		    	pr2.setBounds(300, 0, 286, 362);
-		    	getContentPane().add(pr2);
+		    	
+		    	add(pr2,BorderLayout.SOUTH);
 				
 			
 				m2.getBtnLeer().addActionListener(control);
