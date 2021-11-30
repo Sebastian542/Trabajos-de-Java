@@ -4,7 +4,10 @@ package co.edu.unbosque.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
+
+import co.edu.unbosque.model.Modulo2DTO;
 import co.edu.unbosque.model.Mundo;
 
 import co.edu.unbosque.view.View;
@@ -17,6 +20,9 @@ public class Controller implements  ActionListener {
 	//Atributos que vienen de Vista - GUI
 	private View gui;
 	
+	private Modulo2DTO md2DTO;
+	
+	private ArrayList<Modulo2DTO> rgsModulo2;
 	
 	public Controller() {
 		
@@ -37,57 +43,43 @@ public class Controller implements  ActionListener {
 		
 		System.out.println("Entre al action");
 		
+	
 		
-		
-		if (evento.getActionCommand().equals(gui.getM2().ESCRIBIR2)) {
-			resultado = bd.getBD().escribirArchivoBinario();
-			gui.escribirMensaje(resultado);
+		if(evento.getActionCommand().equals(gui.getM2().ESCRIBIR2)) {
+			
+			String aux=gui.getM2().getNombre().getText();
+			
+			
+			md2DTO.setNombre(aux);
+			
+	
+			bd.getMd2().escribirArchivoModulo2(rgsModulo2);
+	
 		}
 		
 		
-		if(evento.getActionCommand().equals(gui.getPanelEntrada().LEER)) {
-			//haga algo de por Dios!!
-			bd.getBD().leerArchivoBinario();
-			mostrarCifras();
+		if(evento.getActionCommand().equals(gui.getM2().LEER2)) {
 			
+			
+			bd.getMd2().leerArchivoModulo2();
+			
+		
+			System.out.println(rgsModulo2);
+			System.out.println(rgsModulo2);
+			//gui.imprimirJuego(rgsModulo2;
+	
 		}
 		
-		
-		
-		
-		
-		
-		
-			
-		
+
 	
 	}
 	
-	private void mostrarCifras() {
-		for (int i= 0 ; i<bd.getBD().getREGISTROS() ; i++) {
-			
-			gui.getPr2().getTxtMonto().append(String.valueOf(bd.getBD().getNumeros()[i])+"\n");
-			gui.getPr2().getTxtValores().append(String.valueOf(bd.getBD().getValores()[i])+"\n");
-		}	
-	}
-	
+
 	
 	
 
 	
-	private void mostrarRegistros() {
-		
-		for (int i= 0 ; i<3 ; i++) {
-			
-			
-		//	gui.getM2().getCedula().append(String.valueOf(bd.getBD().getDatos()[i].getCedula())+"\n");
-			
-			gui.getM2().getNombre().append(String.valueOf(bd.getBD().getDatos()[i].getNombre())+"\n");
-			
-			
-			//gui.getM2().getTxtSalario().append(String.valueOf(bd.getBD().getDatos()[i].getSalario())+"\n");
-		}	
-	}
+
   	
 	}
 

@@ -101,18 +101,18 @@ public class Modulo2Registro extends JPanel{
 		
 		
 		btnLeer = new JButton("Leer");
-		btnLeer.setBounds(29, 233, 89, 23);
+		btnLeer.setBounds(274, 58, 89, 23);
 		btnLeer.setActionCommand(LEER2);
 		add(btnLeer);
 		
 		btnEscribir = new JButton("Escribir");
-		btnEscribir.setBounds(171, 221, 89, 23);
+		btnEscribir.setBounds(274, 107, 89, 23);
 		btnEscribir.setActionCommand(ESCRIBIR2);
 		add(btnEscribir);
 		
 		
 		btnVolver = new JButton("Volver");
-		btnVolver.setBounds(285, 221, 89, 23);
+		btnVolver.setBounds(274, 154, 89, 23);
 		add(btnVolver);
 		
 	}

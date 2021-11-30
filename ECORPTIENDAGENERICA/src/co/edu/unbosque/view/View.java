@@ -12,6 +12,8 @@ import co.edu.unbosque.view.Modulo2Registro;
 
 import co.edu.unbosque.controller.Controller;
 
+import co.edu.unbosque.model.Modulo2DTO;
+
 
 
 public class View extends JFrame{
@@ -93,6 +95,13 @@ public class View extends JFrame{
 		JOptionPane.showMessageDialog(null, mensaje, "archivos binarios", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
+	public void imprimirModulo2(ArrayList<Modulo2DTO> m2dto) {
+		for(Modulo2DTO rJcln : m2dto) {
+		
+			getM2().getNombre().append(String.valueOf(rJcln.getNombre())+"\n");
+			
+		}
+	}
 	
 	
 	
