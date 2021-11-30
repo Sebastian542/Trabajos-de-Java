@@ -41,31 +41,37 @@ public class Modulo3Panel extends JPanel {
 		setBorder(border);
 		
 		labNIT = new JLabel("NIT");
+		labNIT.setForeground(Color.WHITE);
 		labNIT.setBounds(50, 30, 106, 17);
 		labNIT.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labNIT);
 		
 		labnombre = new JLabel("Nombre");
+		labnombre.setForeground(Color.WHITE);
 		labnombre.setBounds(50, 60, 106, 17);
 		labnombre.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labnombre);
 		
 		labproveedor = new JLabel("Proveedor");
+		labproveedor.setForeground(Color.WHITE);
 		labproveedor.setBounds(50, 90, 106, 17);
 		labproveedor.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labproveedor);
 		
 		labdireccion = new JLabel("Direccion");
+		labdireccion.setForeground(Color.WHITE);
 		labdireccion.setBounds(325, 30, 106, 17);
 		labdireccion.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labdireccion);
 		
 		labtelefono = new JLabel("Telefono");
+		labtelefono.setForeground(Color.WHITE);
 		labtelefono.setBounds(325, 60, 106, 17);
 		labtelefono.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labtelefono);
 		
 		labciudad = new JLabel("Ciudad");
+		labciudad.setForeground(Color.WHITE);
 		labciudad.setBounds(325, 90, 106, 17);
 		labciudad.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labciudad);
