@@ -27,6 +27,7 @@ public class Controller implements  ActionListener {
 	private Modulo5Calculos mc5;
 	
 	public Controller() {
+		
 		bd = new Mundo();
 		rgsModulo2 = new ArrayList<Modulo2DTO>();
 		rgmd2 = new Modulo2DTO(0, null, null, 0, null);
@@ -39,20 +40,11 @@ public class Controller implements  ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent evento) {
-		String aux1 = "";
-		String aux2 = "";
-		String aux7 = "";
-		String aux8 = "";
-		String aux9 = "";
-		String aux10 = "";
-		int aux3 = 0;
-		int aux4 = 0;
-		int aux11 = 0;
-		double aux5 = 0;
-		double aux6 = 0;
-		double aux12 = 0;
-		double aux13 = 0;
-		double aux14 = 0;
+
+		String aux1,aux2,aux7,aux8,aux9,aux10 = "";
+		int aux3,aux4,aux11 = 0;
+        double aux5,aux6,aux12,aux13,aux14 = 0;
+	
 		
 		if(evento.getActionCommand().equals(gui.getPl().MOD2)) {
 			gui.getPl().setVisible(false);

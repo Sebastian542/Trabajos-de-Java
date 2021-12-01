@@ -43,26 +43,38 @@ public class Modulo2Registro extends JPanel {
    
 
    	public Modulo2Registro() {
+   		setForeground(new Color(255, 255, 255));
+   		setBackground(new Color(255, 69, 0));
 
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Cedula");
+		lblNewLabel.setFont(new Font("Roboto", Font.PLAIN, 14));
+		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setBounds(51, 33, 86, 14);
 		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre");
-		lblNewLabel_1.setBounds(51, 75, 46, 14);
+		lblNewLabel_1.setFont(new Font("Roboto", Font.PLAIN, 14));
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1.setBounds(51, 75, 75, 14);
 		add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Direccion");
+		lblNewLabel_2.setFont(new Font("Roboto", Font.PLAIN, 14));
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2.setBounds(51, 117, 75, 14);
 		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Telefono");
+		lblNewLabel_3.setFont(new Font("Roboto", Font.PLAIN, 14));
+		lblNewLabel_3.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3.setBounds(51, 164, 75, 14);
 		add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Correo");
+		lblNewLabel_4.setFont(new Font("Roboto", Font.PLAIN, 14));
+		lblNewLabel_4.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4.setBounds(51, 206, 46, 14);
 		add(lblNewLabel_4);
 		
@@ -91,17 +103,17 @@ public class Modulo2Registro extends JPanel {
 		add(correo);
 		correo.setColumns(10);
 		
-		btnLeer = new JButton("Leer2");		
+		btnLeer = new JButton("Leer");		
 		btnLeer.setActionCommand(LEER2);
 		btnLeer.setBounds(270, 71, 89, 23);
 	    add(btnLeer);
 		
-	    btnEscribir = new JButton("Escribir2");
+	    btnEscribir = new JButton("Escribir");
 	    btnEscribir.setActionCommand(ESCRIBIR2);
 	    btnEscribir.setBounds(270, 113, 89, 23);
 		add(btnEscribir);
 		
-		btnVolver = new JButton("Volver2");
+		btnVolver = new JButton("Volver");
 		btnVolver.setActionCommand(VOLVER2);
 		btnVolver.setBounds(270, 160, 89, 23);
 		add(btnVolver);
