@@ -54,7 +54,7 @@ public class Modulo4Registro extends JPanel {
 
 
 	public Modulo4Registro() {
-		setBackground(new Color(255, 140, 0));
+		setBackground(new Color(255, 255, 255));
 		setLayout(null);
 
 		
