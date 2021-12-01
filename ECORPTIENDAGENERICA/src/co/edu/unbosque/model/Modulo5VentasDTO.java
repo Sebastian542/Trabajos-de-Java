@@ -12,7 +12,7 @@ public class Modulo5VentasDTO implements Serializable{
 	private int cantidadVender;
 	
 	public Modulo5VentasDTO(String cedula, String codigoventa, double valorTOTAL,
-			double valorIVA, double valorIVAtotal, int cantidadvender) {
+			double valor_IVA, double valorIVAtotal, int cantidadvender) {
 		this.cedula=cedula;
 		this.codigoventa=codigoventa;
 		this.valorTOTAL=valorTOTAL;
@@ -84,7 +84,7 @@ public class Modulo5VentasDTO implements Serializable{
 	@Override
 	public String toString() {
 		return "cedula=" + cedula + "\ncodigoventa=" + codigoventa + 
-				"\ncantidadVender="+ cantidadVender+ "\nvalorIVAtotal"+valorIVAtotal + "\nvalorIVA"+valorIVA;
+				"\ncantidadVender="+ cantidadVender+ "\nvalorIVAtotal"+valorIVAtotal + "\nvalorIVA"+valor_IVA;
 	}
 	
 }
