@@ -54,23 +54,25 @@ public class View extends JFrame{
 				
 			   	m2=new Modulo2Registro();
 				
-			   	m4=new Modulo4Registro();
 			   	
 			   	
-				add(m2,BorderLayout.CENTER);
+			   	
+			  	m4=new Modulo4Registro();
+			   	
+			   	
+				add(m4);
 				
 				pr2 = new Panel2Resultados();
 		    	pr2.setBounds(300, 0, 286, 362);
+		
+		//    	add(pr2,BorderLayout.SOUTH);
+	
 		    	
-		    	add(pr2,BorderLayout.SOUTH);
+		    	//m2.getBtnEscribir().addActionListener(control);
+				//m2.getBtnLeer().addActionListener(control);
 				
-		    	
-		    	
-		    	m2.getBtnEscribir().addActionListener(control);
-				m2.getBtnLeer().addActionListener(control);
-				
-				m4.getBtnEscribir().addActionListener(control);
-				m4.getBtnLeer().addActionListener(control);
+				//m4.getBtnEscribir().addActionListener(control);
+				//m4.getBtnLeer().addActionListener(control);
 				
 			//	m2.getBtnVolver().addActionListener(control);
 

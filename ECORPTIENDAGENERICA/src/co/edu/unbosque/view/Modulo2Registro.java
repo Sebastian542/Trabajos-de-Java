@@ -14,9 +14,7 @@ import java.awt.Font;
 
 public class Modulo2Registro extends JPanel{
 	
-	
-	
-	private static final long serialVersionUID = 1L;
+
 	private JButton btnEscribir;//Escribir
 	private JButton btnLeer;//Leer
 	private JButton btnVolver;//Volver
@@ -33,103 +31,98 @@ public class Modulo2Registro extends JPanel{
 	private JTextField telefono;
 	private JTextField correo;
 
-
-
-	public Modulo2Registro() {
-		setBackground(new Color(218, 165, 32));
-		
-		setForeground(new Color(0, 0, 0));
-		
-	
-		setBounds(100, 100, 384, 267);
+   	public Modulo2Registro(Controller control) {
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Cedula");
-		lblNewLabel.setFont(new Font("Roboto", Font.PLAIN, 14));
-		lblNewLabel.setBounds(51, 26, 46, 14);
+		lblNewLabel.setBounds(51, 33, 86, 14);
 		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre");
-		lblNewLabel_1.setFont(new Font("Roboto", Font.PLAIN, 14));
-		lblNewLabel_1.setBounds(51, 61, 67, 14);
-	    add(lblNewLabel_1);
+		lblNewLabel_1.setBounds(51, 75, 46, 14);
+		add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Direccion");
-		lblNewLabel_2.setFont(new Font("Roboto", Font.PLAIN, 14));
-		lblNewLabel_2.setBounds(51, 96, 75, 14);
+		lblNewLabel_2.setBounds(51, 117, 75, 14);
 		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Telefono");
-		lblNewLabel_3.setFont(new Font("Roboto", Font.PLAIN, 14));
-		lblNewLabel_3.setBounds(51, 140, 75, 14);
-	    add(lblNewLabel_3);
+		lblNewLabel_3.setBounds(51, 164, 75, 14);
+		add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Correo");
-		lblNewLabel_4.setFont(new Font("Roboto", Font.PLAIN, 14));
-		lblNewLabel_4.setBounds(51, 185, 46, 14);
+		lblNewLabel_4.setBounds(51, 206, 46, 14);
 		add(lblNewLabel_4);
 		
 		cedula = new JTextField();
-		cedula.setFont(new Font("Roboto", Font.PLAIN, 14));
-		cedula.setForeground(Color.BLACK);
-		cedula.setBackground(Color.WHITE);
-		cedula.setBounds(128, 27, 126, 20);
+		cedula.setBounds(160, 33, 86, 20);
 		add(cedula);
 		cedula.setColumns(10);
 		
 		nombre = new JTextField();
-		nombre.setBounds(128, 59, 126, 20);
+		nombre.setBounds(160, 72, 86, 20);
 		add(nombre);
 		nombre.setColumns(10);
 		
 		direccion = new JTextField();
-		direccion.setBounds(128, 90, 126, 20);
+		direccion.setBounds(160, 114, 86, 20);
 		add(direccion);
 		direccion.setColumns(10);
 		
 		telefono = new JTextField();
-		telefono.setBounds(128, 138, 126, 20);
-        add(telefono);
+		telefono.setBounds(160, 161, 86, 20);
+	    add(telefono);
 		telefono.setColumns(10);
 		
 		correo = new JTextField();
-		correo.setBounds(128, 182, 126, 20);
+		correo.setBounds(160, 203, 86, 20);
 		add(correo);
 		correo.setColumns(10);
 		
-		
-		
-		
-		btnLeer = new JButton("Leer");
-		btnLeer.setBounds(274, 58, 89, 23);
+		btnLeer = new JButton("Leer2");		
 		btnLeer.setActionCommand(LEER2);
-		add(btnLeer);
+		btnLeer.setBounds(270, 71, 89, 23);
+	    add(btnLeer);
 		
-		btnEscribir = new JButton("Escribir");
-		btnEscribir.setBounds(274, 107, 89, 23);
-		btnEscribir.setActionCommand(ESCRIBIR2);
+	    btnEscribir = new JButton("Escribir2");
+	    btnEscribir.setActionCommand(ESCRIBIR2);
+	    btnEscribir.setBounds(270, 113, 89, 23);
 		add(btnEscribir);
 		
-		
-		btnVolver = new JButton("Volver");
-		btnVolver.setBounds(274, 154, 89, 23);
+		btnVolver = new JButton("Volver2");
+		btnVolver.setActionCommand(VOLVER2);
+		btnVolver.setBounds(270, 160, 89, 23);
 		add(btnVolver);
-		
-	}
-	
-
-	public static String getEscribir2() {
-		return ESCRIBIR2;
 	}
 
 
-	public static String getLeer2() {
-		return LEER2;
+	public JButton getBtnEscribir() {
+		return btnEscribir;
 	}
 
 
-	public static String getVolver2() {
-		return VOLVER2;
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
+	}
+
+
+	public JButton getBtnLeer() {
+		return btnLeer;
+	}
+
+
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
+	}
+
+
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+
+
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
 	}
 
 
@@ -183,32 +176,23 @@ public class Modulo2Registro extends JPanel{
 	}
 
 
-	public JButton getBtnEscribir() {
-		return btnEscribir;
+	public static String getEscribir2() {
+		return ESCRIBIR2;
 	}
 
 
-	public void setBtnEscribir(JButton btnEscribir) {
-		this.btnEscribir = btnEscribir;
+	public static String getLeer2() {
+		return LEER2;
 	}
 
 
-	public JButton getBtnLeer() {
-		return btnLeer;
+	public static String getVolver2() {
+		return VOLVER2;
 	}
+	
+
+	
 
 
-	public void setBtnLeer(JButton btnLeer) {
-		this.btnLeer = btnLeer;
-	}
-
-
-	public JButton getBtnVolver() {
-		return btnVolver;
-	}
-
-
-	public void setBtnVolver(JButton btnVolver) {
-		this.btnVolver = btnVolver;
-	}
+	
 }
