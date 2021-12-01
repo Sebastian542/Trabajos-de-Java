@@ -24,6 +24,7 @@ public class Controller implements  ActionListener {
 	private Modulo2DTO rgmd2;
 	private Modulo5VentasDTO rgmd5;
 	private Modulo5VentasDAO bcvmd5;
+	private Modulo5Calculos mc5;
 	
 	public Controller() {
 		bd = new Mundo();
@@ -31,6 +32,7 @@ public class Controller implements  ActionListener {
 		rgmd2 = new Modulo2DTO(0, null, null, 0, null);
 		rgmd5 = new Modulo5VentasDTO(null, null, 0);
 		bcvmd5 = new Modulo5VentasDAO();
+		mc5 = new Modulo5Calculos();
 		gui = new View(this);
 		gui.setVisible(true);
 		
@@ -57,17 +59,37 @@ public class Controller implements  ActionListener {
 			gui.setSize(400,300);
 			gui.getM2().setVisible(true);
 		}
+		if(evento.getActionCommand().equals(gui.getM2().ESCRIBIR2)) {
+			aux3 = Integer.parseInt(gui.getM2().getCedula().getText());
+			rgmd2.setCedula(aux3);
+			aux2 = gui.getM2().getNombre().getText();
+			rgmd2.setNombre(aux2);
+			aux1 = gui.getM2().getDireccion().getText();
+			rgmd2.setDireccion(aux1);
+			aux4 = Integer.parseInt(gui.getM2().getTelefono().getText());
+			rgmd2.setTelefono(aux4);
+			aux7 = gui.getM2().getCorreo().getText();
+			rgmd2.setCorreo(aux7);
+			
+			bd.getMd2().escribirArchivoModulo2(rgsModulo2);
+		}
 		
 		if(evento.getActionCommand().equals(gui.getM2().VOLVER2)) {
 			gui.getPl().setVisible(true);
-			gui.setSize(635,160);
+			gui.setSize(635,200);
 			gui.getM2().setVisible(false);
 		}
 		
 		if(evento.getActionCommand().equals(gui.getPl().MOD3)) {
 			gui.getPl().setVisible(false);
-			gui.setSize(300,400);
+			gui.setSize(635,270);
 			gui.getM3().setVisible(true);
+		}
+		
+		if(evento.getActionCommand().equals(gui.getM3().VOLVER3)) {
+			gui.getPl().setVisible(true);
+			gui.setSize(635,200);
+			gui.getM3().setVisible(false);
 		}
 		
 		if(evento.getActionCommand().equals(gui.getPl().MOD4)) {
@@ -76,18 +98,43 @@ public class Controller implements  ActionListener {
 			gui.getM4().setVisible(true);
 		}
 		
+		if(evento.getActionCommand().equals(gui.getM4().VOLVER4)) {
+			gui.getPl().setVisible(true);
+			gui.setSize(635,200);
+			gui.getM4().setVisible(false);
+		}
+		
 		if(evento.getActionCommand().equals(gui.getPl().MOD5)) {
 			gui.getPl().setVisible(false);
-			gui.setSize(444,100);
+			gui.setSize(635,300);
 			gui.getM5().setVisible(true);
 		}
 		
-		if(evento.getActionCommand().equals(gui.getPl().MOD6)) {
-			gui.getPl().setVisible(false);
-			gui.setSize(835,500);
-			gui.getM6().setSize(835,500);
-			gui.getM6().setVisible(true);
+		if(evento.getActionCommand().equals(gui.getM5().VOLVER5)) {
+			gui.getPl().setVisible(true);
+			gui.setSize(635,200);
+			gui.getM5().setVisible(false);
 		}
+		
+		if(evento.getActionCommand().equals(gui.getM5().BUSCAR5)) {
+			gui.getM5().setVisible(false);
+			gui.getPl().setVisible(false);
+			aux1 = gui.getM5().getTxtCedula().getText();
+			gui.getMd5().setVisible(true);
+		}
+		
+		if(evento.getActionCommand().equals(gui.getMd5().ESCRIBIR5)) {
+			aux5=Double.parseDouble(gui.getMd5().getTxtCantidadVen().getText());
+			aux6=Double.parseDouble(gui.getMd5().getTxtCodProd().getText());
+			aux12 = mc5.calcularIvaTotalVenta(aux5, aux6);
+		}
+		
+		if(evento.getActionCommand().equals(gui.getM5().VOLVER5)) {
+			gui.getPl().setVisible(true);
+			gui.setSize(635,200);
+			gui.getM5().setVisible(false);
+		}
+		
 		
 		
 		

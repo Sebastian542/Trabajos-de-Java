@@ -21,7 +21,6 @@ public class View extends JFrame{
 	private Modulo4Registro m4;
 	private Modulo5Panel m5;
 	private Modulo5Dialog md5;
-	private Modulo6Panel m6;
 	private Panel2Resultados pr2;
 	private PanelPrincipal pl;
 
@@ -46,7 +45,7 @@ public class View extends JFrame{
 				getContentPane().add(m2);
 				
 				m3 = new Modulo3Panel(control);
-				m3.setBounds(0,0,300,400);
+				m3.setBounds(0,0,635,270);
 				getContentPane().add(m3);
 				
 				m4 = new Modulo4Registro(control);
@@ -58,18 +57,14 @@ public class View extends JFrame{
 				getContentPane().add(m5);
 				
 				md5= new Modulo5Dialog(control);
-				
-				m6 = new Modulo6Panel();
-				getContentPane().add(m6);
-				
-				pl.setVisible(false);
+
+				pl.setVisible(true);
 				m1.setVisible(true);
 				m2.setVisible(false);
-				m3.setVisible(true);
+				m3.setVisible(false);
 				m4.setVisible(false);
 				m5.setVisible(false);
 				md5.setVisible(false);
-				m6.setVisible(false);
 				
 				pl.getButMod2().addActionListener(control);
 				pl.getButMod3().addActionListener(control);
@@ -83,8 +78,21 @@ public class View extends JFrame{
 				m2.getBtnEscribir().addActionListener(control);
 				m2.getBtnLeer().addActionListener(control);
 				
-//				m3.get
+				m3.getBtnEscribir().addActionListener(control);
+				m3.getBtnLeer().addActionListener(control);
+				m3.getBtnVolver().addActionListener(control);
+				
+				m4.getBtnNewButton_2().addActionListener(control);
+				m4.getBtnNewButton_1().addActionListener(control);
+				m4.getBtnNewButton().addActionListener(control);
+				
+				m5.getButVolver().addActionListener(control);
+				m5.getButCalcular().addActionListener(control);
 
+	}
+	
+	public void mostrarConsultas() {
+		
 	}
 	
 
@@ -99,6 +107,8 @@ public class View extends JFrame{
 	public Modulo2Registro getM2() {
 		return m2;
 	}
+	
+
 
 	public void setM2(Modulo2Registro m2) {
 		this.m2 = m2;
@@ -149,13 +159,14 @@ public class View extends JFrame{
 	}
 
 
-	public Modulo6Panel getM6() {
-		return m6;
+
+	public Modulo5Dialog getMd5() {
+		return md5;
 	}
 
 
-	public void setM6(Modulo6Panel m6) {
-		this.m6 = m6;
+	public void setMd5(Modulo5Dialog md5) {
+		this.md5 = md5;
 	}
 
 

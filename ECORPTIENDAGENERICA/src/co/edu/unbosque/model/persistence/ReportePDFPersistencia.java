@@ -17,7 +17,7 @@ import java.util.Random;
 
 import co.edu.unbosque.view.ReportePDF;
 
-//Corrija esto Bryann que no sirve
+// Este esta perfecto :) ..
 public class ReportePDFPersistencia {
 	
 	private String ruta = "C:\\data\\prueba.out";

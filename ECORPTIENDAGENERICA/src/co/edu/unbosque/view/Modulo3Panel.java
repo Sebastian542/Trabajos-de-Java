@@ -112,21 +112,66 @@ public class Modulo3Panel extends JPanel {
 		
 		btnLeer = new JButton("Leer");		
 		btnLeer.setActionCommand(LEER3);
-		btnLeer.setBounds(270, 71, 89, 23);
+		btnLeer.setBounds(120, 160, 89, 23);
 	    add(btnLeer);
 		
 	    btnEscribir = new JButton("Escribir");
 	    btnEscribir.setActionCommand(ESCRIBIR3);
-	    btnEscribir.setBounds(270, 113, 89, 23);
+	    btnEscribir.setBounds(270, 160, 89, 23);
 		add(btnEscribir);
 		
 		btnVolver = new JButton("Volver");
 		btnVolver.setActionCommand(VOLVER3);
-		btnVolver.setBounds(270, 160, 89, 23);
+		btnVolver.setBounds(390, 160, 89, 23);
 		add(btnVolver);
 		
-		
 	}
+	
+
+	public JButton getBtnEscribir() {
+		return btnEscribir;
+	}
+
+
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
+	}
+
+
+	public JButton getBtnLeer() {
+		return btnLeer;
+	}
+
+
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
+	}
+
+
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+
+
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
+	}
+
+
+	public static String getEscribir3() {
+		return ESCRIBIR3;
+	}
+
+
+	public static String getLeer3() {
+		return LEER3;
+	}
+
+
+	public static String getVolver3() {
+		return VOLVER3;
+	}
+
 
 	public JLabel getLabNIT() {
 		return labNIT;

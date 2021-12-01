@@ -27,8 +27,6 @@ public class Modulo2Registro extends JPanel {
 	public static final String LEER2 = "Leer2";
 	public static final String VOLVER2 = "Volver2";
 	
-	
-	
 	private JTextField cedula;
 	private JTextField nombre;
 	private JTextField direccion;

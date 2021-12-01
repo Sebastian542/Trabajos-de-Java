@@ -26,6 +26,7 @@ public class Modulo5Panel extends JPanel {
 	private JButton butCalcular;
 	private JButton butVolver;
 	public static final String BUSCAR5="Buscar5";
+	public static final String VOLVER5="Volver5";
 
 	
 	public Modulo5Panel(Controller control) {
@@ -50,33 +51,56 @@ public class Modulo5Panel extends JPanel {
 		butCalcular.setActionCommand(BUSCAR5);
 		add(butCalcular);
 		
-//		labCodProd = new JLabel("Codigo del producto");
-//		labCodProd.setForeground(Color.WHITE);
-//		labCodProd.setBounds(10, 60, 116, 17);
-//		labCodProd.setFont(new Font("Roboto", Font.PLAIN, 11));
-//		add(labCodProd);
-//		
-//		txtCodProd = new JTextField();
-//		txtCodProd.setBounds(160, 60, 86, 20);
-//		add(txtCodProd);
-//		txtCodProd.setColumns(10);
-//		
-//		labCantidadVen = new JLabel("Cantidad a Vender");
-//		labCantidadVen.setBounds(10, 90, 106, 20);
-//		labCantidadVen.setForeground(Color.WHITE);
-//		labCantidadVen.setFont(new Font("Roboto", Font.PLAIN, 11));
-//		add(labCantidadVen);
-//		
-//		txtCantidadVen = new JTextField();
-//		txtCantidadVen.setBounds(160, 90, 86, 20);
-//		add(txtCantidadVen);
-//		txtCantidadVen.setColumns(10);		
+		butVolver = new JButton("VOLVER");
+		butVolver.setBounds(320, 10, 116, 17);
+		butVolver.setActionCommand(VOLVER5);
+		add(butVolver);
+		
+		labCodProd = new JLabel("Codigo del producto");
+		labCodProd.setForeground(Color.WHITE);
+		labCodProd.setBounds(10, 60, 116, 17);
+		labCodProd.setFont(new Font("Roboto", Font.PLAIN, 11));
+		add(labCodProd);
+		
+		txtCodProd = new JTextField();
+		txtCodProd.setBounds(160, 60, 86, 20);
+		add(txtCodProd);
+		txtCodProd.setColumns(10);
+		
+		labCantidadVen = new JLabel("Cantidad a Vender");
+		labCantidadVen.setBounds(10, 90, 106, 20);
+		labCantidadVen.setForeground(Color.WHITE);
+		labCantidadVen.setFont(new Font("Roboto", Font.PLAIN, 11));
+		add(labCantidadVen);
+		
+		txtCantidadVen = new JTextField();
+		txtCantidadVen.setBounds(160, 90, 86, 20);
+		add(txtCantidadVen);
+		txtCantidadVen.setColumns(10);		
 
 		
 	}
 	
 	
 	
+	public JButton getButVolver() {
+		return butVolver;
+	}
+
+
+
+	public void setButVolver(JButton butVolver) {
+		this.butVolver = butVolver;
+	}
+
+
+
+	public static String getVolver5() {
+		return VOLVER5;
+	}
+
+
+
 	public static String getBuscar5() {
 		return BUSCAR5;
 	}

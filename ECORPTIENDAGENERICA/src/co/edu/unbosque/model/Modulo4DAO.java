@@ -27,11 +27,5 @@ public class Modulo4DAO {
 	public void setM4DTO(ArrayList<Modulo4DTO> m4dto) {
 		m4DTO = m4dto;
 	}
-	public Modulo4file getM4file() {
-		return m4file;
-	}
-	public void setM4file(Modulo4file m4file) {
-		this.m4file = m4file;
-	}
 	
 }
