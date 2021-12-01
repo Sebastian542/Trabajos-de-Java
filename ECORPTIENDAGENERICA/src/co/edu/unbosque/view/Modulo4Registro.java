@@ -18,6 +18,11 @@ public class Modulo4Registro extends JPanel{
 	private static final long serialVersionUID = 1L;
 
 	
+
+	private JButton btnEscribir;//Escribir
+	private JButton btnLeer;//Leer
+	private JButton btnVolver;//Volver
+	
 	public static final String ESCRIBIR4 = "Escribir4";
 	public static final String LEER4 = "Leer4";
 	public static final String VOLVER4 = "Volver4";
@@ -86,17 +91,17 @@ public class Modulo4Registro extends JPanel{
 		add(prVenta);
 		prVenta.setColumns(10);
 		
-		JButton btnEscribir = new JButton("Escribir");
+		btnEscribir = new JButton("Escribir");
 		btnEscribir.setBounds(81, 186, 89, 23);
 		btnEscribir.setActionCommand(ESCRIBIR4);
 		add(btnEscribir);
 		
-		JButton btnLeer = new JButton("Leer");
+		btnLeer = new JButton("Leer");
 		btnLeer.setBounds(202, 186, 89, 23);
 		btnEscribir.setActionCommand(LEER4);
 		add(btnLeer);
 		
-		JButton btnVolver = new JButton("Volver");
+		btnVolver = new JButton("Volver");
 		btnVolver.setBounds(320, 186, 89, 23);
 		btnEscribir.setActionCommand(VOLVER4);
 		add(btnVolver);
@@ -174,6 +179,48 @@ public class Modulo4Registro extends JPanel{
 		this.prVenta = prVenta;
 	}
 
+	
+
+
+	public JButton getBtnEscribir() {
+		return btnEscribir;
+	}
+
+
+
+
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
+	}
+
+
+
+
+	public JButton getBtnLeer() {
+		return btnLeer;
+	}
+
+
+
+
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
+	}
+
+
+
+
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+
+
+
+
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
+	}
+
 
 
 
@@ -194,7 +241,9 @@ public class Modulo4Registro extends JPanel{
 	public static String getVolver4() {
 		return VOLVER4;
 	}
-	
+
+
+
 	
 	
 	

@@ -87,6 +87,33 @@ public class Controller implements  ActionListener {
 		}
 		
 		
+		
+		
+		
+		
+		
+		if(evento.getActionCommand().equals(gui.getM4().ESCRIBIR4)) {
+			
+			
+			System.out.println("Click a escribir 4");
+			
+		
+	
+		}
+		
+		
+		
+		if(evento.getActionCommand().equals(gui.getM4().LEER4)) {
+			
+			
+			bd.getMd2().leerArchivoModulo2();
+			
+		
+			System.out.println(rgsModulo2);
+			System.out.println(rgsModulo2);
+			//gui.imprimirJuego(rgsModulo2;
+	
+		}
 
 
 	

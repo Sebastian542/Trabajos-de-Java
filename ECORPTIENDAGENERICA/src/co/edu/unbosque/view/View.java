@@ -68,11 +68,12 @@ public class View extends JFrame{
 		//    	add(pr2,BorderLayout.SOUTH);
 	
 		    	
-		    	//m2.getBtnEscribir().addActionListener(control);
-				//m2.getBtnLeer().addActionListener(control);
+		       m2.getBtnEscribir().addActionListener(control);
+               m2.getBtnLeer().addActionListener(control);
 				
-				//m4.getBtnEscribir().addActionListener(control);
-				//m4.getBtnLeer().addActionListener(control);
+		    	
+		    	m4.getBtnEscribir().addActionListener(control);
+		        m4.getBtnLeer().addActionListener(control);
 				
 			//	m2.getBtnVolver().addActionListener(control);
 
@@ -103,6 +104,17 @@ public class View extends JFrame{
 
 	public void setPr2(Panel2Resultados pr2) {
 		this.pr2 = pr2;
+	}
+
+
+	public Modulo4Registro getM4() {
+		return m4;
+	}
+
+
+
+	public void setM4(Modulo4Registro m4) {
+		this.m4 = m4;
 	}
 
 
