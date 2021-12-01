@@ -18,11 +18,13 @@ public class Modulo5Dialog extends JDialog {
 	private JTextField txtCantidadVen;
 	private JButton butTotalizar;
 	private JButton butVolver;
+	private JButton butCheck;
 	public static final String VOLVER7="VOLVER7";
 	public static final String ESCRIBIR5="ESCRIBIR5";
+	public static final String CHECK5="CHECK5";
 
 	public Modulo5Dialog(Controller control) {
-		setBounds(300, 100, 450, 350);
+		setBounds(100, 100, 350, 350);
 		getContentPane().setBackground(Color.RED);
 		setBackground(Color.RED);
 		setLayout(null);
@@ -30,7 +32,7 @@ public class Modulo5Dialog extends JDialog {
 		labCodProd = new JLabel("Codigo del producto");
 		labCodProd.setForeground(Color.WHITE);
 		labCodProd.setBounds(10, 60, 116, 17);
-		labCodProd.setFont(new Font("Roboto", Font.PLAIN, 11));
+		labCodProd.setFont(new Font("Roboto", Font.PLAIN, 12));
 		add(labCodProd);
 		
 		txtCodProd = new JTextField();
@@ -40,10 +42,11 @@ public class Modulo5Dialog extends JDialog {
 		labCantidadVen = new JLabel("Cantidad a Vender");
 		labCantidadVen.setBounds(10, 90, 106, 20);
 		labCantidadVen.setForeground(Color.WHITE);
-		labCantidadVen.setFont(new Font("Roboto", Font.PLAIN, 11));
+		labCantidadVen.setFont(new Font("Roboto", Font.PLAIN, 12));
 		add(labCantidadVen);
 		
 		txtCantidadVen = new JTextField();
+		txtCantidadVen.setEnabled(false);
 		txtCantidadVen.setBounds(160, 90, 86, 20);
 		add(txtCantidadVen);
 		
@@ -56,8 +59,28 @@ public class Modulo5Dialog extends JDialog {
 		butVolver.setActionCommand(VOLVER7);
 		butVolver.setBounds(10, 160, 89, 23);
 		add(butVolver);
+		
+		butCheck = new JButton("Check");
+		butCheck.setActionCommand(CHECK5);
+		butCheck.setBounds(120, 200, 89, 23);
+		add(butCheck);
 	}
 	
+	
+	public JButton getButCheck() {
+		return butCheck;
+	}
+
+
+	public void setButCheck(JButton butCheck) {
+		this.butCheck = butCheck;
+	}
+
+
+	public static String getCheck5() {
+		return CHECK5;
+	}
+
 
 	public JButton getButTotalizar() {
 		return butTotalizar;

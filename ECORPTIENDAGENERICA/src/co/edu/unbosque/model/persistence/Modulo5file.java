@@ -17,12 +17,12 @@ public class Modulo5file  {
 	private File f1;
 	private File f2;	
 	
-	public String escribirArchivoVentas(ArrayList<Modulo5VentasDTO> mgd5) {
+	public String escribirArchivoVentas(ArrayList<Modulo5VentasDTO> mgdv5) {
 		String mensaje = "Transaccion Completada";
 		f1 = new File(ruta1);
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(ruta1));
-			out.writeObject(mgd5);
+			out.writeObject(mgdv5);
 			out.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -36,16 +36,16 @@ public class Modulo5file  {
 	
 	public ArrayList<Modulo5VentasDTO> leerArchivoVentas(){
 		ObjectInputStream in;
-		ArrayList<Modulo5VentasDTO> mgd5 = null;
+		ArrayList<Modulo5VentasDTO> mgdv5 = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(ruta1));
-			mgd5 = (ArrayList<Modulo5VentasDTO>)in.readObject();
+			mgdv5 = (ArrayList<Modulo5VentasDTO>)in.readObject();
 	        in.close();
 
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		return mgd5;
+		return mgdv5;
 	}
 	
 	public String escribirArchivoDetalleVentas(ArrayList<Modulo5DetallesDTO> mgd5) {
@@ -67,15 +67,15 @@ public class Modulo5file  {
 	
 	public ArrayList<Modulo5DetallesDTO> leerArchivoDetalleVentas(){
 		ObjectInputStream in;
-		ArrayList<Modulo5DetallesDTO> mgdv5 = null;
+		ArrayList<Modulo5DetallesDTO> mgd5 = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(ruta2));
-			mgdv5 = (ArrayList<Modulo5DetallesDTO>)in.readObject();
+			mgd5 = (ArrayList<Modulo5DetallesDTO>)in.readObject();
 	        in.close();
 
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		return mgdv5;
+		return mgd5;
 	}
 }

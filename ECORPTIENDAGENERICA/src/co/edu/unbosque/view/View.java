@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 
 import co.edu.unbosque.controller.Controller;
+import co.edu.unbosque.model.*;
 
 public class View extends JFrame{
 	
@@ -21,6 +22,7 @@ public class View extends JFrame{
 	private Modulo4Registro m4;
 	private Modulo5Panel m5;
 	private Modulo5Dialog md5;
+	private Modulo6Panel md6;
 	private Panel2Resultados pr2;
 	private PanelPrincipal pl;
 
@@ -49,14 +51,15 @@ public class View extends JFrame{
 				getContentPane().add(m3);
 				
 				m4 = new Modulo4Registro(control);
-				m4.setBounds(0, 0, 450, 200);
+				m4.setBounds(0, 0, 650, 200);
 				getContentPane().add(m4);
 				
 				m5= new Modulo5Panel(control);
-				m5.setBounds(0,0,444,100);
+				m5.setBounds(0,0,444,200);
 				getContentPane().add(m5);
 				
 				md5= new Modulo5Dialog(control);
+				md6 = new Modulo6Panel();
 
 				pl.setVisible(true);
 				m1.setVisible(true);
@@ -65,6 +68,7 @@ public class View extends JFrame{
 				m4.setVisible(false);
 				m5.setVisible(false);
 				md5.setVisible(false);
+				md6.setVisible(false);
 				
 				pl.getButMod2().addActionListener(control);
 				pl.getButMod3().addActionListener(control);
@@ -78,8 +82,6 @@ public class View extends JFrame{
 				
 				pr2 = new Panel2Resultados();
 		    	pr2.setBounds(300, 0, 286, 362);
-		
-		//    	add(pr2,BorderLayout.SOUTH);
 	
 		    	
 		       m2.getBtnEscribir().addActionListener(control);
@@ -98,17 +100,29 @@ public class View extends JFrame{
 				m3.getBtnVolver().addActionListener(control);
 
 				
-				m4.getBtnNewButton_2().addActionListener(control);
-				m4.getBtnNewButton_1().addActionListener(control);
-				m4.getBtnNewButton().addActionListener(control);
+				m4.getBtnEscribir().addActionListener(control);
+				m4.getBtnVolver().addActionListener(control);
+				m4.getBtnLeer().addActionListener(control);
 				
 				m5.getButVolver().addActionListener(control);
 				m5.getButCalcular().addActionListener(control);
+				
+				md5.getButVolver().addActionListener(control);
+				md5.getButTotalizar().addActionListener(control);
+				md5.getButCheck().addActionListener(control);
+				
+				md6.getButVolver().addActionListener(control);
 
 	}
 	
-	public void mostrarConsultas() {
+	public void mostrarConsultas(Modulo1DTO m1dto, Modulo2DTO m2dto, Modulo3DTO m3dto,
+			Modulo5VentasDTO mv5dto, Modulo5DetallesDTO md5dto) {
 		
+		getMd6().getListadoClientes().append(String.valueOf(m1dto));
+		getMd6().getTotalVentasCliente().append(String.valueOf(m2dto));
+		getMd6().getDetalleVentasCliente().append(String.valueOf(mv5dto));
+		getMd6().getTotalComprasProveedor().append(String.valueOf(m3dto));
+		getMd6().getDetalleChequesExpedidos().append(String.valueOf(md5dto));
 	}
 	
 
@@ -184,6 +198,14 @@ public class View extends JFrame{
 
 	public void setPl(PanelPrincipal pl) {
 		this.pl = pl;
+	}
+	
+	public Modulo6Panel getMd6() {
+		return md6;
+	}
+
+	public void setMd6(Modulo6Panel md6) {
+		this.md6 = md6;
 	}
 
 	public void escribirMensaje(String mensaje) {

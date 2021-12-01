@@ -67,5 +67,12 @@ public class Modulo3DTO implements Serializable{
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
+
+	@Override
+	public String toString() {
+		return "NIT=" + NIT + "\nnombre=" + nombre + "\nproveedor=" +proveedor + 
+				"\ndireccion=" + direccion+ "\ntelefono=" + telefono +
+				"\nciudad=" + ciudad;
+	}
 	
 }

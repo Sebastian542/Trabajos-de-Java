@@ -4,48 +4,55 @@ import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.TitledBorder;
 
-public class Modulo6Panel extends JPanel {
+public class Modulo6Panel extends JDialog {
 	private static final long serialVersionUID = 1L;
+	public static final String VOLVER9 = "Volver9";
 	private JTextArea listadoClientes;
 	private JTextArea totalVentasCliente;
 	private JTextArea detalleVentasCliente;
 	private JTextArea totalComprasProveedor;
 	private JTextArea detalleChequesExpedidos;
+	private JButton butVolver;
 	
 	public Modulo6Panel() {
-		setVisible(false);
-		setLayout( new GridLayout(1,6, 1, 2) );
+		setLayout( new GridLayout(1,6, 1,1) );
 		setBackground(new Color(255, 69, 0));
 		TitledBorder border = BorderFactory.createTitledBorder("  Clientes                                                Total de Ventas           "
 				+"               "+ "Detalle de Ventas                 Compras por proveedor              Cheques expedidos");
 		border.setTitleColor(Color.WHITE);
-		setBorder( border );
+//		setBorder( border );
+		
+		butVolver = new JButton("Volver");
+		butVolver.setActionCommand(VOLVER9);
 		
 		listadoClientes = new JTextArea();
-		listadoClientes.setForeground(Color.BLACK);
-		listadoClientes.setBackground(Color.WHITE);
+		listadoClientes.setForeground(Color.WHITE);
+		listadoClientes.setBackground(new Color(255, 69, 0));
 
 		totalVentasCliente = new JTextArea();
-		totalVentasCliente.setForeground(Color.BLACK);
-		totalVentasCliente.setBackground(Color.WHITE);
+		totalVentasCliente.setForeground(Color.WHITE);
+		totalVentasCliente.setBackground(new Color(255, 80, 0));
 		
 		detalleVentasCliente = new JTextArea();
-		detalleVentasCliente.setForeground(Color.BLACK);
-		detalleVentasCliente.setBackground(Color.WHITE);
+		detalleVentasCliente.setForeground(Color.WHITE);
+		detalleVentasCliente.setBackground(new Color(255, 69, 0));
 		
 		totalComprasProveedor = new JTextArea();
-		totalComprasProveedor.setForeground(Color.BLACK);
-		totalComprasProveedor.setBackground(Color.WHITE);
+		totalComprasProveedor.setForeground(Color.WHITE);
+		totalComprasProveedor.setBackground(new Color(255,80, 0));
 		
 		detalleChequesExpedidos = new JTextArea();
-		detalleChequesExpedidos.setForeground(Color.BLACK);
-		detalleChequesExpedidos.setBackground(Color.WHITE);
-
+		detalleChequesExpedidos.setForeground(Color.WHITE);
+		detalleChequesExpedidos.setBackground(new Color(255, 69, 0));
+		
+		add(butVolver);
 		add(listadoClientes);
 		add(totalVentasCliente);
 		add(detalleVentasCliente);
@@ -91,6 +98,18 @@ public class Modulo6Panel extends JPanel {
 
 	public void setDetalleChequesExpedidos(JTextArea detalleChequesExpedidos) {
 		this.detalleChequesExpedidos = detalleChequesExpedidos;
+	}
+
+	public JButton getButVolver() {
+		return butVolver;
+	}
+
+	public void setButVolver(JButton butVolver) {
+		this.butVolver = butVolver;
+	}
+
+	public static String getVolver9() {
+		return VOLVER9;
 	}
 	
 }

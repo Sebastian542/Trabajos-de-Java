@@ -5,14 +5,14 @@ import java.io.Serializable;
 public class Modulo5DetallesDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String codigoproducto;
-	private int cantidadVender;
+	private int cantidad;
 	private double valorunitario;
 	private double valortotal;
-	private int codigoventa;
+	private String codigoventa;
 
-	public Modulo5DetallesDTO(String codigoproducto,int cantidadVender,double valorunitario,double valortotal,int codigoventa ) {
+	public Modulo5DetallesDTO(String codigoproducto,int cantidad,double valorunitario,double valortotal,String codigoventa ) {
 		this.codigoproducto=codigoproducto;
-		this.cantidadVender=cantidadVender;
+		this.cantidad=cantidad;
 		this.valorunitario=valorunitario;
 		this.valortotal=valortotal;
 		this.codigoventa=codigoventa;
@@ -26,12 +26,12 @@ public class Modulo5DetallesDTO implements Serializable {
 		this.codigoproducto = codigoproducto;
 	}
 
-	public int getCantidadVender() {
-		return cantidadVender;
+	public int getCantidad() {
+		return cantidad;
 	}
 
 	public void setCantidadVender(int cantidadVender) {
-		this.cantidadVender = cantidadVender;
+		this.cantidad = cantidadVender;
 	}
 
 	public double getValorunitario() {
@@ -50,12 +50,18 @@ public class Modulo5DetallesDTO implements Serializable {
 		this.valortotal = valortotal;
 	}
 
-	public int getCodigoventa() {
+	public String getCodigoventa() {
 		return codigoventa;
 	}
 
-	public void setCodigoventa(int codigoventa) {
+	public void setCodigoventa(String codigoventa) {
 		this.codigoventa = codigoventa;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "\ncodigoproducto=" + codigoproducto + "\ncantidad=" + cantidad
+				+ "\nvalorunitario=" + valorunitario + "\nvalortotal=" + valortotal +
+				"\ncodigoventa=" + codigoventa;
+	}
 }

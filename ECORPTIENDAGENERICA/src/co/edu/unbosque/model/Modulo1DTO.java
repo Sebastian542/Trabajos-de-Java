@@ -2,7 +2,7 @@ package co.edu.unbosque.model;
 
 import java.io.Serializable;
 
-public class RegistroModelo1 implements Serializable {
+public class Modulo1DTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -16,7 +16,7 @@ public class RegistroModelo1 implements Serializable {
 	private String numero_de_cuenta;
 	private String nombre_del_gerente;
 	
-	public RegistroModelo1(String nombre_de_la_tienda, String tipo_de_comercio, int NIT_de_la_tienda,
+	public Modulo1DTO(String nombre_de_la_tienda, String tipo_de_comercio, int NIT_de_la_tienda,
 			int ubicacion ,double valor_IVA,double tasa_de_interes,
 			String nombre_del_banco, String numero_de_cuenta,String nombre_del_gerente){
 		
@@ -28,7 +28,7 @@ public class RegistroModelo1 implements Serializable {
 		this.tasa_de_interes=tasa_de_interes;
 		this.nombre_del_banco=nombre_del_banco;
 		this.numero_de_cuenta=numero_de_cuenta;
-		this.numero_de_cuenta=numero_de_cuenta;
+		this.nombre_del_gerente=nombre_del_gerente;
 		
 	}
 
@@ -106,10 +106,10 @@ public class RegistroModelo1 implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Nombre de la tienda:" + nombre_de_la_tienda + "\n tipo_de_comercio:" + tipo_de_comercio
-				+ "\n NIT_de_la_tienda=" + NIT_de_la_tienda + "\nubicacion=" + ubicacion + "\n valor_IVA=" + valor_IVA
-				+ "\n tasa_de_interes=" + tasa_de_interes + "\n nombre_del_banco=" + nombre_del_banco
-				+ "\n numero_de_cuenta=" + numero_de_cuenta + "\n nombre_del_gerente=" + nombre_del_gerente;
+		return "Nombre de la tienda:" + nombre_de_la_tienda + "\ntipo_de_comercio:" + tipo_de_comercio
+				+ "\nNIT_de_la_tienda=" + NIT_de_la_tienda + "\nubicacion=" + ubicacion + "\nvalor_IVA=" + valor_IVA
+				+ "\ntasa_de_interes=" + tasa_de_interes + "\nnombre_del_banco=" + nombre_del_banco
+				+ "\nnumero_de_cuenta=" + numero_de_cuenta + "\nnombre_del_gerente=" + nombre_del_gerente;
 	}
 	
 	
