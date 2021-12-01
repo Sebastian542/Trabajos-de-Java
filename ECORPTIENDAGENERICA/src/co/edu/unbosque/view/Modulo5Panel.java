@@ -16,12 +16,8 @@ public class Modulo5Panel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	private JLabel labCedula;
-	private JLabel labCodProd;
-	private JLabel labCantidadVen;
 	
 	private JTextField txtCedula;
-	private JTextField txtCodProd;
-	private JTextField txtCantidadVen;
 	
 	private JButton butCalcular;
 	private JButton butVolver;
@@ -56,29 +52,6 @@ public class Modulo5Panel extends JPanel {
 		butVolver.setActionCommand(VOLVER5);
 		add(butVolver);
 		
-		labCodProd = new JLabel("Codigo del producto");
-		labCodProd.setForeground(Color.WHITE);
-		labCodProd.setBounds(10, 60, 116, 17);
-		labCodProd.setFont(new Font("Roboto", Font.PLAIN, 11));
-		add(labCodProd);
-		
-		txtCodProd = new JTextField();
-		txtCodProd.setBounds(160, 60, 86, 20);
-		add(txtCodProd);
-		txtCodProd.setColumns(10);
-		
-		labCantidadVen = new JLabel("Cantidad a Vender");
-		labCantidadVen.setBounds(10, 90, 106, 20);
-		labCantidadVen.setForeground(Color.WHITE);
-		labCantidadVen.setFont(new Font("Roboto", Font.PLAIN, 11));
-		add(labCantidadVen);
-		
-		txtCantidadVen = new JTextField();
-		txtCantidadVen.setBounds(160, 90, 86, 20);
-		add(txtCantidadVen);
-		txtCantidadVen.setColumns(10);		
-
-		
 	}
 	
 	
@@ -111,22 +84,6 @@ public class Modulo5Panel extends JPanel {
 
 	public void setTxtCedula(JTextField txtCedula) {
 		this.txtCedula = txtCedula;
-	}
-
-	public JTextField getTxtCodProd() {
-		return txtCodProd;
-	}
-
-	public void setTxtCodProd(JTextField txtCodProd) {
-		this.txtCodProd = txtCodProd;
-	}
-
-	public JTextField getTxtCantidadVen() {
-		return txtCantidadVen;
-	}
-
-	public void setTxtCantidadVen(JTextField txtCantidadVen) {
-		this.txtCantidadVen = txtCantidadVen;
 	}
 
 	public JButton getButCalcular() {
