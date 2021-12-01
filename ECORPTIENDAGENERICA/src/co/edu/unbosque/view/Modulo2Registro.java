@@ -34,7 +34,7 @@ public class Modulo2Registro extends JPanel{
 	private JTextField telefono;
 	private JTextField correo;
 
-   	public Modulo2Registro(Controller control) {
+   	public Modulo2Registro() {
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Cedula");

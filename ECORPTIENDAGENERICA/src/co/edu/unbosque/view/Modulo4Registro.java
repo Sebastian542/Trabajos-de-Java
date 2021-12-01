@@ -16,95 +16,186 @@ public class Modulo4Registro extends JPanel{
 	
 	
 	private static final long serialVersionUID = 1L;
-	private JButton btnEscribir;//Escribir
-	private JButton btnLeer;//Leer
-	private JButton btnVolver;//Volver
+
 	
 	public static final String ESCRIBIR4 = "Escribir4";
 	public static final String LEER4 = "Leer4";
 	public static final String VOLVER4 = "Volver4";
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	
-	
-	
 
 	
+	private JTextField codProducto;
+	private JTextField nomProducto;
+	private JTextField nitProveedor;
+	private JTextField prCompra;
+	private JTextField prVenta;
+	
+
 
 
 	public Modulo4Registro() {
+		setBackground(new Color(255, 140, 0));
 		setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(48, 35, 46, 14);
+		JLabel lblNewLabel = new JLabel("Codigo del producto");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBounds(26, 35, 129, 23);
 		add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(48, 84, 46, 14);
+		JLabel lblNewLabel_1 = new JLabel("Nombre del producto");
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1.setBounds(26, 84, 123, 14);
 		add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(48, 137, 46, 14);
+		JLabel lblNewLabel_2 = new JLabel("Nit del proveedor");
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2.setBounds(26, 122, 103, 14);
 		add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setBounds(252, 35, 46, 14);
+		JLabel lblNewLabel_3 = new JLabel("Precio de compra");
+		lblNewLabel_3.setForeground(new Color(255, 255, 255));
+		lblNewLabel_3.setBounds(265, 39, 110, 14);
 		add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(252, 84, 46, 14);
+		JLabel lblNewLabel_4 = new JLabel("Precio de venta");
+		lblNewLabel_4.setForeground(new Color(255, 255, 255));
+		lblNewLabel_4.setBounds(265, 84, 110, 14);
 		add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setBounds(252, 137, 46, 14);
-		add(lblNewLabel_5);
+		codProducto = new JTextField();
+		codProducto.setBounds(159, 36, 86, 20);
+		add(codProducto);
+		codProducto.setColumns(10);
 		
-		textField = new JTextField();
-		textField.setBounds(111, 32, 86, 20);
-		add(textField);
-		textField.setColumns(10);
+		nomProducto = new JTextField();
+		nomProducto.setBounds(159, 81, 86, 20);
+		add(nomProducto);
+		nomProducto.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(111, 81, 86, 20);
-		add(textField_1);
-		textField_1.setColumns(10);
+		nitProveedor = new JTextField();
+		nitProveedor.setBounds(159, 119, 86, 20);
+		add(nitProveedor);
+		nitProveedor.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(111, 134, 86, 20);
-		add(textField_2);
-		textField_2.setColumns(10);
+		prCompra = new JTextField();
+		prCompra.setBounds(375, 36, 86, 20);
+		add(prCompra);
+		prCompra.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(320, 32, 86, 20);
-		add(textField_3);
-		textField_3.setColumns(10);
+		prVenta = new JTextField();
+		prVenta.setBounds(375, 81, 86, 20);
+		add(prVenta);
+		prVenta.setColumns(10);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(320, 81, 86, 20);
-		add(textField_4);
-		textField_4.setColumns(10);
+		JButton btnEscribir = new JButton("Escribir");
+		btnEscribir.setBounds(81, 186, 89, 23);
+		btnEscribir.setActionCommand(ESCRIBIR4);
+		add(btnEscribir);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(320, 134, 86, 20);
-		add(textField_5);
-		textField_5.setColumns(10);
+		JButton btnLeer = new JButton("Leer");
+		btnLeer.setBounds(202, 186, 89, 23);
+		btnEscribir.setActionCommand(LEER4);
+		add(btnLeer);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(81, 186, 89, 23);
-		add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(202, 186, 89, 23);
-		add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("New button");
-		btnNewButton_2.setBounds(320, 186, 89, 23);
-		add(btnNewButton_2);
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.setBounds(320, 186, 89, 23);
+		btnEscribir.setActionCommand(VOLVER4);
+		add(btnVolver);
 		
 		
 	}
+
+
+
+
+	public JTextField getCodProducto() {
+		return codProducto;
+	}
+
+
+
+
+	public void setCodProducto(JTextField codProducto) {
+		this.codProducto = codProducto;
+	}
+
+
+
+
+	public JTextField getNomProducto() {
+		return nomProducto;
+	}
+
+
+
+
+	public void setNomProducto(JTextField nomProducto) {
+		this.nomProducto = nomProducto;
+	}
+
+
+
+
+	public JTextField getNitProveedor() {
+		return nitProveedor;
+	}
+
+
+
+
+	public void setNitProveedor(JTextField nitProveedor) {
+		this.nitProveedor = nitProveedor;
+	}
+
+
+
+
+	public JTextField getPrCompra() {
+		return prCompra;
+	}
+
+
+
+
+	public void setPrCompra(JTextField prCompra) {
+		this.prCompra = prCompra;
+	}
+
+
+
+
+	public JTextField getPrVenta() {
+		return prVenta;
+	}
+
+
+
+
+	public void setPrVenta(JTextField prVenta) {
+		this.prVenta = prVenta;
+	}
+
+
+
+
+	public static String getEscribir4() {
+		return ESCRIBIR4;
+	}
+
+
+
+
+	public static String getLeer4() {
+		return LEER4;
+	}
+
+
+
+
+	public static String getVolver4() {
+		return VOLVER4;
+	}
+	
+	
+	
+	
 }
