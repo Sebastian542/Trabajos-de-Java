@@ -53,7 +53,7 @@ public class View extends JFrame{
 				getContentPane().add(m4);
 				
 				m5= new Modulo5Panel(control);
-				m5.setBounds(0,0,444,100);
+				m5.setBounds(0,0,444,500);
 				getContentPane().add(m5);
 				
 				md5= new Modulo5Dialog(control);
@@ -64,7 +64,7 @@ public class View extends JFrame{
 				m3.setVisible(false);
 				m4.setVisible(false);
 				m5.setVisible(false);
-				md5.setVisible(false);
+				md5.setVisible(true);
 				
 				pl.getButMod2().addActionListener(control);
 				pl.getButMod3().addActionListener(control);

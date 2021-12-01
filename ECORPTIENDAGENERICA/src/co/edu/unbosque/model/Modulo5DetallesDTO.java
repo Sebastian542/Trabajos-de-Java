@@ -57,5 +57,11 @@ public class Modulo5DetallesDTO implements Serializable {
 	public void setCodigoventa(int codigoventa) {
 		this.codigoventa = codigoventa;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "\ncodigoproducto=" + codigoproducto + "\ncantidadVender=" + cantidadVender
+				+ "\nvalorunitario=" + valorunitario + "\nvalortotal=" + valortotal +
+				"\ncodigoventa=" + codigoventa;
+	}
 }

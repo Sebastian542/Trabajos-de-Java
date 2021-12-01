@@ -13,7 +13,7 @@ import co.edu.unbosque.controller.Controller;
 
 public class Modulo1Registro extends JDialog {
 	private static final long serialVersionUID = 1L;
-	public static final String LEER = "Leer";
+	public static final String ESCRIBIR = "Escribir";
 	
 	private JLabel nombre_de_la_tienda;	
 	
@@ -152,7 +152,7 @@ public class Modulo1Registro extends JDialog {
     		getContentPane().add(nombre_del_gerente1);
     		
    		    butLeer = new JButton("Almacenar");		
-    		butLeer.setActionCommand(LEER);
+    		butLeer.setActionCommand(ESCRIBIR);
     		butLeer.setBounds(300, 95, 100, 50);
     	     getContentPane().add(butLeer);
     	       	       	      	    
@@ -302,8 +302,8 @@ public class Modulo1Registro extends JDialog {
 			this.nombre_del_gerente1 = nombre_del_gerente1;
 		}
 
-		public static String getLeer() {
-			return LEER;
+		public static String getEscribir() {
+			return ESCRIBIR;
 		}
 
 		public JButton getButLeer() {

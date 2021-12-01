@@ -15,15 +15,10 @@ import java.util.Random;
 
 import co.edu.unbosque.model.Modulo2DTO;
 
-
 public class Modelo2Persistencia {
-	
-	private String ruta = "\\data\\cliente.dat";//guarda en directorio predeterminado del usuario (i.e. C:\\data\\juegos.dat).
-
-	private String nombreArchivoJuego="cliente.dat";
+	private String ruta = "./Data/cliente.dat";
 	private File f;
 			
-	
 	public String escribirArchivoModulo2(ArrayList<Modulo2DTO> rgmd2) {
 		String mensaje="Archivo Generado Exitosamente!";
 		f = new File(ruta);
@@ -42,7 +37,6 @@ public class Modelo2Persistencia {
 	}
 	
 	public ArrayList<Modulo2DTO> leerArchivoModulo2() {
-		f.getAbsoluteFile();
 		ObjectInputStream in;
 		ArrayList<Modulo2DTO> rgModulo2 = null;
 		try {

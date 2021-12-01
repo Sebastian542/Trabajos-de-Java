@@ -38,5 +38,12 @@ public class Modulo5VentasDTO implements Serializable{
 	public void setCantidadVender(int cantidadVender) {
 		this.cantidadVender = cantidadVender;
 	}
+
+
+	@Override
+	public String toString() {
+		return "cedula=" + cedula + "\ncodigoproducto=" + codigoproducto + 
+				"\ncantidadVender="+ cantidadVender;
+	}
 	
 }

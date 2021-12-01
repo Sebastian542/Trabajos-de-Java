@@ -59,5 +59,12 @@ public class Modulo4DTO implements Serializable {
 		this.precio_Venta = precio_Venta;
 	}
 
+
+	@Override
+	public String toString() {
+		return "\nnombreproducto=" + nombreproducto + "\nnitProveedor=" + nitProveedor + "\nprecio_Compra="
+				+ precio_Compra + "\nprecio_Venta=" + precio_Venta + "]";
+	}
+	
 	
 }

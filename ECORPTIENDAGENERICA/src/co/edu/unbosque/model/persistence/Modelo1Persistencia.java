@@ -8,13 +8,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-import co.edu.unbosque.model.RegistroModelo1;
+import co.edu.unbosque.model.Modulo1DTO;
 
 public class Modelo1Persistencia {
-	private String ruta = "./data/config.properties";
+	private String ruta = "./Data/config.properties";
 	private File f;
 	
-	public String escribirArchivoPropiedades(ArrayList<RegistroModelo1> rgm1){
+	public String escribirArchivoPropiedades(ArrayList<Modulo1DTO> rgm1){
 		String mensaje="Archivo Generado Exitosamente!";
 		f = new File(ruta);
 		try {
@@ -28,12 +28,12 @@ public class Modelo1Persistencia {
 		return mensaje;
 	}
 	
-	public ArrayList<RegistroModelo1> leerArchivoPropiedades() {
+	public ArrayList<Modulo1DTO> leerArchivoPropiedades() {
 		ObjectInputStream in;
-		ArrayList<RegistroModelo1> rgm1 = null;
+		ArrayList<Modulo1DTO> rgm1 = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(ruta));
-			rgm1 = (ArrayList<RegistroModelo1>)in.readObject();
+			rgm1 = (ArrayList<Modulo1DTO>)in.readObject();
 	        in.close();
 
 		} catch (IOException | ClassNotFoundException e) {

@@ -60,4 +60,11 @@ public class Modulo2DTO implements Serializable {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+
+	@Override
+	public String toString() {
+		return "cedula=" + cedula + "\nnombre=" + nombre + "\ndireccion="
+	+ direccion + "\ntelefono=" + telefono + "\ncorreo=" + correo;
+	}
+	
 }
