@@ -11,47 +11,21 @@ import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
-// conectar al controller y termino este modulo y OK :) :) ..
-public class ReportePDF extends JFrame {
+
+public class ReportePDF extends JPanel {
 	
 	private JTextField GenerarPDF;
-	
-	private String ruta = "C:\\data\\prueba.out";
-	private String rutaReg = "C:\\data\\registro.out";
 
 	private AbstractButton JTextField;
 		
 	public static final String GENERARPDF = "GenerarPDF";
 		
-	public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-		
-			public void run() {
-				
-				try {
-					
-					ReportePDF frame = new ReportePDF();
-					
-					frame.setVisible(true);
-					
-				} catch (Exception e) {
-					
-					e.printStackTrace();
-}
-				
-			}
-			
-		});
-		
-	}
-	
 	public ReportePDF() {
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 450, 450);
-		getContentPane().setLayout(null);
+		setLayout(null);
 		
 		JButton butGenerarPDF = new JButton("GenerarPDF");
 		butGenerarPDF.setActionCommand(GENERARPDF);
