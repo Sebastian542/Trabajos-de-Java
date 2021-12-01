@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,10 +31,19 @@ public class Modulo3Panel extends JPanel {
 	private JTextField txttelefono;
 	private JTextField txtciudad;
 	
-	public static final String GUARDAR = "Guardar";
+	private JButton btnEscribir;//Escribir
+	private JButton btnLeer;//Leer
+	private JButton btnVolver;//Volver
 	
-	public Modulo3Panel() {
-		setBackground(Color.BLACK);
+	public static final String GUARDAR = "Guardar";
+	public static final String ESCRIBIR3 = "Escribir3";
+	public static final String LEER3 = "Leer3";
+	public static final String VOLVER3 = "Volver3";
+	
+	public Modulo3Panel(Controller control) {
+//		setVisible(false);
+		setVisible(true);
+		setBackground(Color.RED);
 		setSize(584,184); //tama√±o en ancho y alto en pixeles
 		setLayout(null);
 		TitledBorder border = BorderFactory.createTitledBorder("GESTI”N DE PROVEEDORES");
@@ -41,37 +51,31 @@ public class Modulo3Panel extends JPanel {
 		setBorder(border);
 		
 		labNIT = new JLabel("NIT");
-		labNIT.setForeground(Color.WHITE);
 		labNIT.setBounds(50, 30, 106, 17);
 		labNIT.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labNIT);
 		
 		labnombre = new JLabel("Nombre");
-		labnombre.setForeground(Color.WHITE);
 		labnombre.setBounds(50, 60, 106, 17);
 		labnombre.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labnombre);
 		
 		labproveedor = new JLabel("Proveedor");
-		labproveedor.setForeground(Color.WHITE);
 		labproveedor.setBounds(50, 90, 106, 17);
 		labproveedor.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labproveedor);
 		
 		labdireccion = new JLabel("Direccion");
-		labdireccion.setForeground(Color.WHITE);
 		labdireccion.setBounds(325, 30, 106, 17);
 		labdireccion.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labdireccion);
 		
 		labtelefono = new JLabel("Telefono");
-		labtelefono.setForeground(Color.WHITE);
 		labtelefono.setBounds(325, 60, 106, 17);
 		labtelefono.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labtelefono);
 		
 		labciudad = new JLabel("Ciudad");
-		labciudad.setForeground(Color.WHITE);
 		labciudad.setBounds(325, 90, 106, 17);
 		labciudad.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(labciudad);
@@ -106,8 +110,68 @@ public class Modulo3Panel extends JPanel {
 		txtciudad.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		add(txtciudad);
 		
+		btnLeer = new JButton("Leer");		
+		btnLeer.setActionCommand(LEER3);
+		btnLeer.setBounds(120, 160, 89, 23);
+	    add(btnLeer);
+		
+	    btnEscribir = new JButton("Escribir");
+	    btnEscribir.setActionCommand(ESCRIBIR3);
+	    btnEscribir.setBounds(270, 160, 89, 23);
+		add(btnEscribir);
+		
+		btnVolver = new JButton("Volver");
+		btnVolver.setActionCommand(VOLVER3);
+		btnVolver.setBounds(390, 160, 89, 23);
+		add(btnVolver);
 		
 	}
+	
+
+	public JButton getBtnEscribir() {
+		return btnEscribir;
+	}
+
+
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
+	}
+
+
+	public JButton getBtnLeer() {
+		return btnLeer;
+	}
+
+
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
+	}
+
+
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+
+
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
+	}
+
+
+	public static String getEscribir3() {
+		return ESCRIBIR3;
+	}
+
+
+	public static String getLeer3() {
+		return LEER3;
+	}
+
+
+	public static String getVolver3() {
+		return VOLVER3;
+	}
+
 
 	public JLabel getLabNIT() {
 		return labNIT;

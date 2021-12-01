@@ -12,11 +12,10 @@ import co.edu.unbosque.model.Modulo3DTO;
 import co.edu.unbosque.model.Modulo4DTO;
 
 public class Modulo4file {
-	
 	private String ruta = "./data/productos.dat";
 	private File f;
 	
-	public String escribirArchivoProveedores(ArrayList<Modulo4DTO> m4dt) {
+	public String escribirArchivoProductos(ArrayList<Modulo4DTO> m4dt) {
 		String mensaje = "Archivo Generado Exitosamente";
 		f = new File(ruta);
 		try {
@@ -25,7 +24,7 @@ public class Modulo4file {
 			out.close();
 		}catch(IOException e) {
 			e.printStackTrace();
-			mensaje="Error IO";
+			mensaje="Error";
 		}
 		return mensaje;
 	}
@@ -35,7 +34,6 @@ public class Modulo4file {
 		ArrayList<Modulo4DTO> m4dt = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(ruta));
-			
 			m4dt = (ArrayList<Modulo4DTO>)in.readObject();
 	        in.close();
 
@@ -44,5 +42,4 @@ public class Modulo4file {
 		}
 		return m4dt;
 	}
-
 }

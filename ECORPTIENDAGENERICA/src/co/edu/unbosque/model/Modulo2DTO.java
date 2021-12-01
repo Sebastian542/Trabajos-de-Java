@@ -3,7 +3,7 @@ package co.edu.unbosque.model;
 import java.io.Serializable;
 
 public class Modulo2DTO implements Serializable {
-	
+	private static final long serialVersionUID = 1L;	
 
 	private int cedula;
 	private String nombre;
@@ -13,7 +13,6 @@ public class Modulo2DTO implements Serializable {
 	
 
 	public Modulo2DTO(int cedula, String nombre, String direccion, int telefono, String correo) {
-		
 
 		this.cedula = cedula;
 		this.nombre = nombre;

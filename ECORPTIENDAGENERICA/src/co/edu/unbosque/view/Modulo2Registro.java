@@ -1,7 +1,7 @@
 package co.edu.unbosque.view;
-
-
 import java.awt.BorderLayout;
+
+
 import java.awt.EventQueue;
 
 import javax.swing.JButton;
@@ -10,12 +10,19 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
 import co.edu.unbosque.controller.Controller;
 
 import java.awt.Color;
 import java.awt.Font;
 
-public class Modulo2Registro extends JPanel{
+import co.edu.unbosque.controller.Controller;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
+public class Modulo2Registro extends JPanel {
 	
 
 	private JButton btnEscribir;//Escribir
@@ -26,15 +33,17 @@ public class Modulo2Registro extends JPanel{
 	public static final String LEER2 = "Leer2";
 	public static final String VOLVER2 = "Volver2";
 	
-	
-	
 	private JTextField cedula;
 	private JTextField nombre;
 	private JTextField direccion;
 	private JTextField telefono;
 	private JTextField correo;
 
-   	public Modulo2Registro() {
+
+   
+
+   	public Modulo2Registro(Controller control) {
+
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Cedula");
@@ -194,8 +203,6 @@ public class Modulo2Registro extends JPanel{
 	}
 	
 
-	
 
 
-	
 }
