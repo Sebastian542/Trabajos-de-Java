@@ -40,7 +40,7 @@ public class View extends JFrame{
 				
 				m1 = new Modulo1Registro(control);
 				
-				m2 = new Modulo2Registro(control);
+				m2 = new Modulo2Registro();
 				m2.setBounds(0,0,400,250);
 				getContentPane().add(m2);
 				
@@ -74,16 +74,7 @@ public class View extends JFrame{
 				
 				m1.getButLeer().addActionListener(control);
 
-				
-			   	m2=new Modulo2Registro();
-				
-			   	
-			   	
-			   	
-			  	m4=new Modulo4Registro();
-			   	
-			   	
-				add(m4);
+		
 				
 				pr2 = new Panel2Resultados();
 		    	pr2.setBounds(300, 0, 286, 362);
@@ -121,6 +112,16 @@ public class View extends JFrame{
 	}
 	
 
+
+
+	public Scanner getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(Scanner entrada) {
+		this.entrada = entrada;
+	}
+
 	public Modulo1Registro getM1() {
 		return m1;
 	}
@@ -132,11 +133,41 @@ public class View extends JFrame{
 	public Modulo2Registro getM2() {
 		return m2;
 	}
-	
-
 
 	public void setM2(Modulo2Registro m2) {
 		this.m2 = m2;
+	}
+
+	public Modulo3Panel getM3() {
+		return m3;
+	}
+
+	public void setM3(Modulo3Panel m3) {
+		this.m3 = m3;
+	}
+
+	public Modulo4Registro getM4() {
+		return m4;
+	}
+
+	public void setM4(Modulo4Registro m4) {
+		this.m4 = m4;
+	}
+
+	public Modulo5Panel getM5() {
+		return m5;
+	}
+
+	public void setM5(Modulo5Panel m5) {
+		this.m5 = m5;
+	}
+
+	public Modulo5Dialog getMd5() {
+		return md5;
+	}
+
+	public void setMd5(Modulo5Dialog md5) {
+		this.md5 = md5;
 	}
 
 	public Panel2Resultados getPr2() {
@@ -147,63 +178,12 @@ public class View extends JFrame{
 		this.pr2 = pr2;
 	}
 
-
-
-	public Modulo4Registro getM4() {
-		return m4;
-	}
-
-
-
-	public void setM4(Modulo4Registro m4) {
-		this.m4 = m4;
-	}
-
-
-	public Modulo5Panel getM5() {
-		return m5;
-	}
-
-	public void setM5(Modulo5Panel m5) {
-		this.m5 = m5;
-	}
-	
-	public Modulo4Registro getM4() {
-		return m4;
-	}
-
-	public void setM4(Modulo4Registro m4) {
-		this.m4 = m4;
-	}
-
-	public Modulo3Panel getM3() {
-		return m3;
-	}
-
-	
-	public void setM3(Modulo3Panel m3) {
-		this.m3 = m3;
-	}
-
-	
 	public PanelPrincipal getPl() {
 		return pl;
 	}
 
-
 	public void setPl(PanelPrincipal pl) {
 		this.pl = pl;
-	}
-
-
-
-	public Modulo5Dialog getMd5() {
-		return md5;
-	}
-
-
-	public void setMd5(Modulo5Dialog md5) {
-		this.md5 = md5;
 	}
 
 	public void escribirMensaje(String mensaje) {

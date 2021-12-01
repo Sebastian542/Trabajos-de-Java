@@ -145,7 +145,7 @@ public class Controller implements  ActionListener {
 		
 		
 		
-<<<<<<< HEAD
+
 		if(evento.getActionCommand().equals(gui.getM4().ESCRIBIR4)) {
 			
 			
@@ -169,7 +169,7 @@ public class Controller implements  ActionListener {
 	
 		}
 
-=======
+
 		
 //		if(evento.getActionCommand().equals(gui.getM1().LEER)) {
 //			
@@ -199,7 +199,7 @@ public class Controller implements  ActionListener {
 //
 //			bcvmd5.agregarVenta(rgmd5);
 //		}
->>>>>>> branch 'master' of https://github.com/Sebastian542/Trabajos-de-Java/
+
 
 	}
 	

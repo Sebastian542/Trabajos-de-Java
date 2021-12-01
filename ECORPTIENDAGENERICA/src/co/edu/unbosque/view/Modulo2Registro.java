@@ -42,7 +42,7 @@ public class Modulo2Registro extends JPanel {
 
    
 
-   	public Modulo2Registro(Controller control) {
+   	public Modulo2Registro() {
 
 		setLayout(null);
 		
