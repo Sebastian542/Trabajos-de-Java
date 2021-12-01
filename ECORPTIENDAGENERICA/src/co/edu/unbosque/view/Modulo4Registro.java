@@ -13,6 +13,19 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class Modulo4Registro extends JFrame {
+	
+	
+	private static final long serialVersionUID = 1L;
+	private JButton btnEscribir;//Escribir
+	private JButton btnLeer;//Leer
+	private JButton btnVolver;//Volver
+	
+	public static final String ESCRIBIR4 = "Escribir4";
+	public static final String LEER4 = "Leer4";
+	public static final String VOLVER4 = "Volver4";
+	
+	
+	
 
 	private JPanel contentPane;
 	private JTextField nproducto;
@@ -20,25 +33,8 @@ public class Modulo4Registro extends JFrame {
 	private JTextField pcompra;
 	private JTextField pventa;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Modulo4Registro frame = new Modulo4Registro();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the frame.
-	 */
+
 	public Modulo4Registro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 202);
@@ -95,14 +91,136 @@ public class Modulo4Registro extends JFrame {
 		
 		JButton btnEscribir = new JButton("Escribir");
 		btnEscribir.setBounds(86, 135, 89, 23);
+		btnEscribir.setActionCommand(ESCRIBIR4);
 		contentPane.add(btnEscribir);
 		
 		JButton btnLeer = new JButton("Leer");
 		btnLeer.setBounds(205, 135, 89, 23);
+		btnLeer.setActionCommand(LEER4);
 		contentPane.add(btnLeer);
 		
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setBounds(304, 135, 89, 23);
+		btnVolver.setActionCommand(VOLVER4);
 		contentPane.add(btnVolver);
 	}
+
+
+
+	public JButton getBtnEscribir() {
+		return btnEscribir;
+	}
+
+
+
+	public void setBtnEscribir(JButton btnEscribir) {
+		this.btnEscribir = btnEscribir;
+	}
+
+
+
+	public JButton getBtnLeer() {
+		return btnLeer;
+	}
+
+
+
+	public void setBtnLeer(JButton btnLeer) {
+		this.btnLeer = btnLeer;
+	}
+
+
+
+	public JButton getBtnVolver() {
+		return btnVolver;
+	}
+
+
+
+	public void setBtnVolver(JButton btnVolver) {
+		this.btnVolver = btnVolver;
+	}
+
+
+
+	public JPanel getContentPane() {
+		return contentPane;
+	}
+
+
+
+	public void setContentPane(JPanel contentPane) {
+		this.contentPane = contentPane;
+	}
+
+
+
+	public JTextField getNproducto() {
+		return nproducto;
+	}
+
+
+
+	public void setNproducto(JTextField nproducto) {
+		this.nproducto = nproducto;
+	}
+
+
+
+	public JTextField getNproveedor() {
+		return nproveedor;
+	}
+
+
+
+	public void setNproveedor(JTextField nproveedor) {
+		this.nproveedor = nproveedor;
+	}
+
+
+
+	public JTextField getPcompra() {
+		return pcompra;
+	}
+
+
+
+	public void setPcompra(JTextField pcompra) {
+		this.pcompra = pcompra;
+	}
+
+
+
+	public JTextField getPventa() {
+		return pventa;
+	}
+
+
+
+	public void setPventa(JTextField pventa) {
+		this.pventa = pventa;
+	}
+
+
+
+	public static String getEscribir4() {
+		return ESCRIBIR4;
+	}
+
+
+
+	public static String getLeer4() {
+		return LEER4;
+	}
+
+
+
+	public static String getVolver4() {
+		return VOLVER4;
+	}
+	
+	
+	
+	
+	
 }

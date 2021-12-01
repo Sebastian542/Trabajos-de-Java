@@ -26,6 +26,7 @@ public class View extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	private Modulo2Registro m2;
+	private Modulo4Registro m4;
 	
 	private Panel2Resultados pr2;
 
@@ -53,6 +54,9 @@ public class View extends JFrame{
 				
 			   	m2=new Modulo2Registro();
 				
+			   	m4=new Modulo4Registro();
+			   	
+			   	
 				add(m2,BorderLayout.CENTER);
 				
 				pr2 = new Panel2Resultados();
@@ -60,8 +64,13 @@ public class View extends JFrame{
 		    	
 		    	add(pr2,BorderLayout.SOUTH);
 				
-			
+		    	
+		    	
+		    	m2.getBtnEscribir().addActionListener(control);
 				m2.getBtnLeer().addActionListener(control);
+				
+				m4.getBtnEscribir().addActionListener(control);
+				m4.getBtnLeer().addActionListener(control);
 				
 			//	m2.getBtnVolver().addActionListener(control);
 
